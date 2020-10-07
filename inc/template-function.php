@@ -234,7 +234,7 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
                 } elseif ( is_year() ) {
                     printf( __( '%s', 'justg' ), get_the_date( _x( 'Y', 'yearly archives date format', 'justg' ) ) );
                 } else {
-                    _e( 'Blog Archives', 'justg' );
+                    echo post_type_archive_title( '', false );
                 }
             }
         
@@ -246,7 +246,7 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         
             // Static page title.
             if (is_page()) {
-                echo the_title();
+                the_title();
             }
         
             // if you have a static page assigned to be you posts list page

@@ -31,9 +31,7 @@ $container = get_theme_mod( 'justg_container_type' );
 			<main class="site-main col order-2" id="main">
 
 				<?php
-				
-				do_action('justg_before_title');
-				
+								
 				if ( have_posts() ) {
 					// Start the Loop.
 					while ( have_posts() ) {

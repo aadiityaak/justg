@@ -15,7 +15,12 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'justg' ); ?></h1>
+		<h1 class="page-title">
+		
+		<?php do_action('justg_before_title');?>
+		<?php esc_html_e( 'Nothing Found', 'justg' ); ?>
+		
+		</h1>
 
 	</header><!-- .page-header -->
 

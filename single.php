@@ -25,8 +25,6 @@ $container = get_theme_mod( 'justg_container_type' );
 
 				<?php
 				
-				do_action('justg_before_title');
-
 				while ( have_posts() ) {
 					the_post();
 					get_template_part( 'loop-templates/content', 'single' );

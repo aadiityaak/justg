@@ -23,6 +23,9 @@ if ( ! function_exists( 'justg_woocommerce_support' ) ) {
 
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'justg_wc_form_field_args', 10, 3 );
+
+		// Remove woocomerce breadcrumb 
+		remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
 	}
 }
 
@@ -177,21 +180,6 @@ if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	 */
 	function wc_review_ratings_enabled() {
 		return wc_reviews_enabled() && 'yes' === get_option( 'woocommerce_enable_review_rating' );
-	}
-}
-
-if ( ! function_exists( 'justg_woocommerce_breadcrumbs' ) ) {
-
-	add_filter( 'woocommerce_breadcrumb_defaults', 'justg_woocommerce_breadcrumbs' );
-	function justg_woocommerce_breadcrumbs() {
-		return array(
-				'delimiter'   => ' &#47; ',
-				'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
-				'wrap_after'  => '</nav>',
-				'before'      => '',
-				'after'       => '',
-				'home'        => _x( 'Home', 'breadcrumb', 'justg' ),
-			);
 	}
 }
 
