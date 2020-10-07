@@ -307,6 +307,12 @@ Kirki::add_field('justg_config', [
 			'units'    => 'px',
 		],
 	],
+	'partial_refresh'    => [
+		'partial_tinggi_logo' => [
+			'selector'        => '.navbar-brand',
+			'render_callback' => '__return_false'
+		]
+	],
 ]);
 
 Kirki::add_field('justg_config', [
@@ -330,6 +336,12 @@ Kirki::add_field('justg_config', [
 		[
 			'element' => '#main-menu',
 		],
+	],
+	'partial_refresh'    => [
+		'partial_menu_setting' => [
+			'selector'        => '.navbar-nav',
+			'render_callback' => '__return_false'
+		]
 	],
 ]);
 Kirki::add_field('justg_config', [
@@ -415,6 +427,12 @@ Kirki::add_field('justg_config', [
 	'section'  => 'breadcrumb_section',
 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
+	'partial_refresh'    => [
+		'partial_text_breadcrumb_separator' => [
+			'selector'        => '.breadcrumbs',
+			'render_callback' => '__return_false'
+		]
+	],
 ]);
 Kirki::add_field('justg_config', [
 	'type'        => 'multicheck',
@@ -429,7 +447,7 @@ Kirki::add_field('justg_config', [
 		'disable-on-post' => esc_html__('Disable on Post', 'justg'),
 		'disable-on-archive' => esc_html__('Disable on Archive', 'justg'),
 		'disable-on-404' => esc_html__('Disable on 404', 'justg'),
-	],
+	]
 ]);
 
 //sidebar_section
