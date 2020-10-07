@@ -20,7 +20,10 @@ Kirki::add_config('justg_config', [
 	'option_type' => 'theme_mod',
 ]);
 
-// Add Panel
+/**
+ * Add Panel
+ * 
+ */
 Kirki::add_panel('panel_global', [
 	'priority'    => 10,
 	'title'       => esc_html__('Global', 'justg'),
@@ -41,8 +44,17 @@ Kirki::add_panel('panel_sidebar', [
 	'title'       => esc_html__('Sidebar', 'justg'),
 	'description' => esc_html__('', 'justg'),
 ]);
+Kirki::add_panel('panel_footer', [
+	'priority'    => 10,
+	'title'       => esc_html__('Footer', 'justg'),
+	'description' => esc_html__('', 'justg'),
+]);
 
-// Add Section.
+
+/**
+ * Add Section.
+ * 
+ */ 
 Kirki::add_section('global_typography', [
 	'panel'    => 'panel_global',
 	'title'    => __('Typography', 'justg'),
@@ -101,6 +113,17 @@ Kirki::add_section('panel_sidebar', [
 	'priority' => 10,
 ]);
 
+Kirki::add_section('footer_color', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Color', 'justg'),
+	'priority' => 10,
+]);
+
+
+/**
+ * Add Field
+ * 
+ */
 Kirki::add_field('justg_config', [
 	'type'        => 'slider',
 	'settings'    => 'container_width',
@@ -586,5 +609,53 @@ Kirki::add_field('justg_config', [
 		[
 			'element' => '.widget-area > .widget',
 		],
+	],
+]);
+
+Kirki::add_field('justg_config', [
+	'type'        => 'multicolor',
+	'settings'    => 'footer_color_setting',
+	'label'       => esc_html__('Color', 'justg'),
+	'section'     => 'footer_color',
+	'priority'    => 10,
+	'choices'     => [
+		'color'   => esc_html__('Color', 'justg'),
+		'link'    => esc_html__('Link', 'justg'),
+		'hover'   => esc_html__('Hover', 'justg'),
+		'active'  => esc_html__('Active', 'justg'),
+	],
+	'default'     => [
+		'color'   => '#cccccc',
+		'link'    => '#eeeeee',
+		'hover'   => '#ffffff',
+		'active'  => '#eeeeee',
+	],
+	'output'    => [
+		[
+			'choice'    => 'link',
+			'element'   => '#wrapper-footer',
+			'property'  => 'color',
+		],
+		[
+			'choice'    => 'link',
+			'element'   => '#wrapper-footer a',
+			'property'  => 'color',
+		],
+		[
+			'choice'    => 'hover',
+			'element'   => '#wrapper-footer a:hover',
+			'property'  => 'color',
+		],
+		[
+			'choice'    => 'active',
+			'element'   => '#wrapper-footer a:active',
+			'property'  => 'color',
+		],
+	],
+	'partial_refresh'    => [
+		'partial_footer_color_setting' => [
+			'selector'        => '.site-footer > .row',
+			'render_callback' => '__return_false'
+		]
 	],
 ]);
