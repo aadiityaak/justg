@@ -362,29 +362,66 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
             <div class="wrapper bg-dark text-white" id="wrapper-footer">
             
                 <div class="container">
-            
-                    <div class="row">
-            
-                        <div class="col-md-12">
-            
-                            <footer class="site-footer" id="colophon">
-            
-                                <div class="site-info">
-            
-                                    <div class="text-center">© <?php echo date("Y"); ?> <?php echo get_bloginfo('name');?>. All Rights Reserved.</div>
-            
-                                </div><!-- .site-info -->
-            
-                            </footer><!-- #colophon -->
-            
-                        </div><!--col end -->
-            
-                    </div><!-- row end -->
-            
+        
+                    <footer class="site-footer" id="colophon">
+
+                        <div class="row">
+                            <div class="col-md-3 col-12 footer-widget-1" >
+                                <?php justg_get_footer_widget( 'footer-widget-1' ); ?>
+                            </div>
+                            <div class="col-md-3 col-12 footer-widget-2">
+                                <?php justg_get_footer_widget( 'footer-widget-2' ); ?>
+                            </div>
+                            <div class="col-md-3 col-12 footer-widget-3">
+                                <?php justg_get_footer_widget( 'footer-widget-3' ); ?>
+                            </div>
+                            <div class="col-md-3 col-12 footer-widget-4">
+                                <?php justg_get_footer_widget( 'footer-widget-4' ); ?>
+                            </div>
+                        </div>
+                        
+                        <div class="site-info">
+    
+                            <div class="text-center">© <?php echo date("Y"); ?> <?php echo get_bloginfo('name');?>. All Rights Reserved.</div>
+    
+                        </div><!-- .site-info -->
+    
+                    </footer><!-- #colophon -->
+                                
                 </div><!-- container end -->
             
             </div><!-- wrapper end -->
             
         <?php
     }
+}
+
+if ( ! function_exists( 'justg_get_footer_widget' ) ) {
+	/**
+	 * Footer widget area
+	 */
+	function justg_get_footer_widget( $sidebar_id ) {
+
+		if ( is_active_sidebar( $sidebar_id ) ) {
+			dynamic_sidebar( $sidebar_id );
+		} elseif ( current_user_can( 'edit_theme_options' ) ) {
+
+			global $wp_registered_sidebars;
+			$sidebar_name = '';
+			if ( isset( $wp_registered_sidebars[ $sidebar_id ] ) ) {
+				$sidebar_name = $wp_registered_sidebars[ $sidebar_id ]['name'];
+			}
+			?>
+			<aside class="mb-3 widget">
+				<h3 class='widget-title'><?php echo esc_html( $sidebar_name ); ?></h3>
+
+				<p class='no-widget-text'>
+					<a href='<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>'>
+						<?php esc_html_e( 'Click here to edit widget.', 'justg' ); ?>
+					</a>
+				</p>
+			</aside>
+			<?php
+		}
+	}
 }
