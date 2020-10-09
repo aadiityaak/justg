@@ -373,38 +373,34 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
      * 
      */
     function justg_the_footer_content() {
-        ?>
-            <?php
-            $footer_widget = get_theme_mod('widget_footer_setting', '0');
-            echo $footer_widget;
-            if($footer_widget == '4'){
-                echo '<div class="row">';
-                    echo '<div class="col-md-3 col-12 footer-widget-1" >';
-                    for ($x = 0; $x <= 10; $x++) {
-                        if ( is_active_sidebar( 'footer-widget-'.$x ) ) {
-                            dynamic_sidebar( 'footer-widget-'.$x );
-                        } elseif ( current_user_can( 'edit_theme_options' ) ) {
-                            ?>
-                            <aside class="mb-3 widget">
-                                <p class='no-widget-text'>
-                                    <a href='<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>'>
-                                        <?php esc_html_e( 'Click here to edit widget.', 'justg' ); ?>
-                                    </a>
-                                </p>
-                            </aside>
-                            <?php
-                        }
+
+        $footer_widget = get_theme_mod('widget_footer', '0');
+        if($footer_widget == '4'){
+            echo '<div class="row">';
+                echo '<div class="col-md-3 col-12 footer-widget-1" >';
+                for ($x = 0; $x <= 10; $x++) {
+                    if ( is_active_sidebar( 'footer-widget-'.$x ) ) {
+                        dynamic_sidebar( 'footer-widget-'.$x );
+                    } elseif ( current_user_can( 'edit_theme_options' ) ) {
+                        ?>
+                        <aside class="mb-3 widget">
+                            <p class='no-widget-text'>
+                                <a href='<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>'>
+                                    <?php esc_html_e( 'Click here to edit widget.', 'justg' ); ?>
+                                </a>
+                            </p>
+                        </aside>
+                        <?php
                     }
-                    echo '</div>';
+                }
                 echo '</div>';
-            }
-            ?>
-          
-            <div class="site-info">
-
-                <div class="text-center">© <?php echo date("Y"); ?> <?php echo get_bloginfo('name');?>. All Rights Reserved.</div>
-
-            </div><!-- .site-info -->
+            echo '</div>';
+        }
+        ?>
+        
+        <div class="site-info">
+            <div class="text-center">© <?php echo date("Y"); ?> <?php echo get_bloginfo('name');?>. All Rights Reserved.</div>
+        </div><!-- .site-info -->
         <?php
     }
 }

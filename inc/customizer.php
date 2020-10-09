@@ -113,7 +113,7 @@ Kirki::add_section('panel_sidebar', [
 	'priority' => 10,
 ]);
 
-Kirki::add_section('footer_widget', [
+Kirki::add_section('footer_widget_section', [
 	'panel'    => 'panel_footer',
 	'title'    => __('Widget', 'justg'),
 	'priority' => 10,
@@ -619,9 +619,9 @@ Kirki::add_field('justg_config', [
 
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
-	'settings'    => 'widget_footer_setting',
+	'settings'    => 'widget_footer',
 	'label'       => esc_html__( 'Widget Footer', 'justg' ),
-	'section'     => 'footer_widget',
+	'section'     => 'footer_widget_section',
 	'default'     => '0',
 	'priority'    => 10,
 	'choices'     => [
