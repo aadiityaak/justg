@@ -113,6 +113,11 @@ Kirki::add_section('panel_sidebar', [
 	'priority' => 10,
 ]);
 
+Kirki::add_section('footer_widget', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Widget', 'justg'),
+	'priority' => 10,
+]);
 Kirki::add_section('footer_color', [
 	'panel'    => 'panel_footer',
 	'title'    => __('Color', 'justg'),
@@ -612,6 +617,21 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 
+Kirki::add_field( 'justg_config', [
+	'type'        => 'radio-image',
+	'settings'    => 'widget_footer_setting',
+	'label'       => esc_html__( 'Widget Footer', 'justg' ),
+	'section'     => 'footer_widget',
+	'default'     => '0',
+	'priority'    => 10,
+	'choices'     => [
+		'0'   	=> get_template_directory_uri() . '/img/footer-0.png',
+		'4'		=> get_template_directory_uri() . '/img/footer-4.png',
+	],
+	'input_attrs' => array(
+		'style' => 'padding-right:10px',
+	),
+] );
 Kirki::add_field('justg_config', [
 	'type'        => 'multicolor',
 	'settings'    => 'footer_color_setting',
