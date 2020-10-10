@@ -172,7 +172,7 @@ function justg_register_part_hooks() {
 }
 
 function justg_customizer( \WP_Customize_Manager $wp_customize ) {
-	// $wp_customize->get_panel( 'widgets' )->active_callback = '__return_false';
+	$wp_customize->get_panel( 'widgets' )->active_callback = '__return_false';
     $wp_customize->remove_section("colors");
     $wp_customize->remove_section("background_image");
     $wp_customize->remove_section("static_front_page");
