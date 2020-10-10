@@ -101,6 +101,11 @@ Kirki::add_section('sidebar_style_section', [
 	'title'    => __('Sidebar Style', 'justg'),
 	'priority' => 10,
 ]);
+Kirki::add_section('sidebar-widgets-main-sidebar', [
+	'panel'    => 'panel_sidebar',
+	'title'    => __('Sidebar Widget', 'justg'),
+	'priority' => 10,
+]);
 
 Kirki::add_section('breadcrumb_section', [
 	'panel'    => 'panel_breadcrumb',
@@ -115,12 +120,27 @@ Kirki::add_section('panel_sidebar', [
 
 Kirki::add_section('footer_widget_section', [
 	'panel'    => 'panel_footer',
-	'title'    => __('Widget', 'justg'),
+	'title'    => __('Widget Setting', 'justg'),
 	'priority' => 10,
 ]);
-Kirki::add_section('footer_color', [
+Kirki::add_section('sidebar-widgets-footer-widget-1', [
 	'panel'    => 'panel_footer',
-	'title'    => __('Color', 'justg'),
+	'title'    => __('Widget 1', 'justg'),
+	'priority' => 10,
+]);
+Kirki::add_section('sidebar-widgets-footer-widget-2', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Widget 2', 'justg'),
+	'priority' => 10,
+]);
+Kirki::add_section('sidebar-widgets-footer-widget-3', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Widget 3', 'justg'),
+	'priority' => 10,
+]);
+Kirki::add_section('sidebar-widgets-footer-widget-4', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Widget 4', 'justg'),
 	'priority' => 10,
 ]);
 
@@ -637,7 +657,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'multicolor',
 	'settings'    => 'footer_color_setting',
 	'label'       => esc_html__('Color', 'justg'),
-	'section'     => 'footer_color',
+	'section'     => 'footer_widget_section',
 	'priority'    => 10,
 	'choices'     => [
 		'color'   => esc_html__('Color', 'justg'),
