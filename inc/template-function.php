@@ -374,11 +374,14 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
      */
     function justg_the_footer_content() {
 
-        $footer_widget = get_theme_mod('widget_footer', '0');
+        $footer_widget = get_theme_mod('footer_widget_setting', '0');
         if($footer_widget == '4'){
             echo '<div class="row">';
-                echo '<div class="col-md-3 col-12 footer-widget-1" >';
-                for ($x = 0; $x <= 10; $x++) {
+                
+                for ($x = 1; $x <= 4; $x++) {
+
+                    echo '<div class="col-md-3 col-12 footer-widget-1" >';
+
                     if ( is_active_sidebar( 'footer-widget-'.$x ) ) {
                         dynamic_sidebar( 'footer-widget-'.$x );
                     } elseif ( current_user_can( 'edit_theme_options' ) ) {
@@ -392,8 +395,11 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
                         </aside>
                         <?php
                     }
+
+                    echo '</div>';
+                    
                 }
-                echo '</div>';
+                
             echo '</div>';
         }
         ?>

@@ -619,7 +619,7 @@ Kirki::add_field('justg_config', [
 
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
-	'settings'    => 'widget_footer',
+	'settings'    => 'footer_widget_setting',
 	'label'       => esc_html__( 'Widget Footer', 'justg' ),
 	'section'     => 'footer_widget_section',
 	'default'     => '0',
@@ -632,6 +632,7 @@ Kirki::add_field( 'justg_config', [
 		'style' => 'padding-right:10px',
 	),
 ] );
+
 Kirki::add_field('justg_config', [
 	'type'        => 'multicolor',
 	'settings'    => 'footer_color_setting',
