@@ -248,6 +248,11 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
             if (is_page()) {
                 the_title();
             }
+
+            // Show search query
+            if (is_search()) {
+                the_search_query();
+            }
         
             // if you have a static page assigned to be you posts list page
             if (is_home()){
@@ -397,7 +402,7 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
                     }
 
                     echo '</div>';
-                    
+
                 }
                 
             echo '</div>';
