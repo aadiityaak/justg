@@ -138,7 +138,9 @@ function justg_header_footer_render() {
 
 	// If we have a footer, remove the theme footer and hook in Theme Builder's.
 	if ( ! empty( $footer_ids ) ) {
+		remove_action( 'justg_do_footer', 'justg_the_footer_open' );
 		remove_action( 'justg_do_footer', 'justg_the_footer_content' );
+		remove_action( 'justg_do_footer', 'justg_the_footer_close' );
 		add_action( 'justg_do_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
 	}
 }
