@@ -120,7 +120,7 @@ a.cart-contents {
     border-top: 1px solid var(--light);
 }
 
-.wishlist-toggle {
+.wishlist-fix {
     display: block;
     position: absolute;
     top: 16px;
@@ -130,6 +130,10 @@ a.cart-contents {
     height: 24px;
     outline: none;
     border: none;
+}
+
+.wishlist-toggle {
+    
 }
 
 .wishlist-toggle .fa-heart {

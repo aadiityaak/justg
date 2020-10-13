@@ -30,11 +30,14 @@ if (justg_is_woocommerce_activated()) {
 
     // Add wishlist to product
     add_action('woocommerce_before_shop_loop_item_title','wishlist_toggle',15);
-    add_action('woocommerce_single_product_summary','wishlist_toggle',25);
+    add_action('woocommerce_single_product_summary','wishlist_single',25);
     function wishlist_toggle(){
-
         global $product;
-        echo '<a class="wishlist-toggle" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'"><i class="fa fa-heart-o" aria-hidden="true"></i></a>';
+        echo '<a class="wishlist-toggle wishlist-fix" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'"><i class="fa fa-heart-o" aria-hidden="true"></i></a>';
+    }
+    function wishlist_single(){
+        global $product;
+        echo '<a class="wishlist-toggle d-block mb-2" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'"><i class="fa fa-heart-o" aria-hidden="true"></i></a>';
     }
 
     // Wishlist option in the user profile
