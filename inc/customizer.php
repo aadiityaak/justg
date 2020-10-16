@@ -278,7 +278,7 @@ Kirki::add_field('justg_config', [
 	'multiple'    => 1,
 	'choices'     => [
 		'container' => esc_html__('Box', 'justg'),
-		'container-fluid' => esc_html__('FUll Width', 'justg'),
+		'container-fluid' => esc_html__('Full Width', 'justg'),
 	],
 ]);
 Kirki::add_field('justg_config', [
