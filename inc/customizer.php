@@ -595,8 +595,8 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_widget_setting',
-	'label'       => esc_html__('Background Block', 'justg'),
-	'description' => esc_html__('Atur background (widget, heading, article, dll)', 'justg'),
+	'label'       => esc_html__('Background Widget', 'justg'),
+	'description' => esc_html__('Atur background widget', 'justg'),
 	'section'     => 'sidebar_style_section',
 	'default'     => [
 		'background-color'      => '#ffffff',
@@ -605,6 +605,30 @@ Kirki::add_field('justg_config', [
 		'background-position'   => 'center center',
 		'background-size'       => 'cover',
 		'background-attachment' => 'scroll',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => array('.widget-area > .widget'),
+		],
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'dimensions_widget_setting',
+	'label'       => esc_html__('Margin Widget', 'justg'),
+	'description' => esc_html__('Atur Jarak Widget', 'justg'),
+	'section'     => 'sidebar_style_section',
+	'default'     => [
+		'padding-top'    => '0em',
+		'padding-bottom' => '0em',
+		'padding-left'   => '0em',
+		'padding-right'  => '0em',
+
+		'margin-top'    => '0em',
+		'margin-bottom' => '2em',
+		'margin-left'   => '0em',
+		'margin-right'  => '0em',
 	],
 	'transport'   => 'auto',
 	'output'      => [
