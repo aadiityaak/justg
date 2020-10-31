@@ -105,7 +105,7 @@ if ( ! function_exists( 'justg_widgets_init' ) ) {
 				'name'          => __( 'Main Sidebar', 'justg' ),
 				'id'            => 'main-sidebar',
 				'description'   => __( 'Main sidebar widget area', 'justg' ),
-				'before_widget' => '<aside id="%1$s" class="p-2 p-md-3 mb-3 widget %2$s">',
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
