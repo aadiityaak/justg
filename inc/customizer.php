@@ -620,10 +620,10 @@ Kirki::add_field('justg_config', [
 	'description' => esc_html__('Atur Jarak Widget', 'justg'),
 	'section'     => 'sidebar_style_section',
 	'default'     => [
-		'padding-top'    => '0em',
-		'padding-bottom' => '0em',
-		'padding-left'   => '0em',
-		'padding-right'  => '0em',
+		'padding-top'    => '1em',
+		'padding-bottom' => '1em',
+		'padding-left'   => '1em',
+		'padding-right'  => '1em',
 
 		'margin-top'    => '0em',
 		'margin-bottom' => '2em',
