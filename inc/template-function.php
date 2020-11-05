@@ -212,6 +212,10 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         if ( is_404() && in_array( 'disable-on-404', $breadcrumbdisable)) {
             $showbreadcrumb = false;
         }
+        
+        if ( in_array( 'disable-on-all', $breadcrumbdisable)) {
+            $showbreadcrumb = false;
+        }
 
         if ( $showbreadcrumb ) {
         

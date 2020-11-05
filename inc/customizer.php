@@ -490,6 +490,7 @@ Kirki::add_field('justg_config', [
 	'default'     => array('disable-on-home', 'disable-on-404'),
 	'priority'    => 10,
 	'choices'     => [
+		'disable-on-all' => esc_html__('Disable on All', 'justg'),
 		'disable-on-home' => esc_html__('Disable on Home Page', 'justg'),
 		'disable-on-page' => esc_html__('Disable on Page', 'justg'),
 		'disable-on-post' => esc_html__('Disable on Post', 'justg'),
