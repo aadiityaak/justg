@@ -188,7 +188,7 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
     function justg_breadcrumb() {
 
         $sep = get_theme_mod('text_breadcrumb_separator', '/');
-        $sep = ' '.$sep.' ';
+        $sep = '<span class="separator"> '.$sep.' </span>';
 
         $breadcrumbdisable  = get_theme_mod('breadcrumb_disable', array());
         $showbreadcrumb     = true;
@@ -221,15 +221,18 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         
             // Home Url
             echo '<div class="breadcrumbs pb-2"  itemscope itemtype="https://schema.org/BreadcrumbList">';
-            echo '<a href="';
-                echo get_option('home');
-                echo '">';
-                bloginfo('name');
-            echo '</a>' . $sep;
+            
+            $sethome = get_theme_mod('text_breadcrumb_home', 'home');
+            echo '<a href="'.get_home_url().'">';
+                echo ($sethome=='home')?'Home':bloginfo('name');
+            echo '</a>';
         
             // Check if the current page is a category, an archive or a single page
             if (is_category() || is_single() ){
-                the_category('title_li=');
+                if (get_the_category()) {
+                    echo $sep;
+                    the_category('title_li=');
+                }
             } elseif (is_archive() || is_single()){
                 if ( is_day() ) {
                     printf( __( '%s', 'justg' ), get_the_date() );
@@ -237,10 +240,13 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
                     printf( __( '%s', 'justg' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'justg' ) ) );
                 } elseif ( is_year() ) {
                     printf( __( '%s', 'justg' ), get_the_date( _x( 'Y', 'yearly archives date format', 'justg' ) ) );
+                } elseif ( is_tax() ) {
+                    echo single_term_title( '', false );
                 } else {
                     echo post_type_archive_title( '', false );
                 }
             }
+        
         
             // Singgle post and separator
             if (is_single()) {
@@ -250,11 +256,13 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         
             // Static page title.
             if (is_page()) {
+                echo $sep;
                 the_title();
             }
 
             // Show search query
             if (is_search()) {
+                echo $sep;
                 the_search_query();
             }
         
@@ -272,9 +280,10 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
 
             // if 404
             if ( is_404() ) {
+                echo $sep;
                 echo esc_html_e( 'Not Found', 'justg' );
             }
-    
+
             echo '</div>';
         }
     }
