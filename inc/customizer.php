@@ -483,6 +483,20 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 Kirki::add_field('justg_config', [
+	'type'        => 'select',
+	'settings'    => 'text_breadcrumb_home',
+	'label'       => esc_html__('First title', 'justg'),
+	'section'     => 'breadcrumb_section',
+	'default'     => 'blogname',
+	'placeholder' => esc_html__('The first title in the breadcrumb', 'justg'),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'blogname' => esc_html__('Blogname', 'justg'),
+		'home' => esc_html__('Home', 'justg'),
+	],
+]);
+Kirki::add_field('justg_config', [
 	'type'        => 'multicheck',
 	'settings'    => 'breadcrumb_disable',
 	'label'       => esc_html__('Tampilkan Breadcrumb', 'justg'),
