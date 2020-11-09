@@ -483,6 +483,20 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 Kirki::add_field('justg_config', [
+	'type'        => 'select',
+	'settings'    => 'text_breadcrumb_home',
+	'label'       => esc_html__('First title', 'justg'),
+	'section'     => 'breadcrumb_section',
+	'default'     => 'blogname',
+	'placeholder' => esc_html__('The first title in the breadcrumb', 'justg'),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'blogname' => esc_html__('Blogname', 'justg'),
+		'home' => esc_html__('Home', 'justg'),
+	],
+]);
+Kirki::add_field('justg_config', [
 	'type'        => 'multicheck',
 	'settings'    => 'breadcrumb_disable',
 	'label'       => esc_html__('Tampilkan Breadcrumb', 'justg'),
@@ -490,6 +504,7 @@ Kirki::add_field('justg_config', [
 	'default'     => array('disable-on-home', 'disable-on-404'),
 	'priority'    => 10,
 	'choices'     => [
+		'disable-on-all' => esc_html__('Disable on All', 'justg'),
 		'disable-on-home' => esc_html__('Disable on Home Page', 'justg'),
 		'disable-on-page' => esc_html__('Disable on Page', 'justg'),
 		'disable-on-post' => esc_html__('Disable on Post', 'justg'),
