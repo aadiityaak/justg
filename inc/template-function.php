@@ -235,14 +235,19 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
                 }
             } elseif (is_archive() || is_single()){
                 if ( is_day() ) {
+                    echo $sep;
                     printf( __( '%s', 'justg' ), get_the_date() );
                 } elseif ( is_month() ) {
+                    echo $sep;
                     printf( __( '%s', 'justg' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'justg' ) ) );
                 } elseif ( is_year() ) {
+                    echo $sep;
                     printf( __( '%s', 'justg' ), get_the_date( _x( 'Y', 'yearly archives date format', 'justg' ) ) );
                 } elseif ( is_tax() ) {
+                    echo $sep;
                     echo single_term_title( '', false );
                 } else {
+                    echo $sep;
                     echo post_type_archive_title( '', false );
                 }
             }
