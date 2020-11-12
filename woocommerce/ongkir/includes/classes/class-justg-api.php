@@ -143,7 +143,7 @@ class justg_API {
 	 * @since 1.0.0
 	 */
 	public function validate_account() {
-		$account_type = $this->get_option( 'account_type', 'starter' );
+		$account_type = $this->get_option( 'account_type', 'pro' );
 
 		$params = array(
 			'courier'     => array( 'jne' ),

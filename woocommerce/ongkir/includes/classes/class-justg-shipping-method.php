@@ -60,8 +60,8 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 		$this->api                = new justg_API();
 		$this->instance_id        = absint( $instance_id );
 		$this->id                 = 'justg';
-		$this->method_title       = 'JustG';
-		$this->title              = 'JustG';
+		$this->method_title       = 'Ongkir ID';
+		$this->title              = 'Ongkir ID';
 		$this->method_description = 'Ongkir Indonesia';
 		$this->supports           = array(
 			'shipping-zones',
@@ -169,16 +169,16 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 				),
 			),
 			'api_key'               => array(
-				'title'       => __( 'RajaOngkir API Key', 'justg' ),
+				'title'       => __( 'API Key', 'justg' ),
 				'type'        => 'text',
 				'placeholder' => '',
-				'description' => __( '<a href="http://www.rajaongkir.com" target="_blank">Click here</a> to get RajaOngkir.com API Key. It is FREE.', 'justg' ),
+				// 'description' => __( '<a href="http://www.rajaongkir.com" target="_blank">Click here</a> to get RajaOngkir.com API Key. It is FREE.', 'justg' ),
 				'default'     => '',
 			),
 			'account_type'          => array(
-				'title'             => __( 'RajaOngkir Account Type', 'justg' ),
+				'title'             => __( '', 'justg' ),
 				'type'              => 'account_type',
-				'default'           => 'starter',
+				'default'           => 'pro',
 				'options'           => array(),
 				'custom_attributes' => array(
 					'data-accounts' => wp_json_encode( $this->api->get_accounts( true ) ),
@@ -217,13 +217,14 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 		);
 
 		$features = array(
-			'domestic'          => __( 'Domestic Couriers', 'justg' ),
-			'international'     => __( 'International Couriers', 'justg' ),
-			'multiple_couriers' => __( 'Multiple Couriers', 'justg' ),
-			'subdistrict'       => __( 'Calculate Subdistrict', 'justg' ),
-			'volumetric'        => __( 'Calculate Volumetric', 'justg' ),
-			'weight_over_30kg'  => __( 'Weight Over 30kg', 'justg' ),
-			'dedicated_server'  => __( 'Dedicated Server', 'justg' ),
+			''						=> ''
+			// 'domestic'          => __( 'Domestic Couriers', 'justg' ),
+			// 'international'     => __( 'International Couriers', 'justg' ),
+			// 'multiple_couriers' => __( 'Multiple Couriers', 'justg' ),
+			// 'subdistrict'       => __( 'Calculate Subdistrict', 'justg' ),
+			// 'volumetric'        => __( 'Calculate Volumetric', 'justg' ),
+			// 'weight_over_30kg'  => __( 'Weight Over 30kg', 'justg' ),
+			// 'dedicated_server'  => __( 'Dedicated Server', 'justg' ),
 		);
 
 		$accounts = $this->api->get_accounts();
@@ -320,36 +321,7 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 			<td class="forminp">
 				<input type="hidden" name="<?php echo esc_attr( $field_key ); ?>" id="<?php echo esc_attr( $field_key ); ?>" value="<?php echo esc_attr( $this->get_option( $key ) ); ?>" <?php echo $this->get_custom_attribute_html( $data ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> />
 				<div class="justg-account-features-wrap">
-					<table id="justg-account-features" class="justg-account-features form-table">
-						<thead>
-							<tr>
-								<th>&nbsp;</th>
-								<?php foreach ( $this->api->get_accounts() as $account ) { ?>
-									<th class="justg-account-features-col-<?php echo esc_attr( $account->get_type() ); ?>"><a href="https://rajaongkir.com/dokumentasi" target="_blank"><?php echo esc_html( $account->get_label() ); ?></a></th>
-								<?php } ?>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ( (array) $data['features'] as $feature ) : ?>
-							<tr>
-								<th><?php echo esc_html( $feature['label'] ); ?></th>
-								<?php foreach ( $feature['value'] as $account_type => $feature_value ) : ?>
-									<td class="justg-account-features-col-<?php echo esc_attr( $account_type ); ?>"><?php echo esc_html( $feature_value ); ?></td>
-								<?php endforeach; ?>
-							</tr>
-							<?php endforeach; ?>
-						</tbody>
-						<tfoot>
-							<tr>
-								<th></th>
-								<?php foreach ( array_keys( $feature['value'] ) as $account_type ) : ?>
-									<td class="justg-account-features-col-<?php echo esc_attr( $account_type ); ?>" data-title="<?php echo esc_attr( $this->api->get_account( $account_type )->get_label() ); ?>">
-										<input type="checkbox" value="<?php echo esc_attr( $account_type ); ?>" id="<?php echo esc_attr( $field_key ); ?>--<?php echo esc_attr( $account_type ); ?>" class="justg-account-type" <?php checked( $account_type, $this->get_option( $key ) ); ?> <?php disabled( $account_type, $this->get_option( $key ) ); ?>>
-									</td>
-								<?php endforeach; ?>
-							</tr>
-						</tfoot>
-					</table>
+					<input type="checkbox" value="pro" id="<?php echo esc_attr( $field_key ); ?>--pro" class="justg-account-type" <?php checked( 'pro', $this->get_option( $key ) ); ?> <?php disabled( 'pro', $this->get_option( $key ) ); ?>>
 				</div>
 			</td>
 		</tr>
