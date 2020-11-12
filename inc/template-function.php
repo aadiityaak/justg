@@ -77,11 +77,6 @@ if ( ! function_exists( 'justg_header_cart' ) ) {
 	 */
 	function justg_header_cart() {
 		if ( justg_is_woocommerce_activated() ) {
-			if ( is_cart() ) {
-				$class = 'current-menu-item';
-			} else {
-				$class = '';
-			}
 			?>
             <div id="site-header-cart" class="site-header-cart position-relative">
                 <?php justg_cart_link(); ?>
