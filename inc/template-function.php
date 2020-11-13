@@ -369,6 +369,18 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
     }
 }
 
+if( ! function_exists( 'justg_loop_product_title' ) ) {
+    /**
+     * Product Loop Title
+     * 
+     */
+    function justg_loop_product_title() {
+        echo '<h3 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '" >';
+        echo '<a href="' .get_the_permalink(). '">' .get_the_title().'</a>';
+        echo '</h3>';
+    }
+}
+
 if( ! function_exists( 'justg_the_footer_open' ) ) {
     /**
      * Footer open function

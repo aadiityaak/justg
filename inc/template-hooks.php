@@ -41,6 +41,14 @@ add_action( 'woocommerce_widget_shopping_cart_buttons', 'justg_widget_shopping_c
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'justg_widget_shopping_cart_proceed_to_checkout', 20 );
 
 /**
+ * Product Title
+ * 
+ * @see justg_loop_product_title()
+ */
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+add_action('woocommerce_shop_loop_item_title', 'justg_loop_product_title', 10 );
+
+/**
  * Before Title
  *
  * @see justg_breadcrumb()
