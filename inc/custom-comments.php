@@ -81,7 +81,7 @@ if ( ! function_exists( 'justg_bootstrap_comment_form' ) ) {
 		}
 
 		if ( isset( $args['class_submit'] ) ) {
-			$args['class_submit'] = 'btn btn-secondary';
+			$args['class_submit'] = 'btn btn-primary';
 		}
 
 		return $args;

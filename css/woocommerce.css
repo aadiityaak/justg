@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    color: var(--light);
+    background-color: var(--primary);
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+.woocommerce #respond input#submit.loading,
+.woocommerce a.button.loading,
+.woocommerce button.button.loading,
+.woocommerce input.button.loading {
+    opacity: 1;
+}
+
+
 .woocommerce-input-wrapper {
     width: 100%
 }
@@ -52,6 +76,9 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce-MyAccount-navigation .list-group-item:hover a {
     color: #ffffff;
 }
+.woocommerce-MyAccount-navigation .list-group-item.is-active, .woocommerce-MyAccount-navigation .list-group-item:hover {
+    background-color: var(--primary);
+}
 
 .dropdown-cart {
     position: absolute;
@@ -60,81 +87,43 @@ figure.woocommerce-product-gallery__wrapper {
     top: 100%;
     display: none;
     max-width: 90vw;
-    z-index: 99
+    z-index: 99;
 }
 
 .site-header-cart:hover .dropdown-cart {
     display: block;
 }
 
-.wishlist-table {
-    width: 100%;
-    position: relative;
+a.cart-contents {
+    color: var(--primary);
 }
 
-.wishlist-table.loading:after {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    background: #ffffff;
-    opacity: 0.5;
-    z-index: 5;
+.product_list_widget li>a {
+    color: var(--light);
 }
 
-.wishlist-table.loading:before {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -12px;
-    margin-left: -12px;
-    content: "";
-    background-image: url('../img/loading.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: 6;
+.site-header-cart .widget_shopping_cart,
+.site-header-cart .product_list_widget li .quantity {
+    color: var(--light);
 }
 
-.wishlist-table td {
-    position: relative;
+.site-header-cart .widget_shopping_cart {
+    background-color: var(--primary);
+    padding: 20px
 }
 
-.wishlist-table a.details {
-    padding: 4px 16px;
-    background: #000000;
-    color: #ffffff;
-    text-align: center;
-    border: none !important
+.site-header-cart .cart-contents {
+    padding: 5px 20px;
+    border: 1px solid var(--primary);
 }
 
-.wishlist-table a.wishlist-remove {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -12px;
-    margin-left: -12px;
-    background-image: url('../img/remove.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: 6;
-    border: none;
-    opacity: 0;
+.woocommerce .widget_shopping_cart .total,
+.woocommerce.widget_shopping_cart .total {
+    margin-top: 10px;
+    border-top: 1px solid var(--light);
 }
 
-.wishlist-table td:hover>a.wishlist-remove {
-    opacity: 1;
-}
-
-.wishlist-toggle {
+.wishlist-fix {
     display: block;
     position: absolute;
     top: 16px;
@@ -146,63 +135,12 @@ figure.woocommerce-product-gallery__wrapper {
     border: none;
 }
 
-.wishlist-title {
-    display: none;
+.wishlist-toggle {
+    
 }
 
-.entry-summary .wishlist-toggle {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 8px;
-}
-
-.entry-summary .wishlist-title {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    margin-bottom: 8px;
-}
-
-.wishlist-toggle:focus {
-    outline: none;
-    border: none;
-}
-
-.wishlist-toggle svg {
-    fill: #bdbdbd;
-    transition: all 200ms ease-out;
-}
-
-.wishlist-toggle:hover svg,
-.wishlist-toggle.active svg {
-    fill: #000000;
-}
-
-.wishlist-toggle svg .loading,
-.wishlist-toggle svg .check {
-    opacity: 0;
-}
-
-.wishlist-toggle.active svg .check {
-    opacity: 1;
-}
-
-.wishlist-toggle.active svg .heart {
-    opacity: 0;
-}
-
-.wishlist-toggle.loading svg .loading,
-.wishlist-table.loading:before {
-    animation: loading 500ms 0ms infinite normal linear;
-    transform-origin: center;
-    opacity: 1;
-}
-
-.wishlist-toggle.loading svg .heart {
-    opacity: 0;
+.wishlist-toggle .fa-heart {
+    color: var(--pink);
 }
 
 @keyframes loading {

@@ -29,8 +29,9 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="woocommerce-products-header block-customizer">
+<header class="woocommerce-products-header block-primary">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+		<?php do_action('justg_before_title'); ;?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
 
@@ -44,7 +45,7 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
-<div class="block-customizer">
+<div class="block-primary">
 	<?php
 	if ( woocommerce_product_loop() ) {
 

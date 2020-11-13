@@ -60,8 +60,8 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 		$this->api                = new justg_API();
 		$this->instance_id        = absint( $instance_id );
 		$this->id                 = 'justg';
-		$this->method_title       = 'JustG';
-		$this->title              = 'JustG';
+		$this->method_title       = 'Ongkir ID';
+		$this->title              = 'Ongkir ID';
 		$this->method_description = 'Ongkir Indonesia';
 		$this->supports           = array(
 			'shipping-zones',
@@ -169,13 +169,27 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 				),
 			),
 			'api_key'               => array(
-				'title'       => __( 'RajaOngkir API Key', 'justg' ),
+				'title'       => __( 'API Key', 'justg' ),
 				'type'        => 'text',
 				'placeholder' => '',
-				'description' => __( '', 'justg' ),
+				// 'description' => __( '<a href="http://www.rajaongkir.com" target="_blank">Click here</a> to get RajaOngkir.com API Key. It is FREE.', 'justg' ),
 				'default'     => '',
 			),
-
+			'account_type'          => array(
+				'title'             => __( '', 'justg' ),
+				'type'              => 'account_type',
+				'default'           => 'pro',
+				'options'           => array(),
+				'custom_attributes' => array(
+					'data-accounts' => wp_json_encode( $this->api->get_accounts( true ) ),
+					'data-couriers' => wp_json_encode(
+						array(
+							'domestic'      => $this->api->get_couriers( 'domestic', 'all', true ),
+							'international' => $this->api->get_couriers( 'international', 'all', true ),
+						)
+					),
+				),
+			),
 			'domestic'              => array(
 				'title' => __( 'Domestic Shipping', 'justg' ),
 				'type'  => 'couriers_list',
@@ -201,6 +215,31 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 				'default'           => '6000',
 			),
 		);
+
+		$features = array(
+			''						=> ''
+			// 'domestic'          => __( 'Domestic Couriers', 'justg' ),
+			// 'international'     => __( 'International Couriers', 'justg' ),
+			// 'multiple_couriers' => __( 'Multiple Couriers', 'justg' ),
+			// 'subdistrict'       => __( 'Calculate Subdistrict', 'justg' ),
+			// 'volumetric'        => __( 'Calculate Volumetric', 'justg' ),
+			// 'weight_over_30kg'  => __( 'Weight Over 30kg', 'justg' ),
+			// 'dedicated_server'  => __( 'Dedicated Server', 'justg' ),
+		);
+
+		$accounts = $this->api->get_accounts();
+
+		foreach ( $features as $feature_key => $feature_label ) {
+			$settings['account_type']['features'][ $feature_key ]['label'] = $feature_label;
+
+			foreach ( $accounts as $type => $account ) {
+				if ( in_array( $feature_key, array( 'domestic', 'international' ), true ) ) {
+					$settings['account_type']['features'][ $feature_key ]['value'][ $type ] = count( $this->api->get_couriers( $feature_key, $type ) );
+				} else {
+					$settings['account_type']['features'][ $feature_key ]['value'][ $type ] = $account->feature_enable( $feature_key ) ? __( 'Yes', 'justg' ) : __( 'No', 'justg' );
+				}
+			}
+		}
 
 		$this->instance_form_fields = $settings;
 	}
@@ -240,6 +279,50 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 					<input class="input-text regular-input <?php echo esc_attr( $data['class'] ); ?>" type="<?php echo esc_attr( $data['type'] ); ?>" name="<?php echo esc_attr( $field_key ); ?>" id="<?php echo esc_attr( $field_key ); ?>" style="<?php echo esc_attr( $data['css'] ); ?>" value="<?php echo esc_attr( $this->get_option( $key ) ); ?>" placeholder="<?php echo esc_attr( $data['placeholder'] ); ?>" <?php disabled( $data['disabled'], true ); ?> <?php echo $this->get_custom_attribute_html( $data ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> />
 					<?php echo $this->get_description_html( $data ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</fieldset>
+			</td>
+		</tr>
+		<?php
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Generate Select HTML.
+	 *
+	 * @param string $key Field key.
+	 * @param array  $data Field data.
+	 * @since  1.0.0
+	 * @return string
+	 */
+	public function generate_account_type_html( $key, $data ) {
+		$field_key = $this->get_field_key( $key );
+		$defaults  = array(
+			'title'             => '',
+			'disabled'          => false,
+			'class'             => '',
+			'css'               => '',
+			'placeholder'       => '',
+			'type'              => 'text',
+			'desc_tip'          => false,
+			'description'       => '',
+			'custom_attributes' => array(),
+			'options'           => array(),
+			'features'          => array(),
+		);
+
+		$data = wp_parse_args( $data, $defaults );
+
+		ob_start();
+		?>
+		<tr valign="top">
+			<th scope="row" class="titledesc">
+				<label for="<?php echo esc_attr( $field_key ); ?>"><?php echo wp_kses_post( $data['title'] ); ?> <?php echo $this->get_tooltip_html( $data ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></label>
+			</th>
+			<td class="forminp">
+				<input type="hidden" name="<?php echo esc_attr( $field_key ); ?>" id="<?php echo esc_attr( $field_key ); ?>" value="<?php echo esc_attr( $this->get_option( $key ) ); ?>" <?php echo $this->get_custom_attribute_html( $data ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> />
+				<div class="justg-account-features-wrap">
+					<input type="checkbox" value="pro" id="<?php echo esc_attr( $field_key ); ?>--pro" class="justg-account-type" <?php checked( 'pro', $this->get_option( $key ) ); ?> <?php disabled( 'pro', $this->get_option( $key ) ); ?>>
+				</div>
 			</td>
 		</tr>
 		<?php

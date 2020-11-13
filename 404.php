@@ -19,19 +19,26 @@ $container = get_theme_mod( 'justg_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-12 content-area" id="primary">
+			<!-- Do the left sidebar check -->
+			<?php do_action('justg_before_content'); ?>
+
+			<div class="content-area col" id="primary">
 
 				<main class="site-main" id="main">
 
+					
+
 					<section class="error-404 not-found">
 
-						<header class="page-header block-customizer">
+						<header class="page-header block-primary">
+
+							<?php do_action('justg_before_title'); ?>
 
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'justg' ); ?></h1>
 
 						</header><!-- .page-header -->
 
-						<div class="page-content block-customizer">
+						<div class="page-content block-primary">
 
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'justg' ); ?></p>
 
@@ -79,6 +86,10 @@ $container = get_theme_mod( 'justg_container_type' );
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
+			
+			<!-- Do the right sidebar check. -->
+			<?php do_action('justg_after_content'); ?>
+
 
 		</div><!-- .row -->
 

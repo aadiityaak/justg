@@ -158,7 +158,7 @@ if ( ! function_exists( 'justg_scripts_params' ) ) :
 				'debug'         => ( 'yes' === get_option( 'woocommerce_shipping_debug_mode', 'no' ) ),
 				'show_settings' => isset( $_GET['justg_settings'] ) && is_admin(), // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			'method_id'         => 'justg',
-			'method_title'      => 'JustG',
+			'method_title'      => 'Ongkir ID',
 			)
 		);
 	}

@@ -39,3 +39,43 @@ remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_s
 // replace with new function
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'justg_widget_shopping_cart_button_view_cart', 10 );
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'justg_widget_shopping_cart_proceed_to_checkout', 20 );
+
+/**
+ * Product Title
+ * 
+ * @see justg_loop_product_title()
+ */
+remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+add_action('woocommerce_shop_loop_item_title', 'justg_loop_product_title', 10 );
+
+/**
+ * Before Title
+ *
+ * @see justg_breadcrumb()
+ */
+add_action( 'justg_before_title', 'justg_breadcrumb' );
+
+/**
+ * Before Content
+ *
+ * @see justg_left_sidebar_check()
+ */
+add_action( 'justg_before_content', 'justg_left_sidebar_check' );
+
+/**
+ * After Content
+ *
+ * @see justg_left_sidebar_check()
+ */
+add_action( 'justg_after_content', 'justg_right_sidebar_check' );
+
+/**
+ * Footer
+ *
+ * @see justg_the_footer_open()
+ * @see justg_the_footer_content()
+ * @see justg_the_footer_close()
+ */
+add_action( 'justg_do_footer', 'justg_the_footer_open' );
+add_action( 'justg_do_footer', 'justg_the_footer_content' );
+add_action( 'justg_do_footer', 'justg_the_footer_close' );

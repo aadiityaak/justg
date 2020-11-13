@@ -28,6 +28,10 @@ if ( ! function_exists( 'justg_setup' ) ) {
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
+		// Add theme support custom logo
+		add_theme_support( 'custom-logo' );
+
+		// Add theme support to beaver builder
 		add_theme_support( 'fl-theme-builder-headers' );
 		add_theme_support( 'fl-theme-builder-footers' );
 		add_theme_support( 'fl-theme-builder-parts' );
@@ -134,7 +138,9 @@ function justg_header_footer_render() {
 
 	// If we have a footer, remove the theme footer and hook in Theme Builder's.
 	if ( ! empty( $footer_ids ) ) {
+		remove_action( 'justg_do_footer', 'justg_the_footer_open' );
 		remove_action( 'justg_do_footer', 'justg_the_footer_content' );
+		remove_action( 'justg_do_footer', 'justg_the_footer_close' );
 		add_action( 'justg_do_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
 	}
 }
@@ -167,8 +173,8 @@ function justg_register_part_hooks() {
   );
 }
 
-function justg_customizer( $wp_customize ) {
-    // $wp_customize->remove_panel( 'widgets' );
+function justg_customizer( \WP_Customize_Manager $wp_customize ) {
+	// $wp_customize->get_panel( 'widgets' )->active_callback = '__return_false';
     $wp_customize->remove_section("colors");
     $wp_customize->remove_section("background_image");
     $wp_customize->remove_section("static_front_page");

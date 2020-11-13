@@ -9,11 +9,15 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class('block-customizer'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('block-primary'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php 
+		
+		do_action('justg_before_title');
+		
+		the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
 

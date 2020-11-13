@@ -30,11 +30,14 @@ if (justg_is_woocommerce_activated()) {
 
     // Add wishlist to product
     add_action('woocommerce_before_shop_loop_item_title','wishlist_toggle',15);
-    add_action('woocommerce_single_product_summary','wishlist_toggle',25);
+    add_action('woocommerce_single_product_summary','wishlist_single',25);
     function wishlist_toggle(){
-
         global $product;
-        echo '<span class="wishlist-title">'.esc_attr__("Add to wishlist","justg").'</span><a class="wishlist-toggle" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'">'.file_get_contents(get_template_directory() .'/img/icon.svg').'</a>';
+        echo '<a class="wishlist-toggle wishlist-fix" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'"><i class="fa fa-heart-o" aria-hidden="true"></i></a>';
+    }
+    function wishlist_single(){
+        global $product;
+        echo '<a class="wishlist-toggle d-block mb-2" data-product="'.esc_attr($product->get_id()).'" href="#" title="'.esc_attr__("Add to wishlist","justg").'"><i class="fa fa-heart-o" aria-hidden="true"></i></a>';
     }
 
     // Wishlist option in the user profile
@@ -73,21 +76,10 @@ if (justg_is_woocommerce_activated()) {
     add_action('admin_post_nopriv_user_wishlist_update', 'update_wishlist_ajax');
     add_action('admin_post_user_wishlist_update', 'update_wishlist_ajax');
 
-    // Wishlist table shortcode
-    add_shortcode('wishlist', 'wishlist');
-    function wishlist( $atts, $content = null ) {
-
-        extract(shortcode_atts(array(), $atts));
-
-        return '<table class="wishlist-table loading">
-                    <tr>
-                        <th><!-- Left for image --></th>
-                        <th>'.esc_html__("Name","justg").'</th>
-                        <th>'.esc_html__("Price","justg").'</th>
-                        <th>'.esc_html__("Stock","justg").'</th>
-                        <th><!-- Left for button --></th>
-                    </tr>
-                </table>';
+    // Dipanggil di inc/woocommerce.php
+    function wishlist() {
+        
+        return '<table class="wishlist-table table loading"></table>';
 
     }
 

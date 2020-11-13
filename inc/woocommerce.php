@@ -23,6 +23,9 @@ if ( ! function_exists( 'justg_woocommerce_support' ) ) {
 
 		// Add Bootstrap classes to form fields.
 		add_filter( 'woocommerce_form_field_args', 'justg_wc_form_field_args', 10, 3 );
+
+		// Remove woocomerce breadcrumb 
+		remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
 	}
 }
 
@@ -57,9 +60,10 @@ if ( ! function_exists( 'justg_woocommerce_wrapper_start' ) ) {
 		$container = get_theme_mod( 'justg_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
-		// echo '<div class="row">';
-		// get_template_part( 'global-templates/left-sidebar-check' );
-		echo '<main class="site-main" id="main">';
+		echo '<div class="row">';
+		// Do the left sidebar check
+		do_action('justg_before_content');
+		echo '<main class="site-main col order-2" id="main">';
 	}
 }
 
@@ -69,8 +73,9 @@ if ( ! function_exists( 'justg_woocommerce_wrapper_end' ) ) {
 	 */
 	function justg_woocommerce_wrapper_end() {
 		echo '</main><!-- #main -->';
-		// get_template_part( 'global-templates/right-sidebar-check' );
-		// echo '</div><!-- .row -->';
+		// Do the right sidebar check.
+		do_action('justg_after_content');
+		echo '</div><!-- Row end -->';
 		echo '</div><!-- Container end -->';
 		echo '</div><!-- Wrapper end -->';
 	}
@@ -178,21 +183,6 @@ if ( ! is_admin() && ! function_exists( 'wc_review_ratings_enabled' ) ) {
 	}
 }
 
-if ( ! function_exists( 'justg_woocommerce_breadcrumbs' ) ) {
-
-	add_filter( 'woocommerce_breadcrumb_defaults', 'justg_woocommerce_breadcrumbs' );
-	function justg_woocommerce_breadcrumbs() {
-		return array(
-				'delimiter'   => ' &#47; ',
-				'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
-				'wrap_after'  => '</nav>',
-				'before'      => '',
-				'after'       => '',
-				'home'        => _x( 'Home', 'breadcrumb', 'justg' ),
-			);
-	}
-}
-
 if ( ! function_exists( 'justg_override_checkout_fields' ) && class_exists( 'WooCommerce' ) ) {
 	//Unset checkout fields
 	add_filter( 'woocommerce_checkout_fields' , 'justg_override_checkout_fields' );
@@ -233,3 +223,34 @@ if ( ! function_exists( 'justg_woo_cart_available' ) ) {
 	}
 }
 
+/*
+ * Step 1. Add Link (Tab) to My Account menu
+ */
+add_filter ( 'woocommerce_account_menu_items', 'justg_add_link', 40 );
+function justg_add_link( $menu_links ){
+ 
+	$menu_links = array_slice( $menu_links, 0, 5, true ) 
+	+ array( 'wishlist' => 'Wishlist' )
+	+ array_slice( $menu_links, 5, NULL, true );
+ 
+	return $menu_links;
+ 
+}
+/*
+ * Step 2. Register Permalink Endpoint
+ */
+add_action( 'init', 'justg_add_endpoint' );
+function justg_add_endpoint() {
+ 
+	// WP_Rewrite is my Achilles' heel, so please do not ask me for detailed explanation
+	add_rewrite_endpoint( 'wishlist', EP_PAGES );
+ 
+}
+/*
+ * Step 3. Content for the new page in My Account, woocommerce_account_{ENDPOINT NAME}_endpoint
+ */
+add_action( 'woocommerce_account_wishlist_endpoint', 'justg_my_account_endpoint_content' );
+function justg_my_account_endpoint_content() {
+ 	echo wishlist();
+ 
+}

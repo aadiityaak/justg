@@ -9,11 +9,14 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class('block-customizer'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('block-primary'); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
 		<?php
+		
+		do_action('justg_before_title');
+
 		the_title(
 			sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></h2>'

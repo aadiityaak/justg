@@ -34,28 +34,12 @@ if ( ! function_exists( 'justg_body_classes' ) ) {
 	}
 }
 
-// Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
-add_filter( 'body_class', 'justg_adjust_body_class' );
-
-if ( ! function_exists( 'justg_adjust_body_class' ) ) {
-	/**
-	 * Setup body classes.
-	 *
-	 * @param string $classes CSS classes.
-	 *
-	 * @return mixed
+if ( function_exists( 'justg_adjust_body_class' ) ) {
+	/*
+	 * justg_adjust_body_class() deprecated in v0.9.4. We keep adding the
+	 * filter for child themes which use their own justg_adjust_body_class.
 	 */
-	function justg_adjust_body_class( $classes ) {
-
-		foreach ( $classes as $key => $value ) {
-			if ( 'tag' === $value ) {
-				unset( $classes[ $key ] );
-			}
-		}
-
-		return $classes;
-
-	}
+	add_filter( 'body_class', 'justg_adjust_body_class' );
 }
 
 // Filter custom logo with correct classes.
@@ -92,7 +76,7 @@ if ( ! function_exists( 'justg_post_nav' ) ) {
 			return;
 		}
 		?>
-		<nav class="container navigation post-navigation block-customizer">
+		<nav class="container navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'justg' ); ?></h2>
 			<div class="row nav-links justify-content-between">
 				<?php
@@ -161,13 +145,13 @@ if ( ! function_exists( 'justg_escape_the_archive_description' ) ) {
 	function justg_escape_the_archive_description( $description ) {
 		if ( is_author() || is_post_type_archive() ) {
 			return wp_kses_post( $description );
-		} else {
-			/*
-			* All other descriptions are retrieved via term_description() which returns
-			* a sanitized description.
-			*/
-			return $description;
 		}
+
+		/*
+		 * All other descriptions are retrieved via term_description() which returns
+		 * a sanitized description.
+		 */
+		return $description;
 	}
 } // End of if function_exists( 'justg_escape_the_archive_description' ).
 
