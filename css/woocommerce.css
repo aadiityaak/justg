@@ -76,6 +76,9 @@ figure.woocommerce-product-gallery__wrapper {
 .woocommerce-MyAccount-navigation .list-group-item:hover a {
     color: #ffffff;
 }
+.woocommerce-MyAccount-navigation .list-group-item.is-active, .woocommerce-MyAccount-navigation .list-group-item:hover {
+    background-color: var(--primary);
+}
 
 .dropdown-cart {
     position: absolute;
