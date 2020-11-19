@@ -224,9 +224,9 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         
             // Check if the current page is a category, an archive or a single page
             if (is_category() || is_single() ){
-                if (get_the_category()) {
+                if (get_the_category() && isset(get_the_category()[0])) {
                     echo $sep;
-                    the_category('title_li=');
+                    echo '<a href="'.get_term_link(get_the_category()[0]->term_id).'">'.get_the_category()[0]->name.'</a>';
                 }
             } elseif (is_archive() || is_single()){
                 if ( is_day() ) {
