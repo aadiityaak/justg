@@ -624,7 +624,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => array('.widget-area > .widget'),
+			'element' => array('.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget'),
 		],
 	],
 ]);
@@ -648,7 +648,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => array('.widget-area > .widget'),
+			'element' => array('.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget'),
 		],
 	],
 ]);
@@ -671,7 +671,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => '.widget-area > .widget',
+			'element' => '.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget',
 		],
 	],
 ]);
