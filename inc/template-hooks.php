@@ -14,12 +14,16 @@ defined( 'ABSPATH' ) || exit;
  * @see justg_header_open()
  * @see justg_header_logo()
  * @see justg_header_menu()
+ * @see justg_header_profile()
+ * @see justg_header_wishlist()
  * @see justg_header_cart()
  * @see justg_header_close()
  */
 add_action( 'justg_header', 'justg_header_open' );
 add_action( 'justg_header', 'justg_header_logo' );
 add_action( 'justg_header', 'justg_header_menu' );
+add_action( 'justg_header', 'justg_header_profile' );
+add_action( 'justg_header', 'justg_header_wishlist' );
 add_action( 'justg_header', 'justg_header_cart' );
 add_action( 'justg_header', 'justg_header_close' );
 

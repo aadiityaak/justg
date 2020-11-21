@@ -209,7 +209,7 @@ Kirki::add_field('justg_config', [
 	],
 	'default'     => [
 		'link'    => '#121212',
-		'hover'   => '#333333',
+		'hover'   => '#98C65E',
 		'active'  => '#121212',
 		'primary' => '#98C65E',
 		'light'   => '#f8f9fa',

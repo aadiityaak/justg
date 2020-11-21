@@ -114,7 +114,6 @@ a.cart-contents {
 
 .site-header-cart .cart-contents {
     padding: 5px 20px;
-    border: 1px solid var(--primary);
 }
 
 .woocommerce .widget_shopping_cart .total,

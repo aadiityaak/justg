@@ -17,7 +17,6 @@ if( ! function_exists( 'justg_header_open' )) {
     function justg_header_open() {
         $header_container = get_theme_mod( 'select_header_container', 'container' );
         ?>
-        <header class="py-2 bg-header">
             <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
                 <div class="<?php echo $header_container; ?> mx-auto d-flex align-items-center">
         <?php
@@ -69,6 +68,36 @@ if( ! function_exists( 'justg_header_menu') ) {
         </nav><!-- .site-navigation -->
         <?php
     }
+}
+
+if ( ! function_exists( 'justg_header_profile' ) ) {
+	/**
+	 * Display Header Profile 
+	 */
+	function justg_header_profile() {
+		if ( justg_is_woocommerce_activated() ) {
+			?>
+            <div class="site-header-profile position-relative">
+                <a class="py-2 px-3" href="<?php echo get_site_url();?>/my-account"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a>
+            </div>
+            <?php
+		}
+	}
+}
+
+if ( ! function_exists( 'justg_header_wishlist' ) ) {
+	/**
+	 * Display Header Wishlist 
+	 */
+	function justg_header_wishlist() {
+		if ( justg_is_woocommerce_activated() ) {
+			?>
+            <div class="site-header-profile position-relative">
+                <a class="py-2 px-3" href="<?php echo get_site_url();?>/my-account/"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i></a>
+            </div>
+            <?php
+		}
+	}
 }
 
 if ( ! function_exists( 'justg_header_cart' ) ) {
@@ -123,7 +152,7 @@ if ( ! function_exists( 'justg_cart_link' ) ) {
                 ?> 
                 
                 <span class="count">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                    <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> 
                     <?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'justg' ), WC()->cart->get_cart_contents_count() ) ); ?>
                 </span>
 			</a>
@@ -171,7 +200,7 @@ if( ! function_exists( 'justg_header_close' )) {
      * 
      */
     function justg_header_close() {
-        echo '</div></div></header>';
+        echo '</div></div>';
     }
 }
 
