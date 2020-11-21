@@ -9,23 +9,47 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Header
+ * Header Open
  *
  * @see justg_header_open()
+ */
+add_action( 'justg_header_open', 'justg_header_open', 20 );
+
+/**
+ * Header Before
+ *
  * @see justg_header_logo()
+ */
+add_action( 'justg_header_before', 'justg_header_logo' );
+
+/**
+ * Header
+ *
  * @see justg_header_menu()
  * @see justg_header_profile()
  * @see justg_header_wishlist()
  * @see justg_header_cart()
  * @see justg_header_close()
  */
-add_action( 'justg_header', 'justg_header_open' );
-add_action( 'justg_header', 'justg_header_logo' );
 add_action( 'justg_header', 'justg_header_menu' );
-add_action( 'justg_header', 'justg_header_profile' );
-add_action( 'justg_header', 'justg_header_wishlist' );
-add_action( 'justg_header', 'justg_header_cart' );
-add_action( 'justg_header', 'justg_header_close' );
+
+/**
+ * Header After
+ *
+ * @see justg_header_profile()
+ * @see justg_header_wishlist()
+ * @see justg_header_cart()
+ */
+add_action( 'justg_header_after', 'justg_header_profile' );
+add_action( 'justg_header_after', 'justg_header_wishlist' );
+add_action( 'justg_header_after', 'justg_header_cart' );
+
+/**
+ * Header Close
+ *
+ * @see justg_header_close()
+ */
+add_action( 'justg_header_close', 'justg_header_close' );
 
 /**
  * Cart Fragment
