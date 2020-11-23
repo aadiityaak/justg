@@ -123,12 +123,12 @@ function justg_header_footer_render() {
 	$header_ids = FLThemeBuilderLayoutData::get_current_page_header_ids();
 
 	// If we have a header, remove the theme header and hook in Theme Builder's.
-	if ( ! empty( $header_ids ) ) {
-		remove_action( 'justg_header', 'justg_header_open' );
-		remove_action( 'justg_header', 'justg_header_logo' );
-		remove_action( 'justg_header', 'justg_header_menu' );
-		remove_action( 'justg_header', 'justg_header_cart' );
-		remove_action( 'justg_header', 'justg_header_close' );
+	if ( ! empty( $header_ids ) ) {		 
+		remove_all_actions( 'justg_header_open');
+		remove_all_actions( 'justg_header_before');
+		remove_all_actions( 'justg_header');
+		remove_all_actions( 'justg_header_after' );
+		remove_all_actions( 'justg_header_close');
 		
 		add_action( 'justg_header', 'FLThemeBuilderLayoutRenderer::render_header' );
 	}

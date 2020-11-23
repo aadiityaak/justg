@@ -17,6 +17,7 @@ if( ! function_exists( 'justg_header_open' )) {
     function justg_header_open() {
         $header_container = get_theme_mod( 'select_header_container', 'container' );
         ?>
+        <header class="py-2 bg-header">
             <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
                 <div class="<?php echo $header_container; ?> mx-auto d-flex align-items-center">
         <?php
@@ -200,7 +201,7 @@ if( ! function_exists( 'justg_header_close' )) {
      * 
      */
     function justg_header_close() {
-        echo '</div></div>';
+        echo '</div></div></header>';
     }
 }
 
