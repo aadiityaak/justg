@@ -215,7 +215,8 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         $sep = get_theme_mod('text_breadcrumb_separator', '/');
         $sep = '<span class="separator"> '.$sep.' </span>';
 
-        $breadcrumbdisable  = get_theme_mod('breadcrumb_disable', array());
+        $breadcrumbdisable   = get_theme_mod('breadcrumb_disable', array());
+        $breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_top_content');
         $showbreadcrumb     = true;
 
         if ( is_front_page() && in_array( 'disable-on-home', $breadcrumbdisable)) {
@@ -243,78 +244,85 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         }
 
         if ( $showbreadcrumb ) {
-        
-            // Home Url
-            echo '<div class="breadcrumbs pb-2"  itemscope itemtype="https://schema.org/BreadcrumbList">';
             
-            $sethome = get_theme_mod('text_breadcrumb_home', 'home');
-            echo '<a href="'.get_home_url().'">';
-                echo ($sethome=='home')?'Home':bloginfo('name');
-            echo '</a>';
-        
-            // Check if the current page is a category, an archive or a single page
-            if (is_category() || is_single() ){
-                if (get_the_category() && isset(get_the_category()[0])) {
-                    echo $sep;
-                    echo '<a href="'.get_term_link(get_the_category()[0]->term_id).'">'.get_the_category()[0]->name.'</a>';
+            if($breadcrumb_position == 'justg_top_content') {
+                    echo '<div class="container mt-2">';
+            }
+                // Home Url
+                echo '<div class="breadcrumbs pb-2"  itemscope itemtype="https://schema.org/BreadcrumbList">';
+                
+                $sethome = get_theme_mod('text_breadcrumb_home', 'home');
+                echo '<a href="'.get_home_url().'">';
+                    echo ($sethome=='home')?'Home':bloginfo('name');
+                echo '</a>';
+            
+                // Check if the current page is a category, an archive or a single page
+                if (is_category() || is_single() ){
+                    if (get_the_category() && isset(get_the_category()[0])) {
+                        echo $sep;
+                        echo '<a href="'.get_term_link(get_the_category()[0]->term_id).'">'.get_the_category()[0]->name.'</a>';
+                    }
+                } elseif (is_archive() || is_single()){
+                    if ( is_day() ) {
+                        echo $sep;
+                        printf( __( '%s', 'justg' ), get_the_date() );
+                    } elseif ( is_month() ) {
+                        echo $sep;
+                        printf( __( '%s', 'justg' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'justg' ) ) );
+                    } elseif ( is_year() ) {
+                        echo $sep;
+                        printf( __( '%s', 'justg' ), get_the_date( _x( 'Y', 'yearly archives date format', 'justg' ) ) );
+                    } elseif ( is_tax() ) {
+                        echo $sep;
+                        echo single_term_title( '', false );
+                    } else {
+                        echo $sep;
+                        echo post_type_archive_title( '', false );
+                    }
                 }
-            } elseif (is_archive() || is_single()){
-                if ( is_day() ) {
+            
+            
+                // Singgle post and separator
+                if (is_single()) {
                     echo $sep;
-                    printf( __( '%s', 'justg' ), get_the_date() );
-                } elseif ( is_month() ) {
-                    echo $sep;
-                    printf( __( '%s', 'justg' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'justg' ) ) );
-                } elseif ( is_year() ) {
-                    echo $sep;
-                    printf( __( '%s', 'justg' ), get_the_date( _x( 'Y', 'yearly archives date format', 'justg' ) ) );
-                } elseif ( is_tax() ) {
-                    echo $sep;
-                    echo single_term_title( '', false );
-                } else {
-                    echo $sep;
-                    echo post_type_archive_title( '', false );
-                }
-            }
-        
-        
-            // Singgle post and separator
-            if (is_single()) {
-                echo $sep;
-                the_title();
-            }
-        
-            // Static page title.
-            if (is_page()) {
-                echo $sep;
-                the_title();
-            }
-
-            // Show search query
-            if (is_search()) {
-                echo $sep;
-                the_search_query();
-            }
-        
-            // if you have a static page assigned to be you posts list page
-            if (is_home()){
-                global $post;
-                $page_for_posts_id = get_option('page_for_posts');
-                if ( $page_for_posts_id ) { 
-                    $post = get_page($page_for_posts_id);
-                    setup_postdata($post);
                     the_title();
-                    rewind_posts();
                 }
+            
+                // Static page title.
+                if (is_page()) {
+                    echo $sep;
+                    the_title();
+                }
+
+                // Show search query
+                if (is_search()) {
+                    echo $sep;
+                    the_search_query();
+                }
+            
+                // if you have a static page assigned to be you posts list page
+                if (is_home()){
+                    global $post;
+                    $page_for_posts_id = get_option('page_for_posts');
+                    if ( $page_for_posts_id ) { 
+                        $post = get_page($page_for_posts_id);
+                        setup_postdata($post);
+                        the_title();
+                        rewind_posts();
+                    }
+                }
+
+                // if 404
+                if ( is_404() ) {
+                    echo $sep;
+                    echo esc_html_e( 'Not Found', 'justg' );
+                }
+
+                echo '</div>';
+            if($breadcrumb_position == 'justg_top_content') {
+                echo '</div>';
             }
 
-            // if 404
-            if ( is_404() ) {
-                echo $sep;
-                echo esc_html_e( 'Not Found', 'justg' );
-            }
-
-            echo '</div>';
         }
     }
 }

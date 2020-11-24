@@ -26,10 +26,6 @@ add_action( 'justg_header_before', 'justg_header_logo' );
  * Header
  *
  * @see justg_header_menu()
- * @see justg_header_profile()
- * @see justg_header_wishlist()
- * @see justg_header_cart()
- * @see justg_header_close()
  */
 add_action( 'justg_header', 'justg_header_menu' );
 
@@ -81,7 +77,9 @@ add_action('woocommerce_shop_loop_item_title', 'justg_loop_product_title', 10 );
  *
  * @see justg_breadcrumb()
  */
-add_action( 'justg_before_title', 'justg_breadcrumb' );
+$breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_top_content');
+add_action( $breadcrumb_position , 'justg_breadcrumb' );
+
 
 /**
  * Before Content

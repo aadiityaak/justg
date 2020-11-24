@@ -32,3 +32,6 @@ $container = get_theme_mod( 'justg_container_type' );
 	do_action('justg_header_after');
 	do_action('justg_header_close');
 	?>
+	<div class="justg-top-content">
+			<?php do_action('justg_top_content'); ?>
+	</div>

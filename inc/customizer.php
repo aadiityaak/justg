@@ -112,6 +112,12 @@ Kirki::add_section('breadcrumb_section', [
 	'title'    => __('Separator', 'justg'),
 	'priority' => 10,
 ]);
+Kirki::add_section('breadcrumb_location', [
+	'panel'    => 'panel_breadcrumb',
+	'title'    => __('Location', 'justg'),
+	'priority' => 10,
+]);
+
 Kirki::add_section('panel_sidebar', [
 	'panel'    => 'panel_breadcrumb',
 	'title'    => __('Setting', 'justg'),
@@ -486,7 +492,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'select',
 	'settings'    => 'text_breadcrumb_home',
 	'label'       => esc_html__('First title', 'justg'),
-	'section'     => 'breadcrumb_section',
+	'section'     => 'breadcrumb_location',
 	'default'     => 'blogname',
 	'placeholder' => esc_html__('The first title in the breadcrumb', 'justg'),
 	'priority'    => 10,
@@ -500,7 +506,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'multicheck',
 	'settings'    => 'breadcrumb_disable',
 	'label'       => esc_html__('Tampilkan Breadcrumb', 'justg'),
-	'section'     => 'breadcrumb_section',
+	'section'     => 'breadcrumb_location',
 	'default'     => array('disable-on-home', 'disable-on-404'),
 	'priority'    => 10,
 	'choices'     => [
@@ -510,6 +516,20 @@ Kirki::add_field('justg_config', [
 		'disable-on-post' => esc_html__('Disable on Post', 'justg'),
 		'disable-on-archive' => esc_html__('Disable on Archive', 'justg'),
 		'disable-on-404' => esc_html__('Disable on 404', 'justg'),
+	]
+]);
+
+Kirki::add_field('justg_config', [
+	'type'        => 'select',
+	'settings'    => 'breadcrumb_position',
+	'label'       => esc_html__('Lokasi Breadcrumb', 'justg'),
+	'section'     => 'breadcrumb_location',
+	'default'     => array('justg_before_title', 'disable-on-404'),
+	'priority'    => 10,
+	'transport'	  => 'refresh',
+	'choices'     => [
+		'justg_top_content' => esc_html__('Before Content', 'justg'),
+		'justg_before_title' => esc_html__('Before Title', 'justg'),
 	]
 ]);
 
