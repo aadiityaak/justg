@@ -8215,7 +8215,8 @@ a.badge:hover {
 a.badge-primary:focus,
 a.badge-primary:hover {
    color: #fff;
-   background-color: var(--primary) filter: brightness(105%);
+   background-color: var(--primary);
+   filter: brightness(105%);
 }
 
 a.badge-primary.focus,
