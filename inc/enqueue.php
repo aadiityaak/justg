@@ -17,8 +17,8 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 		$the_theme     = wp_get_theme();
 		$theme_version = $the_theme->get( 'Version' );
 
-		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.css' );
-		wp_enqueue_style( 'justg-styles', get_template_directory_uri() . '/css/theme.css', array(), $css_version );
+		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
+		wp_enqueue_style( 'justg-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
 		wp_enqueue_style( 'justg-woocomerce-styles', get_template_directory_uri() . '/css/woocommerce.css', array(), $css_version );
 		wp_enqueue_style( 'justg-custom-styles', get_template_directory_uri() . '/css/custom.css', array(), $css_version );
 

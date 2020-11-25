@@ -5012,7 +5012,7 @@ input[type=submit].btn-block {
    list-style: none;
    background-color: #fff;
    background-clip: padding-box;
-   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
 }
 
 .dropdown-menu-left {
@@ -8215,8 +8215,7 @@ a.badge:hover {
 a.badge-primary:focus,
 a.badge-primary:hover {
    color: #fff;
-   background-color: var(--primary)
-   filter: brightness(105%);
+   background-color: var(--primary) filter: brightness(105%);
 }
 
 a.badge-primary.focus,
@@ -10142,7 +10141,7 @@ a.bg-primary:focus,
 a.bg-primary:hover,
 button.bg-primary:focus,
 button.bg-primary:hover {
-   background-color: var(--primary)!important;
+   background-color: var(--primary) !important;
    filter: brightness(105%);
 }
 
@@ -17951,8 +17950,8 @@ a.skip-link {
    padding: 10px;
 }
 
-.menu-item:hover > .dropdown-menu {
-   display:block;
+.menu-item:hover>.dropdown-menu {
+   display: block;
 }
 
 @media (max-width: 768px) {
@@ -17974,11 +17973,12 @@ a.skip-link {
       left: 0%;
       transition: all ease 200ms
    }
-   
-  .dropdown-menu {
+
+   .dropdown-menu {
       box-shadow: 0 0 0 !important;
       padding: 0;
    }
+
    .dropdown-item {
       padding: .25rem .9rem;
       white-space: inherit;
@@ -17990,41 +17990,51 @@ a.skip-link {
    font-size: 20px;
    margin-bottom: 1.5rem;
 }
+
 #comments .comment-list {
    list-style: none;
    padding-left: 0px;
 }
+
 #comments .comment-body {
    clear: both;
    margin-bottom: 1.5rem;
 }
+
 #comments .comment-meta img {
    float: left;
    margin-right: 10px;
    border-radius: 5px;
 }
-.comment-list li .fn, .comment-list li .cfn {
+
+.comment-list li .fn,
+.comment-list li .cfn {
    text-transform: uppercase;
    display: inline-block;
 }
+
 .comment-list li .says {
    display: none;
 }
+
 #comments .reply {
    margin: -50px 0 0 10px;
    padding: 5px 10px;
    opacity: 0.5;
 }
-#comments .reply > a:before {
+
+#comments .reply>a:before {
    content: '\f112';
    font-family: 'fontawesome';
    position: relative;
    margin-right: 5px;
    font-size: 70%;
 }
+
 #comments footer.comment-meta .comment-metadata {
    font-size: 80%;
 }
+
 #comments .comment-content {
    padding: 10px 20px 45px;
    margin: 10px 0px 15px;
@@ -18033,10 +18043,12 @@ a.skip-link {
    border-radius: 5px;
    line-height: 1.5em !important;
 }
-.site > header {
+
+.site>header {
    border: none;
    border-bottom: solid;
 }
+
 .breadcrumbs,
 .breadcrumbs a,
 .breadcrumbs a:link,
@@ -18044,6 +18056,7 @@ a.skip-link {
    color: var(--secondary);
    font-size: .95em;
 }
+
 blockquote {
    font-style: italic;
    padding: 2em;
@@ -18051,6 +18064,7 @@ blockquote {
    background: #f3f3f3;
    margin: 1rem 0;
 }
+
 blockquote:before {
    display: block;
    content: "\f10d";
@@ -18061,6 +18075,68 @@ blockquote:before {
    color: #7a7a7a;
    font-family: fontawesome;
 }
-.entry-meta, .entry-footer {
+
+.entry-meta,
+.entry-footer {
    font-size: 0.9em;
+}
+
+.widget_calendar {
+   float: left;
+   width: 100%;
+}
+
+#wp-calendar {
+   width: 100%;
+}
+
+#wp-calendar caption {
+   text-align: right;
+   color: #333;
+   font-size: 12px;
+   margin-top: 10px;
+   margin-bottom: 15px;
+}
+
+#wp-calendar thead {
+   font-size: 10px;
+}
+
+#wp-calendar thead th {
+   padding-bottom: 10px;
+   text-align: center;
+   font-size: 16px;
+   color: var(--primary);
+
+}
+
+#wp-calendar tbody {
+   color: #aaa;
+}
+
+#wp-calendar tbody td {
+   background: #f5f5f5;
+   border: 1px solid #fff;
+   text-align: center;
+   padding: 8px;
+}
+
+#wp-calendar tbody td:hover {
+   background: #fff;
+}
+
+#wp-calendar tbody .pad {
+   background: none;
+}
+
+#wp-calendar tfoot #next {
+   font-size: 10px;
+   text-transform: uppercase;
+   text-align: right;
+}
+
+#wp-calendar tfoot #prev {
+   font-size: 10px;
+   text-transform: uppercase;
+   padding-top: 10px;
 }
