@@ -207,20 +207,34 @@ Kirki::add_field('justg_config', [
 	'section'     => 'global_color',
 	'priority'    => 10,
 	'choices'     => [
-		'link'    => esc_html__('Color', 'justg'),
+		'main'    => esc_html__('Text', 'justg'),
+		'heading' => esc_html__('Heading', 'justg'),
+		'link'    => esc_html__('Link', 'justg'),
 		'hover'   => esc_html__('Hover', 'justg'),
 		'active'  => esc_html__('Active', 'justg'),
 		'primary' => esc_html__('Primary', 'justg'),
 		'light'	  => esc_html__('Light', 'justg'),
 	],
 	'default'     => [
-		'link'    => '#121212',
-		'hover'   => '#98C65E',
+		'main'    => '#737373',
+		'heading' => '#121212',
+		'link'    => '#98C65E',
+		'hover'   => '#121212',
 		'active'  => '#121212',
 		'primary' => '#98C65E',
 		'light'   => '#f8f9fa',
 	],
 	'output'    => [
+		[
+			'choice'    => 'main',
+			'element'   => 'body',
+			'property'  => 'color',
+		],
+		[
+			'choice'    => 'heading',
+			'element'   => ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+			'property'  => 'color',
+		],
 		[
 			'choice'    => 'link',
 			'element'   => 'a',

@@ -18082,8 +18082,8 @@ blockquote:before {
 }
 
 .widget_calendar {
-   float: left;
    width: 100%;
+   display: block;
 }
 
 #wp-calendar {
