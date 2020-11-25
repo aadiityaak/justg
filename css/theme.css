@@ -18115,6 +18115,11 @@ blockquote:before {
    color: #aaa;
 }
 
+#wp-calendar #today {
+   color: var(--primary);
+   font-weight: bold;
+}
+
 #wp-calendar tbody td {
    background: #f5f5f5;
    border: 1px solid #fff;
