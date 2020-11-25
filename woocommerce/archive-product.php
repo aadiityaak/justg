@@ -33,6 +33,7 @@ do_action( 'woocommerce_before_main_content' );
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<?php do_action('justg_before_title'); ;?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<?php do_action('justg_after_title'); ;?>
 	<?php endif; ?>
 
 	<?php

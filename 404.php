@@ -36,6 +36,8 @@ $container = get_theme_mod( 'justg_container_type' );
 
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'justg' ); ?></h1>
 
+							<?php do_action('justg_after_title'); ?>
+
 						</header><!-- .page-header -->
 
 						<div class="page-content block-primary">

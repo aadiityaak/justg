@@ -17,7 +17,11 @@ defined( 'ABSPATH' ) || exit;
 		
 		do_action('justg_before_title');
 		
-		the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		the_title( '<h1 class="entry-title">', '</h1>' );
+		
+		do_action('justg_after_title');
+		
+		?>
 
 	</header><!-- .entry-header -->
 

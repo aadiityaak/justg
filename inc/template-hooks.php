@@ -77,7 +77,7 @@ add_action('woocommerce_shop_loop_item_title', 'justg_loop_product_title', 10 );
  *
  * @see justg_breadcrumb()
  */
-$breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_top_content');
+$breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_after_title');
 add_action( $breadcrumb_position , 'justg_breadcrumb' );
 
 

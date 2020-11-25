@@ -524,12 +524,13 @@ Kirki::add_field('justg_config', [
 	'settings'    => 'breadcrumb_position',
 	'label'       => esc_html__('Lokasi Breadcrumb', 'justg'),
 	'section'     => 'breadcrumb_location',
-	'default'     => array('justg_before_title', 'disable-on-404'),
+	'default'     => array('justg_after_title', 'disable-on-404'),
 	'priority'    => 10,
 	'transport'	  => 'refresh',
 	'choices'     => [
 		'justg_top_content' => esc_html__('Before Content', 'justg'),
 		'justg_before_title' => esc_html__('Before Title', 'justg'),
+		'justg_after_title' => esc_html__('After Title', 'justg'),
 	]
 ]);
 

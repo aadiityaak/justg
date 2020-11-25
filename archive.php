@@ -36,6 +36,8 @@ $container = get_theme_mod( 'justg_container_type' );
 						
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+
+						do_action('justg_after_title');
 						?>
 					</header><!-- .page-header -->
 					<?php

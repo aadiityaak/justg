@@ -216,7 +216,7 @@ if( ! function_exists( 'justg_breadcrumb' ) ) {
         $sep = '<span class="separator"> '.$sep.' </span>';
 
         $breadcrumbdisable   = get_theme_mod('breadcrumb_disable', array());
-        $breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_top_content');
+        $breadcrumb_position = get_theme_mod('breadcrumb_position', 'justg_after_title');
         $showbreadcrumb     = true;
 
         if ( is_front_page() && in_array( 'disable-on-home', $breadcrumbdisable)) {
