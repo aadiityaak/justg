@@ -194,59 +194,6 @@ if ( ! function_exists( 'justg_sort_by_priority' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'justg_is_dev' ) ) :
-	/**
-	 * Check is in development environment.
-	 *
-	 * @since 1.2.11
-	 *
-	 * @return bool
-	 */
-	function justg_is_dev() {
-		if ( defined( 'justg_DEV' ) && justg_DEV ) {
-			return true;
-		}
-
-		if ( function_exists( 'getenv' ) && getenv( 'justg_DEV' ) ) {
-			return true;
-		}
-
-		return false;
-	}
-endif;
-
-if ( ! function_exists( 'justg_get_plugin_data' ) ) :
-	/**
-	 * Get plugin data
-	 *
-	 * @since 1.2.13
-	 *
-	 * @param string $selected Selected data key.
-	 * @param string $selected_default Selected data key default value.
-	 * @param bool   $markup If the returned data should have HTML markup applied.
-	 * @param bool   $translate If the returned data should be translated.
-	 *
-	 * @return (string|array)
-	 */
-	function justg_get_plugin_data( $selected = null, $selected_default = '', $markup = false, $translate = true ) {
-		static $plugin_data;
-
-		if ( ! function_exists( 'get_plugin_data' ) ) {
-			require_once ABSPATH . 'wp-admin/includes/plugin.php';
-		}
-
-		if ( is_null( $plugin_data ) ) {
-			$plugin_data = get_plugin_data( JUSTG_FILE, $markup, $translate );
-		}
-
-		if ( ! is_null( $selected ) ) {
-			return isset( $plugin_data[ $selected ] ) ? $plugin_data[ $selected ] : $selected_default;
-		}
-
-		return $plugin_data;
-	}
-endif;
-
 if ( ! function_exists( 'justg_instances' ) ) :
 	/**
 	 * Get shipping method instances

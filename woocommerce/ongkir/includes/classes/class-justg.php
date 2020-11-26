@@ -177,21 +177,16 @@ class justg {
 			return;
 		}
 
-		$is_dev_env = justg_is_dev();
-
 		if ( 'woocommerce_page_wc-settings' === $hook ) {
 			// Define the styles URL.
 			$css_url = get_template_directory_uri() .'/css/ongkir-backend.min.css';
-			if ( $is_dev_env ) {
-				$css_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $css_url ) );
-			}
 
 			// Enqueue admin styles.
 			wp_enqueue_style(
 				'ongkir-backend', // Give the script a unique ID.
 				$css_url, // Define the path to the JS file.
 				array(), // Define dependencies.
-				justg_get_plugin_data( 'Version' ), // Define a version (optional).
+				wp_get_theme()->get('Version'), // Define a version (optional).
 				false // Specify whether to put in footer (leave this false).
 			);
 
@@ -205,7 +200,7 @@ class justg {
 				'lockr.js', // Give the script a unique ID.
 				$lockr_url, // Define the path to the JS file.
 				array( 'jquery' ), // Define dependencies.
-				justg_get_plugin_data( 'Version' ), // Define a version (optional).
+				wp_get_theme()->get('Version'), // Define a version (optional).
 				true // Specify whether to put in footer (leave this true).
 			);
 
@@ -219,7 +214,7 @@ class justg {
 				'ongkir-backend', // Give the script a unique ID.
 				$js_url, // Define the path to the JS file.
 				array( 'jquery', 'accordion', 'wp-util', 'selectWoo', 'lockr.js' ), // Define dependencies.
-				justg_get_plugin_data( 'Version' ), // Define a version (optional).
+				wp_get_theme()->get('Version'), // Define a version (optional).
 				true // Specify whether to put in footer (leave this true).
 			);
 
@@ -237,19 +232,14 @@ class justg {
 			return;
 		}
 
-		$is_dev_env = justg_is_dev();
-
 		// Register lockr.js scripts.
-		$lockr_url = get_template_directory_uri() .'/js/lockr.js';
-		if ( $is_dev_env ) {
-			$lockr_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $lockr_url ) );
-		}
+		$lockr_url = get_template_directory_uri() .'/js/lockr.min.js';
 
 		wp_register_script(
 			'lockr.js', // Give the script a unique ID.
 			$lockr_url, // Define the path to the JS file.
 			array(), // Define dependencies.
-			justg_get_plugin_data( 'Version' ), // Define a version (optional).
+			wp_get_theme()->get('Version'), // Define a version (optional).
 			true // Specify whether to put in footer (leave this true).
 		);
 
@@ -263,7 +253,7 @@ class justg {
 			'ongkir-frontend', // Give the script a unique ID.
 			$js_url, // Define the path to the JS file.
 			array( 'jquery', 'wp-util', 'selectWoo', 'lockr.js' ), // Define dependencies.
-			justg_get_plugin_data( 'Version' ), // Define a version (optional).
+			wp_get_theme()->get('Version'), // Define a version (optional).
 			true // Specify whether to put in footer (leave this true).
 		);
 
