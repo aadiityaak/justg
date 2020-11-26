@@ -49,10 +49,6 @@ if( ! function_exists( 'justg_header_menu') ) {
     function justg_header_menu(){
         ?>
         <nav class="navbar navbar-expand-md ml-auto">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'justg'); ?>">
-                <i class="fa fa-align-right" aria-hidden="true"></i>
-            </button>
-
             <!-- The WordPress Menu goes here -->
             <?php wp_nav_menu(
                 array(
@@ -147,7 +143,7 @@ if ( ! function_exists( 'justg_cart_link' ) ) {
 			return;
         }
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'justg' ); ?>">
+			<a class="cart-contents px-3" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'justg' ); ?>">
                 <?php 
                 // echo wp_kses_post( WC()->cart->get_cart_subtotal() ); 
                 ?> 
@@ -201,6 +197,10 @@ if( ! function_exists( 'justg_header_close' )) {
      * 
      */
     function justg_header_close() {
+        echo '<button class="navbar-toggler d-inline-block d-md-none ml-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">';
+        echo '<i class="fa fa-align-right" aria-hidden="true"></i>';
+        echo '</button>';
+
         echo '</div></div></header>';
     }
 }

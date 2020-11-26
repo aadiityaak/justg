@@ -114,10 +114,6 @@ a.cart-contents {
     padding: 20px
 }
 
-.site-header-cart .cart-contents {
-    padding: 5px 20px;
-}
-
 .woocommerce .widget_shopping_cart .total,
 .woocommerce.widget_shopping_cart .total {
     margin-top: 10px;

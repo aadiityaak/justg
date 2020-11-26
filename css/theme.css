@@ -17970,9 +17970,14 @@ a.skip-link {
       transition: all ease 200ms
    }
 
+   .logged-in .navbar-collapse.show {
+      padding-top: 70px;
+   }
+
    .navbar-collapse.show {
       left: 0%;
-      transition: all ease 200ms
+      transition: all ease 200ms;
+      box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
    }
 
    .dropdown-menu {
