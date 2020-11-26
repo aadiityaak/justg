@@ -239,6 +239,13 @@ th {
    text-align: inherit
 }
 
+td,
+th {
+   padding: 0.75rem;
+   vertical-align: top;
+   border-top: 1px solid rgb(222, 226, 230);
+}
+
 label {
    display: inline-block;
    margin-bottom: .5rem
