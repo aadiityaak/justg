@@ -181,7 +181,7 @@ class justg {
 
 		if ( 'woocommerce_page_wc-settings' === $hook ) {
 			// Define the styles URL.
-			$css_url = get_template_directory_uri() .'/css/ongkir-backend.css';
+			$css_url = get_template_directory_uri() .'/css/ongkir-backend.min.css';
 			if ( $is_dev_env ) {
 				$css_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $css_url ) );
 			}

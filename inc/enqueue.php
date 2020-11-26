@@ -19,7 +19,7 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 
 		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
 		wp_enqueue_style( 'justg-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
-		wp_enqueue_style( 'justg-woocomerce-styles', get_template_directory_uri() . '/css/woocommerce.css', array(), $css_version );
+		wp_enqueue_style( 'justg-woocomerce-styles', get_template_directory_uri() . '/css/woocommerce.min.css', array(), $css_version );
 		wp_enqueue_style( 'justg-custom-styles', get_template_directory_uri() . '/css/custom.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery' );
