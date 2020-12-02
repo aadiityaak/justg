@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Account_Pro class
+ * The file that defines the ongkir_Account_Pro class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Account_Pro class.
+ * The ongkir_Account_Pro class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Account_Pro extends justg_Account {
+class ongkir_Account_Pro extends ongkir_Account {
 
 	/**
 	 * Account priority

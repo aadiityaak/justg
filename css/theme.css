@@ -18115,11 +18115,11 @@ blockquote:before {
 }
 
 #wp-calendar thead th {
-   padding-bottom: 10px;
+   padding: 5px 2px;
    text-align: center;
    font-size: 16px;
    color: var(--primary);
-
+   border: 0px;
 }
 
 #wp-calendar tbody {
@@ -18135,7 +18135,7 @@ blockquote:before {
    background: #f5f5f5;
    border: 1px solid #fff;
    text-align: center;
-   padding: 8px;
+   padding: 10px 2px;
 }
 
 #wp-calendar tbody td:hover {

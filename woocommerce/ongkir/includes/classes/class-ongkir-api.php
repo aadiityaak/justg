@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_API API class.
+ * The ONGKIR_API API class.
  *
  * This is used to make request to RajaOngkir.com API server.
  *
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_API {
+class ONGKIR_API {
 
 	/**
 	 * Class options.
@@ -69,7 +69,7 @@ class justg_API {
 	 * @return void
 	 */
 	private function populate_accounts() {
-		$files = glob( get_template_directory() . '/woocommerce/ongkir/includes/accounts/class-justg-account-*.php' );
+		$files = glob( get_template_directory() . '/woocommerce/ongkir/includes/accounts/class-ongkir-account-*.php' );
 
 		foreach ( $files as $file ) {
 			$class_name = str_replace( array( 'class-', '-' ), array( '', '_' ), basename( $file, '.php' ) );
@@ -96,8 +96,8 @@ class justg_API {
 	 * @return void
 	 */
 	private function populate_couriers() {
-		$files = glob( get_template_directory() . '/woocommerce/ongkir/includes/couriers/class-justg-courier-*.php' );
-
+		$files = glob( get_template_directory() . '/woocommerce/ongkir/includes/couriers/class-ongkir-courier-*.php' );
+		
 		foreach ( $files as $file ) {
 			$class_name = str_replace( array( 'class-', '-' ), array( '', '_' ), basename( $file, '.php' ) );
 
@@ -191,7 +191,7 @@ class justg_API {
 	 * @param string $account_type Account type key.
 	 * @param bool   $as_array Wether to return data as array or not.
 	 *
-	 * @return (justg_Account|array|bool) Courier object or array data. False on failure.
+	 * @return (ongkir_Account|array|bool) Courier object or array data. False on failure.
 	 */
 	public function get_account( $account_type = null, $as_array = false ) {
 		$accounts = $this->get_accounts( $as_array );
@@ -260,7 +260,7 @@ class justg_API {
 	 * @param string $code Courier code.
 	 * @param bool   $as_array Wether to return data as array or not.
 	 *
-	 * @return (justg_Courier|array|bool) Courier object or array data. False on failure.
+	 * @return (ongkir_Courier|array|bool) Courier object or array data. False on failure.
 	 */
 	public function get_courier( $code, $as_array = false ) {
 		$couriers = $this->get_couriers( 'all', 'all', $as_array );
@@ -280,7 +280,7 @@ class justg_API {
 	 * @param string $code Courier code.
 	 * @param bool   $as_array Wether to return data as array or not.
 	 *
-	 * @return (justg_Courier|array|bool) Courier object or array data. False on failure.
+	 * @return (ongkir_Courier|array|bool) Courier object or array data. False on failure.
 	 */
 	public function get_courier_by_response( $code, $as_array = false ) {
 		$couriers = $this->get_couriers( 'all', 'all', $as_array );
@@ -365,7 +365,7 @@ class justg_API {
 			// translators: %1$s - API response body.
 			throw new Exception( wp_sprintf( __( 'API response is invalid:  %1$s', 'justg' ), $body ) );
 		} catch ( Exception $e ) {
-			wc_get_logger()->log( 'error', wp_strip_all_tags( $e->getMessage(), true ), array( 'source' => 'justg_api_error' ) );
+			wc_get_logger()->log( 'error', wp_strip_all_tags( $e->getMessage(), true ), array( 'source' => 'ONGKIR_API_error' ) );
 
 			// translators: %s - Error message from RajaOngkir.com.
 			return new WP_Error( 'invalid_api_response', wp_sprintf( __( '<strong>Error from RajaOngkir.com</strong>: %s', 'justg' ), $e->getMessage() ) );
@@ -440,11 +440,11 @@ class justg_API {
 		 * @param string       $endpoint      API request endpoint.
 		 * @param array        $body Body     API request parameters.
 		 * @param array        $custom_params Custom API request parameters.
-		 * @param justg_API $object        Current class object.
+		 * @param ONGKIR_API $object        Current class object.
 		 *
 		 * @return bool
 		 */
-		$response = apply_filters( 'justg_api_request_post_pre', false, $endpoint, $body, $custom_params, $this );
+		$response = apply_filters( 'ONGKIR_API_request_post_pre', false, $endpoint, $body, $custom_params, $this );
 
 		if ( false === $response ) {
 			$response = wp_remote_post(
@@ -484,11 +484,11 @@ class justg_API {
 		 * @param string       $endpoint      API request endpoint.
 		 * @param array        $query_string  API request Query string URL parameters.
 		 * @param array        $custom_params Custom API request parameters.
-		 * @param justg_API $object        Current class object.
+		 * @param ONGKIR_API $object        Current class object.
 		 *
 		 * @return bool
 		 */
-		$response = apply_filters( 'justg_api_request_get_pre', false, $endpoint, $query_string, $custom_params, $this );
+		$response = apply_filters( 'ONGKIR_API_request_get_pre', false, $endpoint, $query_string, $custom_params, $this );
 
 		if ( false === $response ) {
 			$response = wp_remote_get( add_query_arg( $query_string, $this->api_request_url( $endpoint ) ), $this->api_request_params( $custom_params ) );
@@ -575,7 +575,7 @@ class justg_API {
 								),
 								true
 							),
-							array( 'source' => 'justg_api_unregistered_domestic_courier' )
+							array( 'source' => 'ONGKIR_API_unregistered_domestic_courier' )
 						);
 
 						continue;
@@ -603,7 +603,7 @@ class justg_API {
 										)
 									)
 								),
-								array( 'source' => 'justg_api_unregistered_domestic_service' )
+								array( 'source' => 'ONGKIR_API_unregistered_domestic_service' )
 							);
 
 							$label = isset( $rate['description'] ) ? $rate['description'] : $rate['service'];
@@ -705,7 +705,7 @@ class justg_API {
 							),
 							true
 						),
-						array( 'source' => 'justg_api_unregistered_international_courier' )
+						array( 'source' => 'ONGKIR_API_unregistered_international_courier' )
 					);
 
 					continue;
@@ -733,7 +733,7 @@ class justg_API {
 									)
 								)
 							),
-							array( 'source' => 'justg_api_unregistered_international_service' )
+							array( 'source' => 'ONGKIR_API_unregistered_international_service' )
 						);
 
 						$label = isset( $rate['description'] ) ? $rate['description'] : $rate['service'];

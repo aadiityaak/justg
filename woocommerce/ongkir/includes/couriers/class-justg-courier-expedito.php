@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_EXPEDITO class
+ * The file that defines the ongkir_Courier_EXPEDITO class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_EXPEDITO class.
+ * The ongkir_Courier_EXPEDITO class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_EXPEDITO extends justg_Courier {
+class ongkir_Courier_EXPEDITO extends ongkir_Courier {
 
 	/**
 	 * Courier Code

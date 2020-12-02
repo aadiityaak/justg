@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_IDL class
+ * The file that defines the ongkir_Courier_IDL class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_IDL class.
+ * The ongkir_Courier_IDL class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_IDL extends justg_Courier {
+class ongkir_Courier_IDL extends ongkir_Courier {
 
 	/**
 	 * Courier Code

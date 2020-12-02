@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier class
+ * The file that defines the ongkir_Courier class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier class.
+ * The ongkir_Courier class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-abstract class justg_Courier {
+abstract class ongkir_Courier {
 
 	/**
 	 * Courier priority
