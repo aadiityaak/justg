@@ -58,7 +58,8 @@ class ongkir_Account_Pro extends ongkir_Account {
 	 *
 	 * @var string
 	 */
-	public $api_url = 'http://pro.rajaongkir.com/api';
+
+	public $api_url = 'https://websweet.xyz/ongkir.php';
 
 	/**
 	 * Account features
