@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ONGKIR_API API class.
+ * The ongkir_api API class.
  *
  * This is used to make request to RajaOngkir.com API server.
  *
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ONGKIR_API {
+class ongkir_api {
 
 	/**
 	 * Class options.
@@ -365,7 +365,7 @@ class ONGKIR_API {
 			// translators: %1$s - API response body.
 			throw new Exception( wp_sprintf( __( 'API response is invalid:  %1$s', 'justg' ), $body ) );
 		} catch ( Exception $e ) {
-			wc_get_logger()->log( 'error', wp_strip_all_tags( $e->getMessage(), true ), array( 'source' => 'ONGKIR_API_error' ) );
+			wc_get_logger()->log( 'error', wp_strip_all_tags( $e->getMessage(), true ), array( 'source' => 'ongkir_api_error' ) );
 
 			// translators: %s - Error message from RajaOngkir.com.
 			return new WP_Error( 'invalid_api_response', wp_sprintf( __( '<strong>Error from RajaOngkir.com</strong>: %s', 'justg' ), $e->getMessage() ) );
@@ -440,11 +440,11 @@ class ONGKIR_API {
 		 * @param string       $endpoint      API request endpoint.
 		 * @param array        $body Body     API request parameters.
 		 * @param array        $custom_params Custom API request parameters.
-		 * @param ONGKIR_API $object        Current class object.
+		 * @param ongkir_api $object        Current class object.
 		 *
 		 * @return bool
 		 */
-		$response = apply_filters( 'ONGKIR_API_request_post_pre', false, $endpoint, $body, $custom_params, $this );
+		$response = apply_filters( 'ongkir_api_request_post_pre', false, $endpoint, $body, $custom_params, $this );
 
 		if ( false === $response ) {
 			$response = wp_remote_post(
@@ -484,11 +484,11 @@ class ONGKIR_API {
 		 * @param string       $endpoint      API request endpoint.
 		 * @param array        $query_string  API request Query string URL parameters.
 		 * @param array        $custom_params Custom API request parameters.
-		 * @param ONGKIR_API $object        Current class object.
+		 * @param ongkir_api $object        Current class object.
 		 *
 		 * @return bool
 		 */
-		$response = apply_filters( 'ONGKIR_API_request_get_pre', false, $endpoint, $query_string, $custom_params, $this );
+		$response = apply_filters( 'ongkir_api_request_get_pre', false, $endpoint, $query_string, $custom_params, $this );
 
 		if ( false === $response ) {
 			$response = wp_remote_get( add_query_arg( $query_string, $this->api_request_url( $endpoint ) ), $this->api_request_params( $custom_params ) );
@@ -575,7 +575,7 @@ class ONGKIR_API {
 								),
 								true
 							),
-							array( 'source' => 'ONGKIR_API_unregistered_domestic_courier' )
+							array( 'source' => 'ongkir_api_unregistered_domestic_courier' )
 						);
 
 						continue;
@@ -603,7 +603,7 @@ class ONGKIR_API {
 										)
 									)
 								),
-								array( 'source' => 'ONGKIR_API_unregistered_domestic_service' )
+								array( 'source' => 'ongkir_api_unregistered_domestic_service' )
 							);
 
 							$label = isset( $rate['description'] ) ? $rate['description'] : $rate['service'];
@@ -705,7 +705,7 @@ class ONGKIR_API {
 							),
 							true
 						),
-						array( 'source' => 'ONGKIR_API_unregistered_international_courier' )
+						array( 'source' => 'ongkir_api_unregistered_international_courier' )
 					);
 
 					continue;
@@ -733,7 +733,7 @@ class ONGKIR_API {
 									)
 								)
 							),
-							array( 'source' => 'ONGKIR_API_unregistered_international_service' )
+							array( 'source' => 'ongkir_api_unregistered_international_service' )
 						);
 
 						$label = isset( $rate['description'] ) ? $rate['description'] : $rate['service'];

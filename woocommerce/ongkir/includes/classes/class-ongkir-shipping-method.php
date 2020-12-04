@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class ongkir_Shipping_Method extends WC_Shipping_Method {
 
 	/**
-	 * ONGKIR_API API Class Object
+	 * ongkir_api API Class Object
 	 *
 	 * @since 1.0.0
 	 * @var object
@@ -57,7 +57,7 @@ class ongkir_Shipping_Method extends WC_Shipping_Method {
 	 * @return void
 	 */
 	public function __construct( $instance_id = 0 ) {
-		$this->api                = new ONGKIR_API();
+		$this->api                = new ongkir_api();
 		$this->instance_id        = absint( $instance_id );
 		$this->id                 = 'ongkir';
 		$this->method_title       = 'Ongkir ID';
