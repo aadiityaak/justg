@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_RPX class
+ * The file that defines the ongkir_Courier_SICEPAT class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_RPX class.
+ * The ongkir_Courier_SICEPAT class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_RPX extends justg_Courier {
+class ongkir_Courier_SICEPAT extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_RPX extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'rpx';
+	public $code = 'sicepat';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_RPX extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'RPX';
+	public $label = 'SiCepat Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_RPX extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.rpx.co.id';
+	public $website = 'http://www.sicepat.com';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,12 +60,9 @@ class justg_Courier_RPX extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'SDP' => 'SameDay Package',
-			'MDP' => 'MidDay Package',
-			'NDP' => 'Next Day Package',
-			'RGP' => 'Regular Package',
-			'PAS' => 'Paket Ambil Suka-Suka',
-			'PSR' => 'PAS Reguler',
+			'REG'   => 'Layanan Reguler',
+			'BEST'  => 'Besok Sampai Tujuan',
+			'Cargo' => 'Cargo',
 		);
 	}
 
@@ -78,7 +75,6 @@ class justg_Courier_RPX extends justg_Courier {
 	 */
 	public function get_account_domestic() {
 		return array(
-			'basic',
 			'pro',
 		);
 	}

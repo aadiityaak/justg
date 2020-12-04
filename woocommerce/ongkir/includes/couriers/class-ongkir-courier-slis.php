@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_IDL class
+ * The file that defines the ongkir_Courier_SLIS class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_IDL class.
+ * The ongkir_Courier_SLIS class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_IDL extends justg_Courier {
+class ongkir_Courier_SLIS extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_IDL extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'idl';
+	public $code = 'slis';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_IDL extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Indotama Domestik Lestari';
+	public $label = 'Solusi Ekspres';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_IDL extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.idlcargo.co.id';
+	public $website = 'http://www.solusiekspres.com';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,11 +60,22 @@ class justg_Courier_IDL extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'iSDS' => 'SAME DAY SERVICES',
-			'iONS' => 'OVERNIGHT SERVICES',
-			'iSCF' => 'SPECIAL FLEET',
-			'iREG' => 'REGULAR',
-			'iCon' => 'EKONOMIS',
+			'REGULAR' => 'Regular Service',
+			'EXPRESS' => 'Express Service',
+		);
+	}
+
+	/**
+	 * Get courier services for international shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_services_international_default() {
+		return array(
+			'PACKAGE'       => 'PACKAGE',
+			'COSMETIC/FOOD' => 'COSMETIC/FOOD',
 		);
 	}
 
@@ -76,6 +87,19 @@ class justg_Courier_IDL extends justg_Courier {
 	 * @return array
 	 */
 	public function get_account_domestic() {
+		return array(
+			'pro',
+		);
+	}
+
+	/**
+	 * Get courier account for international shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_account_international() {
 		return array(
 			'pro',
 		);

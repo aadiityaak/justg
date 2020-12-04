@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_LION class
+ * The file that defines the ongkir_Courier_JET class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_LION class.
+ * The ongkir_Courier_JET class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_LION extends justg_Courier {
+class ongkir_Courier_JET extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_LION extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'lion';
+	public $code = 'jet';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_LION extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Lion Parcel';
+	public $label = 'JET Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_LION extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://lionparcel.com';
+	public $website = 'http://www.jetexpress.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,9 +60,10 @@ class justg_Courier_LION extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'ONEPACK'  => 'One Day Service',
-			'LANDPACK' => 'Logistic Service',
-			'REGPACK'  => 'Regular Service',
+			'PRI' => 'Priority',
+			'XPS' => 'Express',
+			'REG' => 'Regular',
+			'CRG' => 'Cargo',
 		);
 	}
 

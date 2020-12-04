@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_INDAH class
+ * The file that defines the ongkir_Courier_JNE class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_INDAH class.
+ * The ongkir_Courier_JNE class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_INDAH extends justg_Courier {
+class ongkir_Courier_JNE extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_INDAH extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'indah';
+	public $code = 'jne';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_INDAH extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Indah Logistic';
+	public $label = 'JNE';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_INDAH extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.indahonline.com';
+	public $website = 'http://www.jne.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,8 +60,24 @@ class justg_Courier_INDAH extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'DARAT' => 'Cargo Darat',
-			'UDARA' => 'Cargo Udara',
+			'CTC'    => 'City Courier',
+			'CTCYES' => 'City Courier YES',
+			'OKE'    => 'Ongkos Kirim Ekonomis',
+			'REG'    => 'Layanan Reguler',
+			'YES'    => 'Yakin Esok Sampai',
+		);
+	}
+
+	/**
+	 * Get courier services for international shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_services_international_default() {
+		return array(
+			'INTL' => 'INTL',
 		);
 	}
 
@@ -73,6 +89,21 @@ class justg_Courier_INDAH extends justg_Courier {
 	 * @return array
 	 */
 	public function get_account_domestic() {
+		return array(
+			'starter',
+			'basic',
+			'pro',
+		);
+	}
+
+	/**
+	 * Get courier account for international shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_account_international() {
 		return array(
 			'pro',
 		);

@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_SICEPAT class
+ * The file that defines the ongkir_Courier_TIKI class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_SICEPAT class.
+ * The ongkir_Courier_TIKI class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_SICEPAT extends justg_Courier {
+class ongkir_Courier_TIKI extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_SICEPAT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'sicepat';
+	public $code = 'tiki';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_SICEPAT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'SiCepat Express';
+	public $label = 'TIKI';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_SICEPAT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.sicepat.com';
+	public $website = 'http://tiki.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,9 +60,12 @@ class justg_Courier_SICEPAT extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'REG'   => 'Layanan Reguler',
-			'BEST'  => 'Besok Sampai Tujuan',
-			'Cargo' => 'Cargo',
+			'REG' => 'Regular Service',
+			'ECO' => 'Economy Service',
+			'ONS' => 'Over Night Service',
+			'SDS' => 'Same Day Service',
+			'HDS' => 'Holiday Services',
+			'TRC' => 'Trucking Service',
 		);
 	}
 
@@ -75,6 +78,8 @@ class justg_Courier_SICEPAT extends justg_Courier {
 	 */
 	public function get_account_domestic() {
 		return array(
+			'starter',
+			'basic',
 			'pro',
 		);
 	}

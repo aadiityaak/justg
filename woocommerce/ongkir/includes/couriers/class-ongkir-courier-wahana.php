@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_JNT class
+ * The file that defines the ongkir_Courier_WAHANA class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_JNT class.
+ * The ongkir_Courier_WAHANA class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_JNT extends justg_Courier {
+class ongkir_Courier_WAHANA extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,16 +31,7 @@ class justg_Courier_JNT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'jnt';
-
-	/**
-	 * API Response ID
-	 *
-	 * @since 1.2.12
-	 *
-	 * @var string
-	 */
-	public $response_code = 'J&T';
+	public $code = 'wahana';
 
 	/**
 	 * Courier Label
@@ -49,7 +40,7 @@ class justg_Courier_JNT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'J&T Express';
+	public $label = 'Wahana Express';
 
 	/**
 	 * Courier Website
@@ -58,7 +49,7 @@ class justg_Courier_JNT extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.jet.co.id';
+	public $website = 'http://www.wahana.com';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -69,8 +60,7 @@ class justg_Courier_JNT extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'EZ'  => 'Regular Service',
-			'JSD' => 'Same Day Service',
+			'Normal' => 'Normal Service',
 		);
 	}
 

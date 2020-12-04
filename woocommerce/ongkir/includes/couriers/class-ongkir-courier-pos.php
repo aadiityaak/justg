@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_JNE class
+ * The file that defines the ongkir_Courier_POS class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_JNE class.
+ * The ongkir_Courier_POS class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_JNE extends justg_Courier {
+class ongkir_Courier_POS extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_JNE extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'jne';
+	public $code = 'pos';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_JNE extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'JNE';
+	public $label = 'POS Indonesia';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_JNE extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.jne.co.id';
+	public $website = 'http://www.posindonesia.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,11 +60,18 @@ class justg_Courier_JNE extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'CTC'    => 'City Courier',
-			'CTCYES' => 'City Courier YES',
-			'OKE'    => 'Ongkos Kirim Ekonomis',
-			'REG'    => 'Layanan Reguler',
-			'YES'    => 'Yakin Esok Sampai',
+			'Surat Kilat Khusus'       => 'Surat Kilat Khusus',
+			'Paketpos Biasa'           => 'Paketpos Biasa',
+			'Paket Kilat Khusus'       => 'Paket Kilat Khusus',
+			'Express Sameday Barang'   => 'Express Sameday Barang',
+			'Express Sameday Dokumen'  => 'Express Sameday Dokumen',
+			'Express Next Day Barang'  => 'Express Next Day Barang',
+			'Express Next Day Dokumen' => 'Express Next Day Dokumen',
+			'Paketpos Dangerous Goods' => 'Paketpos Dangerous Goods',
+			'Paketpos Valuable Goods'  => 'Paketpos Valuable Goods',
+			'Kargopos Ritel Train'     => 'Kargopos Ritel Train',
+			'Kargopos Ritel Udara Dn'  => 'Kargopos Ritel Udara Dn',
+			'Paket Jumbo Ekonomi'      => 'Paket Jumbo Ekonomi',
 		);
 	}
 
@@ -77,7 +84,10 @@ class justg_Courier_JNE extends justg_Courier {
 	 */
 	public function get_services_international_default() {
 		return array(
-			'INTL' => 'INTL',
+			'R LN'              => 'R LN',
+			'EMS BARANG'        => 'EMS BARANG',
+			'PAKETPOS CEPAT LN' => 'PAKETPOS CEPAT LN',
+			'PAKETPOS BIASA LN' => 'PAKETPOS BIASA LN',
 		);
 	}
 
@@ -105,6 +115,7 @@ class justg_Courier_JNE extends justg_Courier {
 	 */
 	public function get_account_international() {
 		return array(
+			'basic',
 			'pro',
 		);
 	}

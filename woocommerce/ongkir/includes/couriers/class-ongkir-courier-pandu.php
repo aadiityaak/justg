@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_PCP class
+ * The file that defines the ongkir_Courier_PANDU class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_PCP class.
+ * The ongkir_Courier_PANDU class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_PCP extends justg_Courier {
+class ongkir_Courier_PANDU extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_PCP extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'pcp';
+	public $code = 'pandu';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_PCP extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'PCP';
+	public $label = 'Pandu Logistics';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_PCP extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.pcpexpress.com';
+	public $website = 'http://www.pandulogistics.com';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,11 +60,7 @@ class justg_Courier_PCP extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'TREX' => 'Titipan Regular Express',
-			'JET'  => 'Jaminan Esok Tiba',
-			'HIT'  => 'Hari Ini Tiba',
-			'EXIS' => 'Express Ekonomi',
-			'GODA' => 'Kargo Darat',
+			'REG' => 'Regular Package',
 		);
 	}
 
@@ -77,7 +73,6 @@ class justg_Courier_PCP extends justg_Courier {
 	 */
 	public function get_account_domestic() {
 		return array(
-			'basic',
 			'pro',
 		);
 	}

@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the justg_Courier_NINJA class
+ * The file that defines the ongkir_Courier_DSE class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The justg_Courier_NINJA class.
+ * The ongkir_Courier_DSE class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg_Courier_NINJA extends justg_Courier {
+class ongkir_Courier_DSE extends ongkir_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class justg_Courier_NINJA extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'ninja';
+	public $code = 'dse';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class justg_Courier_NINJA extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Ninja Xpress';
+	public $label = '21 Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class justg_Courier_NINJA extends justg_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'https://www.ninjaxpress.co';
+	public $website = 'http://21express.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,7 +60,9 @@ class justg_Courier_NINJA extends justg_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'STANDARD' => 'Standard Service',
+			'ECO' => 'Regular Service',
+			'ONS' => 'Over Night Service',
+			'SDS' => 'Same Day Service',
 		);
 	}
 

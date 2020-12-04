@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class justg {
+class ongkir {
 
 
 	/**
@@ -35,7 +35,7 @@ class justg {
 	/**
 	 * Hold an instance of the class
 	 *
-	 * @var justg
+	 * @var ongkir
 	 */
 	private static $instance = null;
 
@@ -43,11 +43,11 @@ class justg {
 	 * The object is created from within the class itself
 	 * only if the class has no instance.
 	 *
-	 * @return justg
+	 * @return ongkir
 	 */
 	public static function get_instance() {
 		if ( null === self::$instance ) {
-			self::$instance = new justg();
+			self::$instance = new ongkir();
 		}
 
 		return self::$instance;
@@ -72,7 +72,7 @@ class justg {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_frontend_assets' ), 999 );
 
 		// Hook to check if this shipping method is available for current order.
-		add_filter( 'woocommerce_shipping_' . 'justg' . '_is_available', array( $this, 'check_is_available' ), 10, 2 );
+		add_filter( 'woocommerce_shipping_' . 'ongkir' . '_is_available', array( $this, 'check_is_available' ), 10, 2 );
 
 		// Hook to modify billing and shipping address fields position priority.
 		add_filter( 'woocommerce_default_address_fields', array( $this, 'default_address_fields_priority' ) );
@@ -135,7 +135,7 @@ class justg {
 			}
 
 			foreach ( $zone['shipping_methods'] as $zone_shipping_method ) {
-				if ( $zone_shipping_method instanceof justg ) {
+				if ( $zone_shipping_method instanceof ongkir ) {
 					$zone_id = $zone['zone_id'];
 					break;
 				}
@@ -191,10 +191,8 @@ class justg {
 			);
 
 			// Register lockr.js scripts.
-			$lockr_url = get_template_directory_uri() .'/js/lockr.js';
-			if ( $is_dev_env ) {
-				$lockr_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $lockr_url ) );
-			}
+			$lockr_url = get_template_directory_uri() .'/js/lockr.min.js';
+
 
 			wp_register_script(
 				'lockr.js', // Give the script a unique ID.
@@ -206,9 +204,7 @@ class justg {
 
 			// Define the scripts URL.
 			$js_url = get_template_directory_uri() .'/js/ongkir-backend.js';
-			if ( $is_dev_env ) {
-				$js_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $js_url ) );
-			}
+
 
 			wp_enqueue_script(
 				'ongkir-backend', // Give the script a unique ID.
@@ -245,9 +241,6 @@ class justg {
 
 		// Enqueue main scripts.
 		$js_url = get_template_directory_uri() .'/js/ongkir-frontend.js';
-		if ( $is_dev_env ) {
-			$js_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $js_url ) );
-		}
 
 		wp_enqueue_script(
 			'ongkir-frontend', // Give the script a unique ID.
@@ -436,10 +429,8 @@ class justg {
 	 * @param array $methods Registered shipping methods.
 	 */
 	public function register_shipping_method( $methods ) {
-		if ( class_exists( 'justg_Shipping_Method' ) ) {
-			$methods[ 'justg' ] = 'justg_Shipping_Method';
+		if ( class_exists( 'ongkir_Shipping_Method' ) ) {
+			$methods[ 'ongkir' ] = 'ongkir_Shipping_Method';
 		}
-
-		return $methods;
 	}
 }
