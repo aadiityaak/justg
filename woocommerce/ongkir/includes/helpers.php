@@ -22,9 +22,6 @@ if ( ! function_exists( 'justg_autoload' ) ) :
 	 */
 	function justg_autoload( $class ) {
 		$class = strtolower( $class );
-		echo '<pre>';
-print_r($class);
-echo '</pre>';
 		if ( strpos( $class, 'ongkir' ) !== 0 ) {
 			return;
 		}
