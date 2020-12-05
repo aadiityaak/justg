@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Account_Pro class
+ * The file that defines the justg_Account_Pro class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Account_Pro class.
+ * The justg_Account_Pro class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Account_Pro extends ongkir_Account {
+class justg_Account_Pro extends justg_Account {
 
 	/**
 	 * Account priority
@@ -58,9 +58,7 @@ class ongkir_Account_Pro extends ongkir_Account {
 	 *
 	 * @var string
 	 */
-
-	// public $api_url = 'https://websweet.xyz/ongkir.php';
-	public $api_url = 'https://pro.rajaongkir.com/api/';
+	public $api_url = 'http://pro.rajaongkir.com/api';
 
 	/**
 	 * Account features

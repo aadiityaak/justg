@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_EXPEDITO class
+ * The file that defines the justg_Courier_SLIS class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_EXPEDITO class.
+ * The justg_Courier_SLIS class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_EXPEDITO extends ongkir_Courier {
+class justg_Courier_SLIS extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_EXPEDITO extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'expedito';
+	public $code = 'slis';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_EXPEDITO extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Expedito';
+	public $label = 'Solusi Ekspres';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,21 @@ class ongkir_Courier_EXPEDITO extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.expedito.co.id';
+	public $website = 'http://www.solusiekspres.com';
+
+	/**
+	 * Get courier services for domestic shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_services_domestic_default() {
+		return array(
+			'REGULAR' => 'Regular Service',
+			'EXPRESS' => 'Express Service',
+		);
+	}
 
 	/**
 	 * Get courier services for international shipping
@@ -60,14 +74,21 @@ class ongkir_Courier_EXPEDITO extends ongkir_Courier {
 	 */
 	public function get_services_international_default() {
 		return array(
-			'CityLink'         => 'CityLink',
-			'DPEX'             => 'DPEX',
-			'ARAMEX Indonesia' => 'ARAMEX Indonesia',
-			'DHL  JKT'         => 'DHL  JKT',
-			'DHL Singapore'    => 'DHL Singapore',
-			'SF EXPRESS'       => 'SF EXPRESS',
-			'SkyNet Worldwide' => 'SkyNet Worldwide',
-			'TNT | Fedex'      => 'TNT | Fedex',
+			'PACKAGE'       => 'PACKAGE',
+			'COSMETIC/FOOD' => 'COSMETIC/FOOD',
+		);
+	}
+
+	/**
+	 * Get courier account for domestic shipping
+	 *
+	 * @since 1.2.12
+	 *
+	 * @return array
+	 */
+	public function get_account_domestic() {
+		return array(
+			'pro',
 		);
 	}
 

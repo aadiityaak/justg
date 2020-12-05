@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_REX class
+ * The file that defines the justg_Courier_NCS class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_REX class.
+ * The justg_Courier_NCS class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_REX extends ongkir_Courier {
+class justg_Courier_NCS extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_REX extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'rex';
+	public $code = 'ncs';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_REX extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Royal Express Indonesia';
+	public $label = 'Nusantara Card Semesta';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_REX extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'https://www.rex.co.id';
+	public $website = 'http://www.ptncs.com';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,10 +60,9 @@ class ongkir_Courier_REX extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'EXP'    => 'EXPRESS',
-			'REX-1'  => 'REX-1',
-			'REX-5'  => 'REX-5',
-			'REX-10' => 'REX-10',
+			'NRS' => 'REGULAR SERVICE',
+			'ONS' => 'OVERNIGHT SERVICE',
+			'SDS' => 'SAME DAY SERVICE',
 		);
 	}
 

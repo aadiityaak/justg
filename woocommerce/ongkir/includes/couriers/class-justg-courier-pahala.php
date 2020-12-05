@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_INDAH class
+ * The file that defines the justg_Courier_PAHALA class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_INDAH class.
+ * The justg_Courier_PAHALA class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_INDAH extends ongkir_Courier {
+class justg_Courier_PAHALA extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_INDAH extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'indah';
+	public $code = 'pahala';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_INDAH extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Indah Logistic';
+	public $label = 'Pahala Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_INDAH extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.indahonline.com';
+	public $website = 'http://www.pahalaexpress.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,8 +60,13 @@ class ongkir_Courier_INDAH extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'DARAT' => 'Cargo Darat',
-			'UDARA' => 'Cargo Udara',
+			'EXPRESS'     => 'Express Service',
+			'ONS'         => 'One Night Service',
+			'SDS'         => 'Same Day Service',
+			'SEPEDA'      => 'Paket Sepeda',
+			'MOTOR SPORT' => 'Paket Motor Sport',
+			'MOTOR BESAR' => 'Paket Motor Besar',
+			'MOTOR BEBEK' => 'Paket Motor Bebek',
 		);
 	}
 

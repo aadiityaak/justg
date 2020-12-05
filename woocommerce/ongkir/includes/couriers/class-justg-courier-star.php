@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_NINJA class
+ * The file that defines the justg_Courier_STAR class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_NINJA class.
+ * The justg_Courier_STAR class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_NINJA extends ongkir_Courier {
+class justg_Courier_STAR extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_NINJA extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'ninja';
+	public $code = 'star';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_NINJA extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Ninja Xpress';
+	public $label = 'Star Cargo';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_NINJA extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'https://www.ninjaxpress.co';
+	public $website = 'http://www.starcargo.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,7 +60,11 @@ class ongkir_Courier_NINJA extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'STANDARD' => 'Standard Service',
+			'Express'            => 'Express',
+			'Reguler'            => 'Reguler',
+			'Dokumen'            => 'Dokumen',
+			'MOTOR'              => 'MOTOR',
+			'MOTOR 150 - 250 CC' => 'MOTOR 150 - 250 CC',
 		);
 	}
 

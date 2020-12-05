@@ -10,6 +10,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'justg_is_plugin_active' ) ) :
+	/**
+	 * Check if plugin is active
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string $plugin_file Plugin file name.
+	 */
+	function justg_is_plugin_active( $plugin_file ) {
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			include_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		return is_plugin_active( $plugin_file );
+	}
+endif;
+
 if ( ! function_exists( 'justg_autoload' ) ) :
 	/**
 	 * Class autoload
@@ -22,16 +39,18 @@ if ( ! function_exists( 'justg_autoload' ) ) :
 	 */
 	function justg_autoload( $class ) {
 		$class = strtolower( $class );
-		if ( strpos( $class, 'ongkir' ) !== 0 ) {
+
+		if ( strpos( $class, 'justg' ) !== 0 ) {
 			return;
 		}
 
-		if ( strpos( $class, 'ongkir_account_' ) === 0 ) {
+		if ( strpos( $class, 'justg_account_' ) === 0 ) {
 			require_once get_template_directory() . '/woocommerce/ongkir/includes/accounts/class-' . str_replace( '_', '-', $class ) . '.php';
-		} elseif ( strpos( $class, 'ongkir_courier_' ) === 0 ) {
+		} elseif ( strpos( $class, 'justg_courier_' ) === 0 ) {
 			require_once get_template_directory() . '/woocommerce/ongkir/includes/couriers/class-' . str_replace( '_', '-', $class ) . '.php';
 		} else {
 			require_once get_template_directory() . '/woocommerce/ongkir/includes/classes/class-' . str_replace( '_', '-', $class ) . '.php';
+			
 		}
 	}
 endif;
@@ -138,7 +157,7 @@ if ( ! function_exists( 'justg_scripts_params' ) ) :
 				),
 				'debug'         => ( 'yes' === get_option( 'woocommerce_shipping_debug_mode', 'no' ) ),
 				'show_settings' => isset( $_GET['justg_settings'] ) && is_admin(), // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			'method_id'         => 'ongkir',
+			'method_id'         => 'justg',
 			'method_title'      => 'Ongkir ID',
 			)
 		);
@@ -193,7 +212,7 @@ if ( ! function_exists( 'justg_instances' ) ) :
 
 		if ( $shipping_methods ) {
 			foreach ( $shipping_methods as $shipping_method ) {
-				if ( 'ongkir' !== $shipping_method->method_id ) {
+				if ( 'justg' !== $shipping_method->method_id ) {
 					continue;
 				}
 
@@ -212,8 +231,7 @@ if ( ! function_exists( 'justg_instances' ) ) :
 				$shipping_methods = $zone_data_store->get_methods( $zone['id'], $enabled_only );
 				if ( $shipping_methods ) {
 					foreach ( $shipping_methods as $shipping_method ) {
-						
-						if ( 'ongkir' !== $shipping_method->method_id ) {
+						if ( 'justg' !== $shipping_method->method_id ) {
 							continue;
 						}
 

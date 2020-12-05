@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_STAR class
+ * The file that defines the justg_Courier_REX class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_STAR class.
+ * The justg_Courier_REX class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_STAR extends ongkir_Courier {
+class justg_Courier_REX extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_STAR extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'star';
+	public $code = 'rex';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_STAR extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Star Cargo';
+	public $label = 'Royal Express Indonesia';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_STAR extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.starcargo.co.id';
+	public $website = 'https://www.rex.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,11 +60,10 @@ class ongkir_Courier_STAR extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'Express'            => 'Express',
-			'Reguler'            => 'Reguler',
-			'Dokumen'            => 'Dokumen',
-			'MOTOR'              => 'MOTOR',
-			'MOTOR 150 - 250 CC' => 'MOTOR 150 - 250 CC',
+			'EXP'    => 'EXPRESS',
+			'REX-1'  => 'REX-1',
+			'REX-5'  => 'REX-5',
+			'REX-10' => 'REX-10',
 		);
 	}
 

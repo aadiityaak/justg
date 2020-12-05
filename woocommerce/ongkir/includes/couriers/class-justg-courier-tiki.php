@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_SAP class
+ * The file that defines the justg_Courier_TIKI class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_SAP class.
+ * The justg_Courier_TIKI class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_SAP extends ongkir_Courier {
+class justg_Courier_TIKI extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_SAP extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'sap';
+	public $code = 'tiki';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_SAP extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'SAP Express';
+	public $label = 'TIKI';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_SAP extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://sap-express.id';
+	public $website = 'http://tiki.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -61,8 +61,11 @@ class ongkir_Courier_SAP extends ongkir_Courier {
 	public function get_services_domestic_default() {
 		return array(
 			'REG' => 'Regular Service',
+			'ECO' => 'Economy Service',
+			'ONS' => 'Over Night Service',
 			'SDS' => 'Same Day Service',
-			'ODS' => 'One Day Service',
+			'HDS' => 'Holiday Services',
+			'TRC' => 'Trucking Service',
 		);
 	}
 
@@ -75,6 +78,8 @@ class ongkir_Courier_SAP extends ongkir_Courier {
 	 */
 	public function get_account_domestic() {
 		return array(
+			'starter',
+			'basic',
 			'pro',
 		);
 	}

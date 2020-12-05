@@ -22,7 +22,7 @@ if ( function_exists( 'justg_autoload' ) ) {
 /**
  * Boot the plugin
  */
-if ( justg_is_woocommerce_activated() && class_exists( 'ongkir' ) ) {
-	// Initialize the ongkir class.
-	ongkir::get_instance();
+if ( justg_is_woocommerce_activated() && class_exists( 'justg' ) ) {
+	// Initialize the justg class.
+	justg::get_instance();
 }

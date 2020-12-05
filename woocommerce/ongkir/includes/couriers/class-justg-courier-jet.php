@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_IDL class
+ * The file that defines the justg_Courier_JET class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_IDL class.
+ * The justg_Courier_JET class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_IDL extends ongkir_Courier {
+class justg_Courier_JET extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_IDL extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'idl';
+	public $code = 'jet';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_IDL extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Indotama Domestik Lestari';
+	public $label = 'JET Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_IDL extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.idlcargo.co.id';
+	public $website = 'http://www.jetexpress.co.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,11 +60,10 @@ class ongkir_Courier_IDL extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'iSDS' => 'SAME DAY SERVICES',
-			'iONS' => 'OVERNIGHT SERVICES',
-			'iSCF' => 'SPECIAL FLEET',
-			'iREG' => 'REGULAR',
-			'iCon' => 'EKONOMIS',
+			'PRI' => 'Priority',
+			'XPS' => 'Express',
+			'REG' => 'Regular',
+			'CRG' => 'Cargo',
 		);
 	}
 

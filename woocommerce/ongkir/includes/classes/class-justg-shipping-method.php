@@ -31,10 +31,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Shipping_Method extends WC_Shipping_Method {
+class justg_Shipping_Method extends WC_Shipping_Method {
 
 	/**
-	 * ongkir_api API Class Object
+	 * justg_API API Class Object
 	 *
 	 * @since 1.0.0
 	 * @var object
@@ -57,9 +57,9 @@ class ongkir_Shipping_Method extends WC_Shipping_Method {
 	 * @return void
 	 */
 	public function __construct( $instance_id = 0 ) {
-		$this->api                = new ongkir_api();
+		$this->api                = new justg_API();
 		$this->instance_id        = absint( $instance_id );
-		$this->id                 = 'ongkir';
+		$this->id                 = 'justg';
 		$this->method_title       = 'Ongkir ID';
 		$this->title              = 'Ongkir ID';
 		$this->method_description = 'Ongkir Indonesia';
@@ -592,7 +592,7 @@ class ongkir_Shipping_Method extends WC_Shipping_Method {
 				 *
 				 * @param array|WP_Error           $results API shipping calculation results.
 				 * @param array                    $package Current order package data.
-				 * @param ongkir_Shipping_Method $object  Current class object.
+				 * @param justg_Shipping_Method $object  Current class object.
 				 *
 				 * @return array
 				 */
@@ -682,7 +682,7 @@ class ongkir_Shipping_Method extends WC_Shipping_Method {
 					 * @param string                   $rate_label The default shipping rate label.
 					 * @param bool                     $result     Shipping rate result data.
 					 * @param array                    $package    Current order package data.
-					 * @param ongkir_Shipping_Method $object     Current class object.
+					 * @param justg_Shipping_Method $object     Current class object.
 					 *
 					 * @return string
 					 */

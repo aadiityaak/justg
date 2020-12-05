@@ -1,6 +1,6 @@
 <?php
 /**
- * The file that defines the ongkir_Courier_NCS class
+ * The file that defines the justg_Courier_SAP class
  *
  * @link       https://github.com/sofyansitorus
  * @since      1.2.12
@@ -15,14 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * The ongkir_Courier_NCS class.
+ * The justg_Courier_SAP class.
  *
  * @since      1.2.12
  * @package    justg
  * @subpackage justg/includes
  * @author     Sofyan Sitorus <sofyansitorus@gmail.com>
  */
-class ongkir_Courier_NCS extends ongkir_Courier {
+class justg_Courier_SAP extends justg_Courier {
 
 	/**
 	 * Courier Code
@@ -31,7 +31,7 @@ class ongkir_Courier_NCS extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $code = 'ncs';
+	public $code = 'sap';
 
 	/**
 	 * Courier Label
@@ -40,7 +40,7 @@ class ongkir_Courier_NCS extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $label = 'Nusantara Card Semesta';
+	public $label = 'SAP Express';
 
 	/**
 	 * Courier Website
@@ -49,7 +49,7 @@ class ongkir_Courier_NCS extends ongkir_Courier {
 	 *
 	 * @var string
 	 */
-	public $website = 'http://www.ptncs.com';
+	public $website = 'http://sap-express.id';
 
 	/**
 	 * Get courier services for domestic shipping
@@ -60,9 +60,9 @@ class ongkir_Courier_NCS extends ongkir_Courier {
 	 */
 	public function get_services_domestic_default() {
 		return array(
-			'NRS' => 'REGULAR SERVICE',
-			'ONS' => 'OVERNIGHT SERVICE',
-			'SDS' => 'SAME DAY SERVICE',
+			'REG' => 'Regular Service',
+			'SDS' => 'Same Day Service',
+			'ODS' => 'One Day Service',
 		);
 	}
 
