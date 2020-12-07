@@ -192,9 +192,6 @@ class justg {
 
 			// Register lockr.js scripts.
 			$lockr_url = get_template_directory_uri() .'/js/lockr.js';
-			if ( $is_dev_env ) {
-				$lockr_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $lockr_url ) );
-			}
 
 			wp_register_script(
 				'lockr.js', // Give the script a unique ID.
@@ -206,9 +203,6 @@ class justg {
 
 			// Define the scripts URL.
 			$js_url = get_template_directory_uri() .'/js/ongkir-backend.js';
-			if ( $is_dev_env ) {
-				$js_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $js_url ) );
-			}
 
 			wp_enqueue_script(
 				'ongkir-backend', // Give the script a unique ID.
