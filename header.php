@@ -27,11 +27,13 @@ $container = get_theme_mod( 'justg_container_type' );
 <div class="site" id="page">
 
 	<?php 
+	do_action('justg_before_header');
 	do_action('justg_header_open');
 	do_action('justg_header_before');
 	do_action('justg_header');
 	do_action('justg_header_after');
 	do_action('justg_header_close');
+	do_action('justg_after_header');
 	?>
 	<div class="justg-top-content">
 			<?php do_action('justg_top_content'); ?>
