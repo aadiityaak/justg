@@ -159,8 +159,8 @@ function justg_register_part_hooks() {
     array(
       'label' => 'Content',
       'hooks' => array(
-        'justg_before_content' => 'Before Content',
-        'justg_after_content'  => 'After Content',
+        'justg_top_content' => 'Before Content',
+        'justg_bottom_content'  => 'After Content',
       )
     ),
     array(

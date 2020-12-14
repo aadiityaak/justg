@@ -11,7 +11,12 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php do_action('justg_do_footer'); ?>
+<?php 
+do_action('justg_bottom_content');
+do_action('justg_before_footer');
+do_action('justg_do_footer');
+do_action('justg_after_footer');
+?>
 
 </div><!-- #page we need this extra closing tag here -->
 
