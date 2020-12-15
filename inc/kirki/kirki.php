@@ -5,7 +5,7 @@
  * Description:   The Ultimate WordPress Customizer Framework
  * Author:        David Vongries
  * Author URI:    https://wp-pagebuilderframework.com/
- * Version:       3.1.5
+ * Version:       3.1.6
  * Text Domain:   kirki
  * Requires WP:   4.9
  * Requires PHP:  5.3
@@ -40,7 +40,7 @@ if ( ! defined( 'KIRKI_PLUGIN_FILE' ) ) {
 
 // Define the KIRKI_VERSION constant.
 if ( ! defined( 'KIRKI_VERSION' ) ) {
-	define( 'KIRKI_VERSION', '3.1.3' );
+	define( 'KIRKI_VERSION', '3.1.6' );
 }
 
 // Make sure the path is properly set.
@@ -49,7 +49,7 @@ Kirki_Init::set_url();
 
 new Kirki_Controls();
 
-if ( ! function_exists( 'kirki' ) ) {
+if ( ! function_exists( 'Kirki' ) ) {
 	/**
 	 * Returns an instance of the Kirki object.
 	 */
