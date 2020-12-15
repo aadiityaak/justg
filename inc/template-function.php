@@ -435,6 +435,29 @@ if( ! function_exists( 'justg_the_footer_open' ) ) {
     }
 }
 
+if( ! function_exists( 'justg_widget_float' ) ) {
+    /**
+     * Floating whatsapp
+     * 
+     */
+    function justg_widget_float() {
+
+        $no_wa          = get_theme_mod('nomor_whatsapp', 0);
+        $text_wa          = get_theme_mod('text_whatsapp', 'Contact Us!');
+        $wa_position    = get_theme_mod('posisi_wa', 'right');
+        if (substr($no_wa, 0, 1) === '0') {
+           $no_wa    = '62' . substr($no_wa, 1);
+        } else if (substr($no_wa, 0, 1) === '+') {
+            $no_wa    = '' . substr($no_wa, 1);
+        }
+        if($no_wa){
+            echo '<div class="float-widget">';
+                echo '<a class="position-fixed btn bg-whatsapp-float whatsapp-float text-white ml-auto" style="'.$wa_position.':10px;" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+            echo '</div>';
+        }
+    }
+}
+
 if( ! function_exists( 'justg_the_footer_content' ) ) {
     /**
      * Footer content function

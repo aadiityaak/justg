@@ -44,6 +44,11 @@ Kirki::add_panel('panel_sidebar', [
 	'title'       => esc_html__('Sidebar', 'justg'),
 	'description' => esc_html__('', 'justg'),
 ]);
+Kirki::add_panel('panel_whatsapp', [
+	'priority'    => 10,
+	'title'       => esc_html__('Floating Whatsapp', 'justg'),
+	'description' => esc_html__('', 'justg'),
+]);
 Kirki::add_panel('panel_footer', [
 	'priority'    => 10,
 	'title'       => esc_html__('Footer', 'justg'),
@@ -91,6 +96,7 @@ Kirki::add_section('menus_section', [
 	'title'    => __('Primary Menu', 'justg'),
 	'priority' => 10,
 ]);
+
 Kirki::add_section('sidebar_section', [
 	'panel'    => 'panel_sidebar',
 	'title'    => __('Sidebar', 'justg'),
@@ -117,7 +123,6 @@ Kirki::add_section('breadcrumb_location', [
 	'title'    => __('Location', 'justg'),
 	'priority' => 10,
 ]);
-
 Kirki::add_section('panel_sidebar', [
 	'panel'    => 'panel_breadcrumb',
 	'title'    => __('Setting', 'justg'),
@@ -139,6 +144,18 @@ Kirki::add_section('sidebar-widgets-footer-widget-2', [
 	'title'    => __('Widget 2', 'justg'),
 	'priority' => 10,
 ]);
+
+Kirki::add_section('no_whatsapp', [
+	'panel'    => 'panel_whatsapp',
+	'title'    => __('Nomor Whatsapp', 'justg'),
+	'priority' => 10,
+]);
+Kirki::add_section('style_whatsapp', [
+	'panel'    => 'panel_whatsapp',
+	'title'    => __('Style Whatsapp', 'justg'),
+	'priority' => 10,
+]);
+
 Kirki::add_section('sidebar-widgets-footer-widget-3', [
 	'panel'    => 'panel_footer',
 	'title'    => __('Widget 3', 'justg'),
@@ -642,6 +659,7 @@ Kirki::add_field('justg_config', [
 		],
 	],
 ]);
+
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_widget_setting',
@@ -663,6 +681,7 @@ Kirki::add_field('justg_config', [
 		],
 	],
 ]);
+
 Kirki::add_field('justg_config', [
 	'type'        => 'dimensions',
 	'settings'    => 'dimensions_widget_setting',
@@ -687,6 +706,7 @@ Kirki::add_field('justg_config', [
 		],
 	],
 ]);
+
 Kirki::add_field('justg_config', [
 	'type'        => 'typography',
 	'settings'    => 'typography_widget_setting',
@@ -710,6 +730,73 @@ Kirki::add_field('justg_config', [
 		],
 	],
 ]);
+
+Kirki::add_field('justg_config', [
+	'type'     => 'text',
+	'settings' => 'nomor_whatsapp',
+	'label'    => esc_html__('Nomor Whatsapp', 'justg'),
+	'section'  => 'no_whatsapp',
+// 	'default'  => esc_html__('/', 'justg'),
+	'priority' => 10,
+	'partial_refresh'    => [
+		'partial_text_breadcrumb_separator' => [
+			'selector'        => '.whatsapp-float',
+			'render_callback' => '__return_false'
+		]
+	],
+]);
+
+Kirki::add_field('justg_config', [
+	'type'     => 'text',
+	'settings' => 'text_whatsapp',
+	'label'    => esc_html__('Text Whatsapp', 'justg'),
+	'section'  => 'no_whatsapp',
+// 	'default'  => esc_html__('/', 'justg'),
+	'priority' => 10,
+	'partial_refresh'    => [
+		'partial_text_breadcrumb_separator' => [
+			'selector'        => '.whatsapp-float',
+			'render_callback' => '__return_false'
+		]
+	],
+]);
+
+Kirki::add_field('justg_config', [
+	'type'        => 'background',
+	'settings'    => 'background_whatsapp',
+	'label'       => esc_html__('Background Whatsapp', 'justg'),
+	'description' => esc_html__('', 'justg'),
+	'section'     => 'style_whatsapp',
+	'default'     => [
+		'background-color'      => '#51CC64',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => ['.bg-whatsapp-float'],
+		],
+	],
+]);
+
+Kirki::add_field( 'justg_config', [
+	'type'        => 'select',
+	'settings'    => 'posisi_wa',
+	'label'       => esc_html__( 'Posisi Whatsapp', 'kirki' ),
+	'section'     => 'style_whatsapp',
+	'default'     => 'right',
+	'placeholder' => esc_html__( '', 'kirki' ),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'right' => esc_html__( 'Bawah Kanan', 'kirki' ),
+		'left' => esc_html__( 'Bawah Kiri', 'kirki' ),
+	],
+] );
 
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
