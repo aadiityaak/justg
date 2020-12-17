@@ -2665,5 +2665,13 @@ function () {
             $(".navbar-collapse").removeClass('show');
         }
     });
+
+    //go to top animation
+    $('#go-to-top').each(function(){
+        $(this).click(function(){ 
+            $('html,body').animate({ scrollTop: 0 }, 'slow');
+            return false; 
+        });
+    });
 })(jQuery);
 
