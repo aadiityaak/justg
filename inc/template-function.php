@@ -443,7 +443,9 @@ if( ! function_exists( 'justg_widget_float' ) ) {
     function justg_widget_float() {
 
         $no_wa          = get_theme_mod('nomor_whatsapp', 0);
-        $text_wa          = get_theme_mod('text_whatsapp', 'Contact Us!');
+        $to_top_status  = get_theme_mod('to_top_status', 'off');
+        $icon_to_top    = get_theme_mod('icon_to_top', 'arrow-up');
+        $text_wa        = get_theme_mod('text_whatsapp', 'Contact Us!');
         $wa_position    = get_theme_mod('posisi_wa', 'right');
         if (substr($no_wa, 0, 1) === '0') {
            $no_wa    = '62' . substr($no_wa, 1);
@@ -452,8 +454,12 @@ if( ! function_exists( 'justg_widget_float' ) ) {
         }
         if($no_wa){
             echo '<div class="float-widget">';
-                echo '<a class="position-fixed btn bg-whatsapp-float whatsapp-float text-white ml-auto" style="'.$wa_position.':10px;" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
-            echo '</div>';
+                $wa_right = ($to_top_status == 'on' && $wa_position == 'right') ? '70px' : '10px';
+                echo '<a class="position-fixed btn bg-whatsapp-float whatsapp-float text-white ml-auto" style="'.$wa_position.':'.$wa_right.';" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+                if($to_top_status == 'on') {
+                    echo '<a class="position-fixed btn bg-to_top-float whatsapp-float text-white" style="right:10px;" href="#"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
+                }
+                echo '</div>';
         }
     }
 }

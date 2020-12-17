@@ -44,9 +44,9 @@ Kirki::add_panel('panel_sidebar', [
 	'title'       => esc_html__('Sidebar', 'justg'),
 	'description' => esc_html__('', 'justg'),
 ]);
-Kirki::add_panel('panel_whatsapp', [
+Kirki::add_panel('panel_floating', [
 	'priority'    => 10,
-	'title'       => esc_html__('Floating Whatsapp', 'justg'),
+	'title'       => esc_html__('Floating', 'justg'),
 	'description' => esc_html__('', 'justg'),
 ]);
 Kirki::add_panel('panel_footer', [
@@ -145,14 +145,14 @@ Kirki::add_section('sidebar-widgets-footer-widget-2', [
 	'priority' => 10,
 ]);
 
-Kirki::add_section('no_whatsapp', [
-	'panel'    => 'panel_whatsapp',
-	'title'    => __('Nomor Whatsapp', 'justg'),
+Kirki::add_section('whatsapp', [
+	'panel'    => 'panel_floating',
+	'title'    => __('Whatsapp', 'justg'),
 	'priority' => 10,
 ]);
-Kirki::add_section('style_whatsapp', [
-	'panel'    => 'panel_whatsapp',
-	'title'    => __('Style Whatsapp', 'justg'),
+Kirki::add_section('to_top', [
+	'panel'    => 'panel_floating',
+	'title'    => __('Back to Top', 'justg'),
 	'priority' => 10,
 ]);
 
@@ -735,7 +735,7 @@ Kirki::add_field('justg_config', [
 	'type'     => 'text',
 	'settings' => 'nomor_whatsapp',
 	'label'    => esc_html__('Nomor Whatsapp', 'justg'),
-	'section'  => 'no_whatsapp',
+	'section'  => 'whatsapp',
 // 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
 	'partial_refresh'    => [
@@ -750,7 +750,7 @@ Kirki::add_field('justg_config', [
 	'type'     => 'text',
 	'settings' => 'text_whatsapp',
 	'label'    => esc_html__('Text Whatsapp', 'justg'),
-	'section'  => 'no_whatsapp',
+	'section'  => 'whatsapp',
 // 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
 	'partial_refresh'    => [
@@ -761,12 +761,27 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 
+Kirki::add_field( 'justg_config', [
+	'type'        => 'select',
+	'settings'    => 'posisi_wa',
+	'label'       => esc_html__( 'Posisi Whatsapp', 'kirki' ),
+	'section'     => 'whatsapp',
+	'default'     => 'right',
+	'placeholder' => esc_html__( '', 'kirki' ),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'right' => esc_html__( 'Bawah Kanan', 'kirki' ),
+		'left' => esc_html__( 'Bawah Kiri', 'kirki' ),
+	],
+] );
+
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_whatsapp',
 	'label'       => esc_html__('Background Whatsapp', 'justg'),
 	'description' => esc_html__('', 'justg'),
-	'section'     => 'style_whatsapp',
+	'section'     => 'whatsapp',
 	'default'     => [
 		'background-color'      => '#51CC64',
 		'background-image'      => '',
@@ -784,19 +799,48 @@ Kirki::add_field('justg_config', [
 ]);
 
 Kirki::add_field( 'justg_config', [
-	'type'        => 'select',
-	'settings'    => 'posisi_wa',
-	'label'       => esc_html__( 'Posisi Whatsapp', 'kirki' ),
-	'section'     => 'style_whatsapp',
-	'default'     => 'right',
-	'placeholder' => esc_html__( '', 'kirki' ),
+	'type'        => 'switch',
+	'settings'    => 'to_top_status',
+	'label'       => esc_html__( 'Status', 'justg' ),
+	'section'     => 'to_top',
+	'default'     => 'off',
 	'priority'    => 10,
-	'multiple'    => 1,
 	'choices'     => [
-		'right' => esc_html__( 'Bawah Kanan', 'kirki' ),
-		'left' => esc_html__( 'Bawah Kiri', 'kirki' ),
+		'on'  => esc_html__( 'On', 'justg' ),
+		'off' => esc_html__( 'Off', 'justg' ),
 	],
 ] );
+
+Kirki::add_field( 'justg_config', [
+	'type'     => 'dashicons',
+	'settings' => 'icon_to_top',
+	'label'    => esc_html__( 'Icon Go to Top', 'justg' ),
+	'section'  => 'to_top',
+	'default'  => 'arrow-up',
+	'priority' => 10,
+] );
+
+Kirki::add_field('justg_config', [
+	'type'        => 'background',
+	'settings'    => 'bg_to_top',
+	'label'       => esc_html__('Background Whatsapp', 'justg'),
+	'description' => esc_html__('', 'justg'),
+	'section'     => 'to_top',
+	'default'     => [
+		'background-color'      => '#333333',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => ['.bg-to_top-float'],
+		],
+	],
+]);
 
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
