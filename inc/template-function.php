@@ -38,7 +38,7 @@ if( ! function_exists( 'justg_header_logo' ) ) {
             $title = get_bloginfo( 'name' );
         }
         
-        echo '<a class="navbar-brand" rel="home" href="'.get_site_url().'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" itemprop="url">'.$title.'</a>';
+        echo '<a class="navbar-brand" rel="home" href="'.get_home_url().'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" itemprop="url">'.$title.'</a>';
     }
 }
 if( ! function_exists( 'justg_header_menu') ) {
@@ -75,7 +75,7 @@ if ( ! function_exists( 'justg_header_profile' ) ) {
 		if ( justg_is_woocommerce_activated() ) {
 			?>
             <div class="site-header-profile position-relative">
-                <a class="py-2 px-3" href="<?php echo get_site_url();?>/my-account"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a>
+                <a class="py-2 px-3" href="<?php echo get_home_url();?>/my-account"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a>
             </div>
             <?php
 		}
@@ -90,7 +90,7 @@ if ( ! function_exists( 'justg_header_wishlist' ) ) {
 		if ( justg_is_woocommerce_activated() ) {
 			?>
             <div class="site-header-profile position-relative">
-                <a class="py-2 px-3" href="<?php echo get_site_url();?>/my-account/wishlist"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i></a>
+                <a class="py-2 px-3" href="<?php echo get_home_url();?>/my-account/wishlist"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i></a>
             </div>
             <?php
 		}
