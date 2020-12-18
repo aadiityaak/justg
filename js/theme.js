@@ -2666,6 +2666,18 @@ function () {
         }
     });
 
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.bg-to-top-float').fadeIn( 200 );
+            if ($(".bg-to-top-float")[0]){
+                $('.wa-right').addClass( 'push-left' );
+            }
+        } else {
+            $('.bg-to-top-float').fadeOut( 200 );
+            $('.wa-right').removeClass( 'push-left' );
+        }
+    });
+
     //go to top animation
     $('#go-to-top').each(function(){
         $(this).click(function(){ 

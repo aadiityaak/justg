@@ -244,6 +244,7 @@ th {
    padding: 0.75rem;
    vertical-align: top;
 }
+
 td {
    border-top: 1px solid rgb(222, 226, 230);
 }
@@ -18160,9 +18161,36 @@ blockquote:before {
    padding-top: 10px;
 }
 
-.whatsapp-float {
+.whatsapp-float,
+.to-top-float {
    bottom: 10px;
 }
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+
+.wa-left {
+   left: 10px;
+}
+
+.to-top-float,
+.wa-right {
+   right: 10px;
+}
+
+.to-top-float {
+   display: none;
+}
+
+.wa-right {
+   transition: all 200ms ease;
+}
+
+.wa-right.push-left {
+   transition: all 200ms ease;
+   right: 55px;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
    background-color: var(--primary);
 }
