@@ -455,9 +455,9 @@ if( ! function_exists( 'justg_widget_float' ) ) {
         if($no_wa){
             echo '<div class="float-widget">';
                 $wa_right = ($to_top_status == 'on' && $wa_position == 'right') ? '70px' : '10px';
-                echo '<a class="position-fixed btn bg-whatsapp-float whatsapp-float text-white ml-auto" style="'.$wa_position.':'.$wa_right.';" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+                echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto" style="'.$wa_position.':'.$wa_right.';" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
                 if($to_top_status == 'on') {
-                    echo '<a id="go-to-top" class="position-fixed btn bg-to-top-float text-white" style="right:10px; bottom: 10px;"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
+                    echo '<a id="go-to-top" class="position-fixed btn btn-sm bg-to-top-float text-white" style="right:10px; bottom: 10px;"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
                 }
                 echo '</div>';
         }
