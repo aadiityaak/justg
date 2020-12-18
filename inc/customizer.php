@@ -805,21 +805,6 @@ Kirki::add_field( 'justg_config', [
 	],
 ] );
 
-Kirki::add_field( 'justg_config', [
-	'type'     => 'dashicons',
-	'settings' => 'icon_to_top',
-	'label'    => esc_html__( 'Icon Go to Top', 'justg' ),
-	'section'  => 'to_top',
-	'default'  => 'arrow-up',
-	'priority' => 10,
-	'partial_refresh'    => [
-		'partial_icon_to_top' => [
-			'selector'        => '.bg-to-top-float',
-			'render_callback' => '__return_false'
-		]
-	],
-] );
-
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'bg_to_top',
@@ -841,6 +826,21 @@ Kirki::add_field('justg_config', [
 		],
 	],
 ]);
+
+Kirki::add_field( 'justg_config', [
+	'type'     => 'dashicons',
+	'settings' => 'icon_to_top',
+	'label'    => esc_html__( 'Icon Go to Top', 'justg' ),
+	'section'  => 'to_top',
+	'default'  => 'arrow-up',
+	'priority' => 10,
+	'partial_refresh'    => [
+		'partial_icon_to_top' => [
+			'selector'        => '.bg-to-top-float',
+			'render_callback' => '__return_false'
+		]
+	],
+] );
 
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
