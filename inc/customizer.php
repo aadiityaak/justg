@@ -739,7 +739,7 @@ Kirki::add_field('justg_config', [
 // 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
 	'partial_refresh'    => [
-		'partial_text_breadcrumb_separator' => [
+		'partial_nomor_whatsapp' => [
 			'selector'        => '.whatsapp-float',
 			'render_callback' => '__return_false'
 		]
@@ -753,12 +753,6 @@ Kirki::add_field('justg_config', [
 	'section'  => 'whatsapp',
 // 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
-	'partial_refresh'    => [
-		'partial_text_breadcrumb_separator' => [
-			'selector'        => '.whatsapp-float',
-			'render_callback' => '__return_false'
-		]
-	],
 ]);
 
 Kirki::add_field( 'justg_config', [
@@ -818,6 +812,12 @@ Kirki::add_field( 'justg_config', [
 	'section'  => 'to_top',
 	'default'  => 'arrow-up',
 	'priority' => 10,
+	'partial_refresh'    => [
+		'partial_icon_to_top' => [
+			'selector'        => '.bg-to-top-float',
+			'render_callback' => '__return_false'
+		]
+	],
 ] );
 
 Kirki::add_field('justg_config', [
@@ -837,7 +837,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['.bg-to_top-float'],
+			'element' => ['.bg-to-top-float'],
 		],
 	],
 ]);
