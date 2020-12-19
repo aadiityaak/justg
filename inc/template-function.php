@@ -106,7 +106,12 @@ if ( ! function_exists( 'justg_header_cart' ) ) {
 			?>
             <div id="site-header-cart" class="site-header-cart position-relative">
                 <?php justg_cart_link(); ?>
-                <div class="dropdown-cart pt-3">
+                <div class="close-mini-cart"></div>
+                <div class="cart-widget-side">
+                    <div class="widget-heading">
+                        <h3 class="widget-title"><?php esc_html_e( 'Shopping cart', 'justg' ); ?></h3>
+                        <a href="#" class="close-side-widget wd-cross-button wd-with-text-left"><?php esc_html_e( 'close', 'justg' ); ?></a>
+                    </div>
                     <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
                 </div>
             </div>
@@ -143,7 +148,7 @@ if ( ! function_exists( 'justg_cart_link' ) ) {
 			return;
         }
 		?>
-			<a class="cart-contents px-3" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'justg' ); ?>">
+			<a class="cart-contents px-3 open-mini-cart" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'justg' ); ?>">
                 <?php 
                 // echo wp_kses_post( WC()->cart->get_cart_subtotal() ); 
                 ?> 

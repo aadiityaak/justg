@@ -268,7 +268,7 @@ function woocommerce_custom_product_add_to_cart_text() {
     return __( 'Beli', 'justg' );
 }
 
-do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int ); 
+// do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int ); 
 
 
 add_action('woocommerce_share','justg_share');

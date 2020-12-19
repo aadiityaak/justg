@@ -2698,6 +2698,13 @@ function () {
             }, 2000);
     });
 
+    // Open mini cart
+    $(document).on( 'click', '.open-mini-cart, .cart-side-opened', function(e) {
+        e.preventDefault();
+        $('.cart-widget-side').toggleClass('cart-widget-side-opened');
+        $('.close-mini-cart').toggleClass('cart-side-opened');
+    });
+
     // Quantity btn
     $('form.cart').on( 'click', 'button.plus, button.minus', function() {
         // Get current quantity values
