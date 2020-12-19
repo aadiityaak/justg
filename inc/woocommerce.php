@@ -63,7 +63,7 @@ if ( ! function_exists( 'justg_woocommerce_wrapper_start' ) ) {
 		echo '<div class="row">';
 		// Do the left sidebar check
 		do_action('justg_before_content');
-		echo '<main class="site-main col order-2" id="main">';
+		echo '<main class="site-main col order-2 bg-white py-3" id="main">';
 	}
 }
 
@@ -274,7 +274,7 @@ do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int );
 add_action('woocommerce_share','justg_share');
 function justg_share() {
 	$class = 'btn btn-link';
-	echo '<div class="share-buttons mt-3">';
+	echo '<div class="share-buttons pt-2">';
 		echo 'Share ';
 		//Email
 		echo '<a class="'.$class.'" href="mailto:?Subject='.get_the_title().'&amp;Body='.get_the_permalink().'"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>';
@@ -289,14 +289,18 @@ function justg_share() {
 }
 
 /* Show Buttons */
-add_action( 'woocommerce_before_add_to_cart_quantity', 'display_quantity_plus' );
-
-function display_quantity_plus() {
-     echo '<button type="button" class="plus btn btn-primary" >+</button>';
+add_action( 'woocommerce_before_add_to_cart_quantity', 'display_quantity_minus' );
+function display_quantity_minus() {
+	echo '<button type="button" class="minus btn btn-link btn-sm text-dark" >-</button>';
 }
 
-add_action( 'woocommerce_after_add_to_cart_quantity', 'display_quantity_minus' );
+add_action( 'woocommerce_after_add_to_cart_quantity', 'display_quantity_plus' );
+function display_quantity_plus() {
+	echo '<button type="button" class="plus btn btn-link btn-sm text-dark" >+</button>';
+}
 
-function display_quantity_minus() {
-     echo '<button type="button" class="minus btn btn-primary" >-</button>';
+add_filter( 'woocommerce_quantity_input_args', 'custom_quantity', 10, 2 );
+function custom_quantity( $args, $product ) {
+    $args['input_value'] = 0;
+    return $args;
 }

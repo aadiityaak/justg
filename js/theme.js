@@ -2689,7 +2689,7 @@ function () {
     // Quantity btn
     $('form.cart').on( 'click', 'button.plus, button.minus', function() {
         // Get current quantity values
-        var qty = $( this ).closest( 'form.cart' ).find( '.qty' );
+        var qty = $( this ).parent().find( '.qty' );
         var val   = parseFloat(qty.val());
         var max = parseFloat(qty.attr( 'max' ));
         var min = parseFloat(qty.attr( 'min' ));

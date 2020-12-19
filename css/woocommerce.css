@@ -142,6 +142,61 @@ a.cart-contents {
     color: var(--pink);
 }
 
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+   background-color: var(--primary);
+}
+.woocommerce div.product form.cart .group_table td:first-child {
+   width: 11em;
+}
+
+.single-product div.product form.cart .quantity {
+   float: none !important;
+   margin: 0;
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.product_meta  {
+   border-top: 1px solid rgba(0,0,0,.1);
+   border-bottom: 1px solid rgba(0,0,0,.1);
+   padding: 15px 0;
+   margin-top: 30px;
+   font-size: .9em;
+}
+
+.quantity .qty {
+   padding: 0;
+   width: 20%;
+   min-width: 30px;
+   max-height: 24px;
+   text-align: center;
+   border: 0;
+   color: #777777;
+   outline: 0;
+   -webkit-appearance: none;
+   background: 0 0;
+   -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.quantity input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li img {
+    padding: 10px 5px;
+}
+
 @keyframes loading {
     from {
         transform: rotate(0deg);

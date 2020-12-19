@@ -18187,22 +18187,3 @@ blockquote:before {
    transition: all 200ms ease;
    right: 55px;
 }
-
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-   background-color: var(--primary);
-}
-
-.single-product div.product form.cart .quantity {
-   float: none !important;
-   margin: 0;
-   display: inline-block;
-   vertical-align: middle;
-}
-
-.add_to_cart_button:before {
-   content: "\f07a";
-   font-family: FontAwesome;
-}
