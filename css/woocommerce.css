@@ -197,6 +197,36 @@ a.cart-contents {
     padding: 10px 5px;
 }
 
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border: none
+}
+
+.woocommerce div.product form.cart .group_table td {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.woocommerce div.product form.cart .group_table td label {
+    margin: 0px;
+}
+
+.woocommerce div.product form.cart table {
+    width: 100%;
+}
+
+.woocommerce div.product form.cart table {
+    margin-bottom: 20px;
+}
+
+.woocommerce .star-rating span {
+    color: #ffb100;
+}
+
 @keyframes loading {
     from {
         transform: rotate(0deg);

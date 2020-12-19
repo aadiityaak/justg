@@ -273,7 +273,7 @@ do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int );
 
 add_action('woocommerce_share','justg_share');
 function justg_share() {
-	$class = 'btn btn-link';
+	$class = 'p-1 mx-1 text-dark';
 	echo '<div class="share-buttons pt-2">';
 		echo 'Share ';
 		//Email
@@ -291,16 +291,31 @@ function justg_share() {
 /* Show Buttons */
 add_action( 'woocommerce_before_add_to_cart_quantity', 'display_quantity_minus' );
 function display_quantity_minus() {
+	echo '<div class="border rounded d-inline-block">';
 	echo '<button type="button" class="minus btn btn-link btn-sm text-dark" >-</button>';
 }
 
 add_action( 'woocommerce_after_add_to_cart_quantity', 'display_quantity_plus' );
 function display_quantity_plus() {
 	echo '<button type="button" class="plus btn btn-link btn-sm text-dark" >+</button>';
+	echo '</div>';
 }
 
 add_filter( 'woocommerce_quantity_input_args', 'custom_quantity', 10, 2 );
 function custom_quantity( $args, $product ) {
     $args['input_value'] = 0;
     return $args;
+}
+
+// Add breadcrumb on woocommerce_single_product_summary
+add_action( 'woocommerce_single_product_summary' , 'justg_breadcrumb' );
+
+// Show empty rating
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
+add_action('woocommerce_after_shop_loop_item_title', 'justg_get_star_rating' );
+function justg_get_star_rating()
+{
+    global $woocommerce, $product;
+    $average = $product->get_average_rating();
+    echo '<div class="star-rating"><span style="width:'.( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">'.$average.'</strong> '.__( 'out of 5', 'woocommerce' ).'</span></div>';
 }
