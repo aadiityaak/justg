@@ -350,7 +350,7 @@ if( ! function_exists( 'justg_left_sidebar_check' ) ) {
             $sidebar_pos = $archives_sidebar_pos;
         }
         
-        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() ) ){
+        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() || is_cart() || is_checkout()) ){
             return;
         }
 
@@ -390,7 +390,7 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
             $sidebar_pos = $archives_sidebar_pos;
         }
 
-        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() ) ){
+        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() || is_cart() || is_checkout()) ){
             return;
         }
 

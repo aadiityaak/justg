@@ -28,7 +28,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<button type="submit" class="single_add_to_cart_button btn btn-sm ml-1 btn-primary"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	<button type="submit" class="single_add_to_cart_button btn btn-sm ml-1 btn-primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

@@ -2686,6 +2686,14 @@ function () {
         });
     });
 
+    $('body').on('added_to_cart',function(){
+        setTimeout(
+            function() 
+            {
+              $('.added_to_cart').hide('fast');
+            }, 1000);
+    });
+
     // Quantity btn
     $('form.cart').on( 'click', 'button.plus, button.minus', function() {
         // Get current quantity values

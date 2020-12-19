@@ -36,6 +36,17 @@ figure.woocommerce-product-gallery__wrapper {
     vertical-align: middle;
 }
 
+.woocommerce a.added_to_cart {
+    vertical-align: middle;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-color: #333333;
+    padding: 0px 20px;
+    width: 100%;
+    text-align: center;
+}
+
 .woocommerce span.onsale {
     padding: 0px;
 }
@@ -225,6 +236,13 @@ a.cart-contents {
 
 .woocommerce .star-rating span {
     color: #ffb100;
+}
+
+.woocommerce-loop-product__title a {
+    line-height: 2.5ex;
+    height: 5ex;
+    overflow: hidden;
+    display: inline-block;
 }
 
 @keyframes loading {
