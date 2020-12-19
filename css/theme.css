@@ -18194,3 +18194,15 @@ blockquote:before {
 .woocommerce input.button.alt {
    background-color: var(--primary);
 }
+
+.single-product div.product form.cart .quantity {
+   float: none !important;
+   margin: 0;
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.add_to_cart_button:before {
+   content: "\f07a";
+   font-family: FontAwesome;
+}

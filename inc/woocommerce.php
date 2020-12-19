@@ -38,7 +38,7 @@ if ( ! function_exists( 'justg_is_woocommerce_activated' ) ) {
 	}
 }
 
-//Load Ongkir Function
+//Load Woocomerce Function
 if ( justg_is_woocommerce_activated() ) {
 	require_once get_template_directory() . '/woocommerce/wishlist.php';
 	require_once get_template_directory() . '/woocommerce/ongkir/ongkir.php';
@@ -253,4 +253,50 @@ add_action( 'woocommerce_account_wishlist_endpoint', 'justg_my_account_endpoint_
 function justg_my_account_endpoint_content() {
  	echo wishlist();
  
+}
+
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Beli', 'justg' ); 
+}
+
+// To change add to cart text on product archives(Collection) page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+function woocommerce_custom_product_add_to_cart_text() {
+    return __( 'Beli', 'justg' );
+}
+
+do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int ); 
+
+
+add_action('woocommerce_share','justg_share');
+function justg_share() {
+	$class = 'btn btn-link';
+	echo '<div class="share-buttons mt-3">';
+		echo 'Share ';
+		//Email
+		echo '<a class="'.$class.'" href="mailto:?Subject='.get_the_title().'&amp;Body='.get_the_permalink().'"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>';
+		//Facebook
+		echo '<a class="'.$class.'" href="http://www.facebook.com/sharer.php?u='.get_the_permalink().'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+		//Pinterest
+		// echo '<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>';
+		//Twitter
+		echo '<a class="'.$class.'" href="https://twitter.com/share?url='.get_the_permalink().'&amp;text='.get_the_title().'&amp;" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
+	echo '</div>';
+
+}
+
+/* Show Buttons */
+add_action( 'woocommerce_before_add_to_cart_quantity', 'display_quantity_plus' );
+
+function display_quantity_plus() {
+     echo '<button type="button" class="plus btn btn-primary" >+</button>';
+}
+
+add_action( 'woocommerce_after_add_to_cart_quantity', 'display_quantity_minus' );
+
+function display_quantity_minus() {
+     echo '<button type="button" class="minus btn btn-primary" >-</button>';
 }

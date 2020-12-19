@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 		<tbody>
 			<?php
 			foreach ( $customer_orders->orders as $customer_order ) {
-				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+				$order      = wc_get_order( $customer_order ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Override
 				$item_count = $order->get_item_count() - $order->get_item_count_refunded();
 				?>
 				<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-<?php echo esc_attr( $order->get_status() ); ?> order">
@@ -46,7 +46,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 							<?php elseif ( 'order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo esc_html( _x( '#', 'hash before order number', 'justg' ) . $order->get_order_number() ); ?>
+									<?php echo esc_html( _x( '#', 'hash before order number', 'understrap' ) . $order->get_order_number() ); ?>
 								</a>
 
 							<?php elseif ( 'order-date' === $column_id ) : ?>
@@ -58,16 +58,16 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 							<?php elseif ( 'order-total' === $column_id ) : ?>
 								<?php
 								/* translators: 1: formatted order total 2: total order items */
-								echo wp_kses_post( sprintf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'justg' ), $order->get_formatted_order_total(), $item_count ) );
+								echo wp_kses_post( sprintf( _n( '%1$s for %2$s item', '%1$s for %2$s items', $item_count, 'understrap' ), $order->get_formatted_order_total(), $item_count ) );
 								?>
 
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
-								$actions = wc_get_account_orders_actions( $order );
+								$orders_actions = wc_get_account_orders_actions( $order );
 
-								if ( ! empty( $actions ) ) {
-									foreach ( $actions as $key => $action ) { // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
-										echo '<a href="' . esc_url( $action['url'] ) . '" class="woocommerce-button button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+								if ( ! empty( $orders_actions ) ) {
+									foreach ( $orders_actions as $key => $orders_action ) {
+										echo '<a href="' . esc_url( $orders_action['url'] ) . '" class="woocommerce-button btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $orders_action['name'] ) . '</a>';
 									}
 								}
 								?>
@@ -86,22 +86,23 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
 		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
 			<?php if ( 1 !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_html_e( 'Previous', 'justg' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page - 1 ) ); ?>"><?php esc_html_e( 'Previous', 'understrap' ); ?></a>
 			<?php endif; ?>
 
 			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next button" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_html_e( 'Next', 'justg' ); ?></a>
+				<a class="woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-outline-primary" href="<?php echo esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ); ?>"><?php esc_html_e( 'Next', 'understrap' ); ?></a>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="woocommerce-Button button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-			<?php esc_html_e( 'Browse products', 'justg' ); ?>
+		<a class="btn btn-outline-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+			<?php esc_html_e( 'Go to the shop', 'understrap' ); ?>
 		</a>
-		<?php esc_html_e( 'No order has been made yet.', 'justg' ); ?>
+		<?php esc_html_e( 'No order has been made yet.', 'understrap' ); ?>
 	</div>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_account_orders', $has_orders ); ?>
+<?php
+do_action( 'woocommerce_after_account_orders', $has_orders );

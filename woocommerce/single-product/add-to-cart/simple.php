@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.4.0
+ * @version 3.6.1
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -23,7 +23,7 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
-echo wc_get_stock_html( $product ); // WPCS: XSS ok.
+echo wc_get_stock_html( $product ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 if ( $product->is_in_stock() ) : ?>
 
@@ -37,21 +37,21 @@ if ( $product->is_in_stock() ) : ?>
 
 		woocommerce_quantity_input(
 			array(
-				'classes'      => apply_filters( 'woocommerce_quantity_input_classes', array( 'input-text', 'qty', 'text', 'form-control', 'form-control-sm' ), $product ),
 				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
 				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // phpcs:ignore WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 			)
 		);
 
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button alt btn bg-dark px-3 px-md-4 text-white btn-sm"><i class="fa fa-cart-plus"></i> Beli</button>
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="btn btn-outline-primary"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
-<?php endif; ?>
+	<?php
+endif;
