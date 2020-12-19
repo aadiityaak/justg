@@ -110,14 +110,14 @@ figure.woocommerce-product-gallery__wrapper {
     z-index: 10;
     opacity: 0;
     visibility: hidden;
-    background-color: rgba(0,0,0,.7);
-    transition: opacity .25s ease,visibility 0s ease .25s;
+    background-color: rgba(0, 0, 0, .7);
+    transition: opacity .25s ease, visibility 0s ease .25s;
 }
 
 .cart-side-opened {
     opacity: 1;
     visibility: visible;
-    transition: opacity .25s ease,visibility 0s ease;
+    transition: opacity .25s ease, visibility 0s ease;
 }
 
 .cart-widget-side .widget_shopping_cart {
@@ -150,11 +150,11 @@ figure.woocommerce-product-gallery__wrapper {
     background-color: #FFF;
     transition: -webkit-transform .25s ease;
     transition: transform .25s ease;
-    transition: transform .25s ease,-webkit-transform .25s ease;
+    transition: transform .25s ease, -webkit-transform .25s ease;
     right: 0;
     left: auto;
-    -webkit-transform: translate3d(340px,0,0);
-    transform: translate3d(340px,0,0);
+    -webkit-transform: translate3d(340px, 0, 0);
+    transform: translate3d(340px, 0, 0);
 }
 
 .cart-widget-side.cart-widget-side-opened {
@@ -162,7 +162,7 @@ figure.woocommerce-product-gallery__wrapper {
     transform: none;
     transition: -webkit-transform .25s ease;
     transition: transform .25s ease;
-    transition: transform .25s ease,-webkit-transform .25s ease;
+    transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .justg-scroll {
@@ -183,9 +183,33 @@ figure.woocommerce-product-gallery__wrapper {
     border-bottom: 1px solid;
 }
 
+.widget_shopping_cart .mini_cart_item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.justg-scroll-content .remove {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    z-index: 2;
+    margin-bottom: 0;
+    padding-right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, .8);
+    text-align: center;
+    font-size: 0;
+    line-height: 20px;
+}
+
 .cart-widget-side .shopping-cart-widget-footer {
     flex: 0 0 auto;
-    padding-bottom: 15px;
+    padding: 10px 15px 0px;
 }
 
 a.cart-contents {
