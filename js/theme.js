@@ -2686,12 +2686,16 @@ function () {
         });
     });
 
+    // Add rounded in thumbnail class
+    $('.attachment-woocommerce_thumbnail').addClass('rounded')
+
+    // Add hide added to cart
     $('body').on('added_to_cart',function(){
         setTimeout(
             function() 
             {
-              $('.added_to_cart').hide('fast');
-            }, 1000);
+              $('.added_to_cart').hide('slow');
+            }, 2000);
     });
 
     // Quantity btn
