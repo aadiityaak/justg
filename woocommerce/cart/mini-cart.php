@@ -89,11 +89,11 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 			
 		<?php else : ?>
 
-			<p class="woocommerce-mini-cart__empty-message empty"><?php esc_html_e( 'No products in the cart.', 'woocommerce' ); ?></p>
+			<p class="woocommerce-mini-cart__empty-message empty px-2 pt-5"><?php esc_html_e( 'Keranjang Belanja Kosong.', 'woocommerce' ); ?></p>
 			<?php if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
-				<p class="return-to-shop">
-					<a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-						<?php esc_html_e( 'Return To Shop', 'justg' ) ?>
+				<p class="return-to-shop px-2">
+					<a class="btn btn-block btn-primary wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+						<?php esc_html_e( 'Kembali Belanja', 'justg' ) ?>
 					</a>
 				</p>
 			<?php endif; ?>

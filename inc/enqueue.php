@@ -23,6 +23,7 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 		wp_enqueue_style( 'justg-custom-styles', get_template_directory_uri() . '/css/custom.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery' );
+		wp_enqueue_style('dashicons');
 
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'justg-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
