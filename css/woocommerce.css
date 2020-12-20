@@ -114,6 +114,14 @@ figure.woocommerce-product-gallery__wrapper {
     transition: opacity .25s ease, visibility 0s ease .25s;
 }
 
+.justg-scroll-content {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
 .cart-side-opened {
     opacity: 1;
     visibility: visible;

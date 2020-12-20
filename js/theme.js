@@ -2691,18 +2691,20 @@ function () {
 
     // Add hide added to cart
     $('body').on('added_to_cart',function(){
+        toggleMiniCart();
         setTimeout(
-            function() 
-            {
-              $('.added_to_cart').hide('slow');
-            }, 2000);
+        $('.added_to_cart').hide('slow');
     });
+
+    function toggleMiniCart() {
+        $('.cart-widget-side').toggleClass('cart-widget-side-opened');
+        $('.close-mini-cart').toggleClass('cart-side-opened');
+    }
 
     // Open mini cart
     $(document).on( 'click', '.open-mini-cart, .cart-side-opened', function(e) {
         e.preventDefault();
-        $('.cart-widget-side').toggleClass('cart-widget-side-opened');
-        $('.close-mini-cart').toggleClass('cart-side-opened');
+        toggleMiniCart();
     });
 
     // Quantity btn
