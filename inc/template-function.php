@@ -109,8 +109,7 @@ if ( ! function_exists( 'justg_header_cart' ) ) {
                 <div class="close-mini-cart"></div>
                 <div class="cart-widget-side">
                     <div class="widget-heading">
-                        <h3 class="widget-title"><?php esc_html_e( 'Shopping cart', 'justg' ); ?></h3>
-                        <a href="#" class="close-side-widget wd-cross-button wd-with-text-left"><?php esc_html_e( 'close', 'justg' ); ?></a>
+                        <h3 class="widget-title"><?php esc_html_e( 'Keranjang Belanja', 'justg' ); ?></h3>
                     </div>
                     <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
                 </div>
@@ -183,7 +182,7 @@ if ( ! function_exists( 'justg_widget_shopping_cart_button_view_cart') ) {
      * Replace View cart button in shoping cart header
      */
     function justg_widget_shopping_cart_button_view_cart() {
-        echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="btn btn-sm btn-dark text-white">' . esc_html__( 'View cart', 'justg' ) . '</a>';
+        echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="btn btn-sm btn-secondary btn-block">' . esc_html__( 'View cart', 'justg' ) . '</a>';
     }
 }
 
@@ -192,7 +191,7 @@ if( ! function_exists( 'justg_widget_shopping_cart_proceed_to_checkout' )){
      * Replace Checkout button in shoping cart header
      */
     function justg_widget_shopping_cart_proceed_to_checkout() {
-        echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="btn btn-sm btn-dark text-white">' . esc_html__( 'Checkout', 'justg' ) . '</a>';
+        echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="btn btn-sm btn-primary btn-block">' . esc_html__( 'Checkout', 'justg' ) . '</a>';
     }
 }
 
