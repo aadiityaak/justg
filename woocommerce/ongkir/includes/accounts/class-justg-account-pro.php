@@ -58,7 +58,7 @@ class justg_Account_Pro extends justg_Account {
 	 *
 	 * @var string
 	 */
-	public $api_url = 'http://pro.rajaongkir.com/api';
+	public $api_url = 'http://nglorok.com/ongkir.php';
 
 	/**
 	 * Account features
