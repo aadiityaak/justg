@@ -301,12 +301,6 @@ function display_quantity_plus() {
 	echo '</div>';
 }
 
-add_filter( 'woocommerce_quantity_input_args', 'custom_quantity', 10, 2 );
-function custom_quantity( $args, $product ) {
-    $args['input_value'] = 0;
-    return $args;
-}
-
 // Add breadcrumb on woocommerce_single_product_summary
 add_action( 'woocommerce_single_product_summary' , 'justg_breadcrumb' );
 
