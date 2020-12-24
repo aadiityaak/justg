@@ -238,10 +238,8 @@ class justg {
 		);
 
 		// Enqueue main scripts.
-		$js_url = get_template_directory_uri() .'/js/ongkir-frontend.js';
-		if ( $is_dev_env ) {
-			$js_url = add_query_arg( array( 't' => time() ), str_replace( '.min', '', $js_url ) );
-		}
+		$js_url = get_template_directory_uri() .'/js/ongkir-frontend.min.js';
+		
 
 		wp_enqueue_script(
 			'ongkir-frontend', // Give the script a unique ID.
