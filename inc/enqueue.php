@@ -20,14 +20,12 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
 		wp_enqueue_style( 'justg-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
 		wp_enqueue_style( 'justg-woocomerce-styles', get_template_directory_uri() . '/css/woocommerce.min.css', array(), $css_version );
-		wp_enqueue_style( 'justg-custom-styles', get_template_directory_uri() . '/css/custom.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_style('dashicons');
 
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'justg-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
-		wp_enqueue_script( 'justg-custom-scripts', get_template_directory_uri() . '/js/custom.js', array(), $js_version, true );
 		
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
