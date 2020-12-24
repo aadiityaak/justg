@@ -89,7 +89,7 @@ if ( ! function_exists( 'justg_header_wishlist' ) ) {
 	function justg_header_wishlist() {
 		if ( justg_is_woocommerce_activated() ) {
 			?>
-            <div class="site-header-profile position-relative">
+            <div class="site-header-profile position-relative d-none d-sm-block">
                 <a class="py-2 px-3" href="<?php echo get_home_url();?>/my-account/wishlist"><i class="fa fa-heart-o fa-lg" aria-hidden="true"></i></a>
             </div>
             <?php
@@ -156,9 +156,11 @@ if ( ! function_exists( 'justg_cart_link' ) ) {
                 // echo wp_kses_post( WC()->cart->get_cart_subtotal() ); 
                 ?> 
                 
-                <span class="count">
+                <span class="count d-block">
                     <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> 
+                    <span class="position-absolute pt-2">
                     <?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'justg' ), WC()->cart->get_cart_contents_count() ) ); ?>
+                    </span>
                 </span>
 			</a>
 		<?php

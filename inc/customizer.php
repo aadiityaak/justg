@@ -878,8 +878,8 @@ Kirki::add_field('justg_config', [
 	],
 	'output'    => [
 		[
-			'choice'    => 'link',
-			'element'   => '#wrapper-footer',
+			'choice'    => 'color',
+			'element'   => '#wrapper-footer, #wrapper-footer h1, #wrapper-footer h2, #wrapper-footer h3, #wrapper-footer h4, #wrapper-footer h5, #wrapper-footer h6',
 			'property'  => 'color',
 		],
 		[
