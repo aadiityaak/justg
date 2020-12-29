@@ -2687,7 +2687,7 @@ function () {
     });
 
     // Add rounded in thumbnail class
-    $('.attachment-woocommerce_thumbnail').addClass('rounded')
+    $('.attachment-woocommerce_thumbnail').addClass('rounded p-0')
 
     // Add hide added to cart
     $('body').on('added_to_cart',function(){

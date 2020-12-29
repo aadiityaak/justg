@@ -462,9 +462,11 @@ if( ! function_exists( 'justg_widget_float' ) ) {
         } else if (substr($no_wa, 0, 1) === '+') {
             $no_wa    = '' . substr($no_wa, 1);
         }
-        if($no_wa){
+        if($to_top_status == 'on' || $no_wa){
             echo '<div class="float-widget">';
-                echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+                if(get_theme_mod('nomor_whatsapp', 0)) {
+                    echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+                }
                 if($to_top_status == 'on') {
                     echo '<a id="go-to-top" class="position-fixed btn btn-sm bg-to-top-float to-top-float text-white"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
                 }
