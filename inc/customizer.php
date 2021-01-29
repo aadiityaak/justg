@@ -319,6 +319,21 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 Kirki::add_field('justg_config', [
+	'type'        => 'select',
+	'settings'    => 'select_header_position',
+	'label'       => esc_html__('Header Position', 'justg'),
+	'section'     => 'header_section',
+	'default'     => 'container',
+	'placeholder' => esc_html__('Header Position', 'justg'),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'relative' => esc_html__('Relative', 'justg'),
+		'fixed-top' => esc_html__('Fixed Top', 'justg'),
+		'sticky-top' => esc_html__('Sticky Top', 'justg'),
+	],
+]);
+Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_header',
 	'label'       => esc_html__('Background Header', 'justg'),
