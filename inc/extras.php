@@ -236,3 +236,14 @@ if ( ! function_exists( 'justg_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'justg_kses_title' ).
+
+//remove category: in title archive category
+add_filter( 'get_the_archive_title', 'justg_prefix_category_title' );
+if ( ! function_exists( 'justg_prefix_category_title' ) ) {
+	function justg_prefix_category_title( $title ) {
+		if ( is_category() ) {
+			$title = single_cat_title( '', false );
+		}
+		return $title;
+	}
+}

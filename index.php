@@ -48,11 +48,11 @@ $container = get_theme_mod( 'justg_container_type' );
 					get_template_part( 'loop-templates/content', 'none' );
 				}
 				?>
+				
+				<!-- The pagination component -->
+				<?php justg_pagination(); ?>
 
 			</main><!-- #main -->
-
-			<!-- The pagination component -->
-			<?php justg_pagination(); ?>
 
 			<!-- Do the right sidebar check. -->
 			<?php do_action('justg_after_content'); ?>

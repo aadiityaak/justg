@@ -17979,7 +17979,9 @@ a.skip-link {
       overflow-y: auto;
       transition: all ease 200ms
    }
-
+   .navbar-collapse a {
+      color: #333 !important;
+   }
    .logged-in .navbar-collapse.show {
       padding-top: 70px;
    }
@@ -17999,6 +18001,9 @@ a.skip-link {
       padding: .25rem .9rem;
       white-space: inherit;
    }
+   .navbar-collapse .dropdown-menu {
+      background-color: #fff !important;
+  }
 }
 
 
@@ -18060,7 +18065,7 @@ a.skip-link {
    line-height: 1.5em !important;
 }
 
-.site>header {
+.block-header {
    border: none;
    border-bottom: solid;
 }
@@ -18164,6 +18169,7 @@ blockquote:before {
 .whatsapp-float,
 .to-top-float {
    bottom: 10px;
+   z-index: 10;
 }
 
 .wa-left {
@@ -18173,7 +18179,6 @@ blockquote:before {
 .to-top-float,
 .wa-right {
    right: 10px;
-   z-index: 10;
 }
 
 .to-top-float {

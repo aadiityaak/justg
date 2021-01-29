@@ -255,22 +255,6 @@ function justg_my_account_endpoint_content() {
  
 }
 
-
-// To change add to cart text on single product page
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
-function woocommerce_custom_single_add_to_cart_text() {
-    return __( 'Beli', 'justg' ); 
-}
-
-// To change add to cart text on product archives(Collection) page
-add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
-function woocommerce_custom_product_add_to_cart_text() {
-    return __( 'Beli', 'justg' );
-}
-
-// do_action( 'woocommerce_share', $jetpack_woocommerce_social_share_icons, $int ); 
-
-
 add_action('woocommerce_share','justg_share');
 function justg_share() {
 	$class = 'p-1 mx-1 text-dark';

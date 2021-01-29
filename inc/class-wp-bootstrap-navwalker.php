@@ -63,7 +63,13 @@ if ( ! class_exists( 'justg_WP_Bootstrap_Navwalker' ) ) {
 			 * @param int      $depth   Depth of menu item. Used for padding.
 			 */
 			$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
-			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+			
+			$depthleft = '';
+			if($depth!=0) {
+				$depthleft = ' dropdown-sub';
+			}
+
+			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) .$depthleft. '"' : '';
 			/**
 			 * The `.dropdown-menu` container needs to have a labelledby
 			 * attribute which points to it's trigger link.
@@ -190,12 +196,14 @@ if ( ! class_exists( 'justg_WP_Bootstrap_Navwalker' ) ) {
 
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
-				$atts['href']          = $item->url;
-				$atts['data-toggle']   = 'dropdown';
-				$atts['aria-haspopup'] = 'true';
-				$atts['aria-expanded'] = 'false';
-				$atts['class']         = 'dropdown-toggle nav-link';
+				// $atts['href']          = '#';
+				// $atts['href']          = ! empty( $item->url ) ? $item->url : '#';
+				// $atts['data-toggle']   = 'dropdown';
+				// $atts['aria-haspopup'] = 'true';
+				// $atts['aria-expanded'] = 'false';
+				$atts['class']         = 'dropdown-togglex nav-link d-flex align-items-center justify-content-between';
 				$atts['id']            = 'menu-item-dropdown-' . $item->ID;
+				// $atts['onClick'] 		= 'window.location.href="'.$atts['href'].'";';
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
@@ -240,7 +248,11 @@ if ( ! class_exists( 'justg_WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= self::linkmod_element_open( $linkmod_type, $attributes );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '<a' . $attributes . '>';
+				if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth > 1 ) {
+					$item_output .= '<span' . $attributes . '>';
+				} else {
+					$item_output .= '<a' . $attributes . '>';
+				}
 			}
 
 			/**
@@ -280,6 +292,13 @@ if ( ! class_exists( 'justg_WP_Bootstrap_Navwalker' ) ) {
 				}
 			}
 
+			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth > 1 ) {
+
+				$attributesx 			= 'href="' .  esc_attr($item->url) . '"';
+				$title 					= '<a '.$attributesx.' class="nav-link p-0">'.$title.'</a>';
+				
+			}
+
 			// Put the item contents into $output.
 			$item_output .= isset( $args->link_before ) ? $args->link_before . $icon_html . $title . $args->link_after : '';
 			/**
@@ -291,7 +310,15 @@ if ( ! class_exists( 'justg_WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= self::linkmod_element_close( $linkmod_type, $attributes );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '</a>';
+
+				if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth > 1 ) {
+					$item_output .= '<small class="ml-1 fa fa-caret-down d-none d-md-inline-block"></small>';
+					$item_output .= '<small class="ml-1 fa fa-caret-down d-md-none btn btn-sm p-0 px-2" data-toggle="collapse" data-target="#menu-item-'.$item->ID.' .dropdown-menu"></small>';
+					$item_output .= '</span>';
+				} else {
+					$item_output .= '</a>';
+				}
+			
 			}
 
 			$item_output .= isset( $args->after ) ? $args->after : '';

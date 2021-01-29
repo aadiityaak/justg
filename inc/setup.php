@@ -31,6 +31,12 @@ if ( ! function_exists( 'justg_setup' ) ) {
 		// Add theme support custom logo
 		add_theme_support( 'custom-logo' );
 
+		// Add theme support custom header
+		add_theme_support( 'custom-header' );
+
+		// Add theme support custom background
+		add_theme_support( 'custom-background');
+
 		// Add theme support to beaver builder
 		add_theme_support( 'fl-theme-builder-headers' );
 		add_theme_support( 'fl-theme-builder-footers' );

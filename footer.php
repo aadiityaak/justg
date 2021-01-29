@@ -11,6 +11,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+</div><!-- #wrapper-content  closing tag here -->
+
 <?php 
 do_action('justg_bottom_content');
 do_action('justg_before_footer');

@@ -16,7 +16,7 @@ $justg_includes = array(
 	'/template-tags.php',                   // Custom template tags for this theme.
 	'/pagination.php',                      // Custom pagination for this theme.
 	'/template-function.php',				// Load template functions.
-	'/template-hooks.php',					// Loat template hook.
+	'/template-hooks.php',					// Load template hook.
 	'/extras.php',                          // Custom functions that act independently of the theme templates.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.

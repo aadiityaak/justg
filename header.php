@@ -18,7 +18,6 @@ $container = get_theme_mod( 'justg_container_type' );
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="shortcut icon" href="">
 	<?php wp_head(); ?>
 </head>
 
@@ -35,6 +34,7 @@ $container = get_theme_mod( 'justg_container_type' );
 	do_action('justg_header_close');
 	do_action('justg_after_header');
 	?>
-	<div class="justg-top-content">
-			<?php do_action('justg_top_content'); ?>
-	</div>
+
+	<div class="justg-top-content"><?php do_action('justg_top_content'); ?></div>
+	
+	<div id="wrapper-content">
