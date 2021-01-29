@@ -196,10 +196,10 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'typography',
 	'settings'    => 'typography_setting',
-	'label'       => esc_html__('Typography Umum', 'justg'),
+	'label'       => esc_html__('Typography Global', 'justg'),
 	'section'     => 'global_typography',
 	'default'     => [
-		'font-family'    => 'Poppins',
+		'font-family'    => 'inherit',
 		'variant'        => 'regular',
 		'font-size'      => '14px',
 		'line-height'    => '1.5',
@@ -213,6 +213,58 @@ Kirki::add_field('justg_config', [
 	'output'      => [
 		[
 			'element' => 'body',
+		],
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'typography',
+	'settings'    => 'menu_setting',
+	'label'       => esc_html__('Typography Menu', 'justg'),
+	'section'     => 'global_typography',
+	'default'     => [
+		'font-family'    => 'inherit',
+		'variant'        => 'regular',
+		'font-size'      => '16px',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#333333',
+		'text-transform' => 'uppercase',
+		'text-align'     => 'left',
+	],
+	'priority'    => 10,
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => '#main-menu',
+		],
+	],
+	'partial_refresh'    => [
+		'partial_menu_setting' => [
+			'selector'        => '.navbar-nav',
+			'render_callback' => '__return_false'
+		]
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'typography',
+	'settings'    => 'typography_widget_setting',
+	'label'       => esc_html__('Typography Widget', 'justg'),
+	'section'     => 'global_typography',
+	'default'     => [
+		'font-family'    => 'inherit',
+		'variant'        => 'regular',
+		'font-size'      => '14px',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#333333',
+		'text-transform' => 'none',
+		'text-align'     => 'left',
+	],
+	'priority'    => 10,
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => '.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget',
 		],
 	],
 ]);
@@ -415,35 +467,6 @@ Kirki::add_field('justg_config', [
 	],
 ]);
 
-Kirki::add_field('justg_config', [
-	'type'        => 'typography',
-	'settings'    => 'menu_setting',
-	'label'       => esc_html__('Menu Typography', 'justg'),
-	'section'     => 'menus_section',
-	'default'     => [
-		'font-family'    => 'Poppins',
-		'variant'        => 'regular',
-		'font-size'      => '16px',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'          => '#333333',
-		'text-transform' => 'uppercase',
-		'text-align'     => 'left',
-	],
-	'priority'    => 10,
-	'transport'   => 'auto',
-	'output'      => [
-		[
-			'element' => '#main-menu',
-		],
-	],
-	'partial_refresh'    => [
-		'partial_menu_setting' => [
-			'selector'        => '.navbar-nav',
-			'render_callback' => '__return_false'
-		]
-	],
-]);
 Kirki::add_field('justg_config', [
 	'type'        => 'multicolor',
 	'settings'    => 'link_menu',
@@ -718,30 +741,6 @@ Kirki::add_field('justg_config', [
 	'output'      => [
 		[
 			'element' => array('.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget'),
-		],
-	],
-]);
-
-Kirki::add_field('justg_config', [
-	'type'        => 'typography',
-	'settings'    => 'typography_widget_setting',
-	'label'       => esc_html__('Typography', 'justg'),
-	'section'     => 'sidebar_style_section',
-	'default'     => [
-		'font-family'    => 'Poppins',
-		'variant'        => 'regular',
-		'font-size'      => '14px',
-		'line-height'    => '1.5',
-		'letter-spacing' => '0',
-		'color'          => '#333333',
-		'text-transform' => 'none',
-		'text-align'     => 'left',
-	],
-	'priority'    => 10,
-	'transport'   => 'auto',
-	'output'      => [
-		[
-			'element' => '.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget',
 		],
 	],
 ]);

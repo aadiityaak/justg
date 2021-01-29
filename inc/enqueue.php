@@ -51,3 +51,16 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 } // End of if function_exists( 'justg_scripts' ).
 
 add_action( 'wp_enqueue_scripts', 'justg_scripts', 20 );
+
+
+/**
+ * Add style to customizer.
+ */
+function justg_customizer_stylesheet() {
+
+	wp_register_style( 'justg-customizer-css', get_template_directory_uri() . '/css/customizer.min.css', NULL, NULL, 'all' );
+	wp_enqueue_style( 'justg-customizer-css' );
+
+}
+add_action( 'customize_controls_print_styles', 'justg_customizer_stylesheet' );
+
