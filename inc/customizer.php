@@ -80,6 +80,11 @@ Kirki::add_section('block_section', [
 	'title'    => __('Block Setting', 'justg'),
 	'priority' => 10,
 ]);
+Kirki::add_section('wrapper_section', [
+	'panel'    => 'panel_global',
+	'title'    => __('Wrapper Content', 'justg'),
+	'priority' => 10,
+]);
 
 Kirki::add_section('title_tagline', [
 	'panel'    => 'panel_header',
@@ -129,6 +134,11 @@ Kirki::add_section('panel_sidebar', [
 	'priority' => 10,
 ]);
 
+Kirki::add_section('footer_container_section', [
+	'panel'    => 'panel_footer',
+	'title'    => __('Container', 'justg'),
+	'priority' => 10,
+]);
 Kirki::add_section('footer_widget_section', [
 	'panel'    => 'panel_footer',
 	'title'    => __('Widget Setting', 'justg'),
@@ -361,13 +371,14 @@ Kirki::add_field('justg_config', [
 	'settings'    => 'select_header_container',
 	'label'       => esc_html__('Header Container', 'justg'),
 	'section'     => 'header_section',
-	'default'     => 'container',
+	'default'     => 'full',
 	'placeholder' => esc_html__('Header Container', 'justg'),
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => [
-		'container' => esc_html__('Box', 'justg'),
-		'container-fluid' => esc_html__('Full Width', 'justg'),
+		'fixed' => esc_html__('Fixed', 'justg'),
+		'full' => esc_html__('Full Width', 'justg'),
+		'stretch' => esc_html__('Full Stretch', 'justg'),
 	],
 ]);
 Kirki::add_field('justg_config', [
@@ -402,7 +413,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['.site > header', '#main-menu .dropdown-menu'],
+			'element' => ['.block-header', '#main-menu .dropdown-menu'],
 		],
 	],
 ]);
@@ -421,7 +432,7 @@ Kirki::add_field('justg_config', [
 	],
 	'output' => [
 		[
-			'element'  => '.site > header',
+			'element'  => '.block-header',
 			'property' => 'border-width',
 			'units'    => 'px',
 		],
@@ -430,12 +441,12 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'color',
 	'settings'    => 'header_border_color',
-	'label'       => __('Color Control (hex-only)', 'justg'),
+	'label'       => __('Color Border Header', 'justg'),
 	'section'     => 'header_section',
 	'default'     => '#efefef',
 	'output' => [
 		[
-			'element'  => '.site > header',
+			'element'  => '.block-header',
 			'property' => 'border-color',
 		],
 	],
@@ -468,6 +479,35 @@ Kirki::add_field('justg_config', [
 ]);
 
 Kirki::add_field('justg_config', [
+	'type'        => 'typography',
+	'settings'    => 'menu_setting',
+	'label'       => esc_html__('Menu Typography', 'justg'),
+	'section'     => 'menus_section',
+	'default'     => [
+		'font-family'    => 'Poppins',
+		'variant'        => 'regular',
+		'font-size'      => '16px',
+		'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		'color'          => '#333333',
+		'text-transform' => 'uppercase',
+		'text-align'     => 'left',
+	],
+	'priority'    => 10,
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => '#main-menu',
+		],
+	],
+	'partial_refresh'    => [
+		'partial_menu_setting' => [
+			'selector'        => '.navbar-nav',
+			'render_callback' => '__return_false'
+		]
+	],
+]);
+Kirki::add_field('justg_config', [
 	'type'        => 'multicolor',
 	'settings'    => 'link_menu',
 	'label'       => esc_html__('Menu Color', 'justg'),
@@ -485,13 +525,74 @@ Kirki::add_field('justg_config', [
 	'output'    => [
 		[
 			'choice'    => 'link',
-			'element'   => '#main-menu a',
+			'element'   => '#main-menu a,#main-menu .fa',
 			'property'  => 'color',
 		],
 		[
 			'choice'    => 'hover',
 			'element'   => '#main-menu a:hover',
 			'property'  => 'color',
+		],
+	],
+]);
+
+// Add field to wrapper section
+Kirki::add_field('justg_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'dimensions_wrapper_setting',
+	'label'       => esc_html__('Margin Block wrapper', 'justg'),
+	'description' => esc_html__('Atur Jarak Block wrapper', 'justg'),
+	'section'     => 'wrapper_section',
+	'default'     => [
+		'padding-top'    => '2em',
+		'padding-bottom' => '2em',
+		'padding-left'   => '0em',
+		'padding-right'  => '0em',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => array('#wrapper-content > .wrapper'),
+		],
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'background',
+	'settings'    => 'background_wrapper_setting',
+	'label'       => esc_html__('Background Content', 'justg'),
+	'description' => esc_html__('Atur background Content Website', 'justg'),
+	'section'     => 'wrapper_section',
+	'default'     => [
+		'background-color'      => 'rgba(255,255,255,0)',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => array('#wrapper-content > .wrapper > .container'),
+		],
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'dimensions',
+	'settings'    => 'dimensions_wrapper_container',
+	'label'       => esc_html__('Margin Container wrapper', 'justg'),
+	'description' => esc_html__('Atur Jarak Container wrapper', 'justg'),
+	'section'     => 'wrapper_section',
+	'default'     => [
+		'padding-top'    => '0em',
+		'padding-bottom' => '0em',
+		'padding-left'   => '1.1em',
+		'padding-right'  => '1.1em',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => array('#wrapper-content > .wrapper > .container'),
 		],
 	],
 ]);
@@ -715,7 +816,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => array('.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget'),
+			'element' => array('.widget-area .widget,.fl-module-sidebar .fl-module-content > .widget'),
 		],
 	],
 ]);
@@ -740,7 +841,7 @@ Kirki::add_field('justg_config', [
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => array('.widget-area > .widget,.fl-module-sidebar .fl-module-content > .widget'),
+			'element' => array('.widget-area .widget,.fl-module-sidebar .fl-module-content > .widget'),
 		],
 	],
 ]);
@@ -822,7 +923,7 @@ Kirki::add_field( 'justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'bg_to_top',
-	'label'       => esc_html__('Background Whatsapp', 'justg'),
+	'label'       => esc_html__('Background Button', 'justg'),
 	'description' => esc_html__('', 'justg'),
 	'section'     => 'to_top',
 	'default'     => [
@@ -856,6 +957,42 @@ Kirki::add_field( 'justg_config', [
 	],
 ] );
 
+Kirki::add_field('justg_config', [
+	'type'        => 'select',
+	'settings'    => 'option_footer_container',
+	'label'       => esc_html__('Footer Container', 'justg'),
+	'section'     => 'footer_container_section',
+	'default'     => 'full',
+	'placeholder' => esc_html__('Footer Container', 'justg'),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'fixed' => esc_html__('Fixed', 'justg'),
+		'full' => esc_html__('Full Width', 'justg'),
+		'stretch' => esc_html__('Full Stretch', 'justg'),
+	],
+]);
+Kirki::add_field('justg_config', [
+	'type'        => 'background',
+	'settings'    => 'background_footer',
+	'label'       => esc_html__('Background Footer', 'justg'),
+	'description' => esc_html__('', 'justg'),
+	'section'     => 'footer_container_section',
+	'default'     => [
+		'background-color'      => '#333333',
+		'background-image'      => '',
+		'background-repeat'     => 'repeat',
+		'background-position'   => 'center center',
+		'background-size'       => 'cover',
+		'background-attachment' => 'scroll',
+	],
+	'transport'   => 'auto',
+	'output'      => [
+		[
+			'element' => ['.block-footer'],
+		],
+	],
+]);
 Kirki::add_field( 'justg_config', [
 	'type'        => 'radio-image',
 	'settings'    => 'footer_widget_setting',
@@ -865,6 +1002,7 @@ Kirki::add_field( 'justg_config', [
 	'priority'    => 10,
 	'choices'     => [
 		'0'   	=> get_template_directory_uri() . '/img/footer-0.png',
+		'3'		=> get_template_directory_uri() . '/img/footer-3.png',
 		'4'		=> get_template_directory_uri() . '/img/footer-4.png',
 	],
 	'input_attrs' => array(
