@@ -15,12 +15,22 @@ if( ! function_exists( 'justg_header_open' )) {
      * 
      */
     function justg_header_open() {
-        $header_container   = get_theme_mod( 'select_header_container', 'container' );
+        $header_container = get_theme_mod( 'select_header_container', 'full' );
         $header_position    = get_theme_mod( 'select_header_position', 'relative' );
+        $header1 = [
+            'fixed'     => 'container mx-auto p-2 block-header',
+            'full'      => 'py-2 block-header',
+            'stretch'   => 'p-2 block-header',
+        ];
+        $header2 = [
+            'fixed'     => '',
+            'full'      => 'container mx-auto px-md-0',
+            'stretch'   => '',
+        ];
         ?>
-        <header class="py-2 bg-header <?php echo $header_position; ?>">
-            <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-                <div class="<?php echo $header_container; ?> mx-auto d-flex align-items-center">
+        <header id="wrapper-header" class="bg-header header-<?php echo $header_container; ?> <?php echo $header_position; ?>">
+            <div id="wrapper-navbar" class="<?php echo $header1[$header_container]; ?>" itemscope itemtype="http://schema.org/WebSite">
+                <div class="d-flex align-items-center <?php echo $header2[$header_container]; ?>">
         <?php
     }
 }
@@ -49,7 +59,7 @@ if( ! function_exists( 'justg_header_menu') ) {
      */
     function justg_header_menu(){
         ?>
-        <nav class="navbar navbar-expand-md ml-auto">
+        <nav class="navbar navbar-expand-md ml-auto px-0">
             <!-- The WordPress Menu goes here -->
             <?php wp_nav_menu(
                 array(
@@ -371,7 +381,9 @@ if( ! function_exists( 'justg_left_sidebar_check' ) ) {
             }
             ?>
             <div class="widget-area left-sidebar pr-md-2 col-sm-12 order-md-1 order-3" id="left-sidebar" role="complementary">
+                <?php do_action('justg_before_main_sidebar'); ?>
                 <?php dynamic_sidebar( 'main-sidebar' ); ?>
+                <?php do_action('justg_after_main_sidebar'); ?>
             </div>
             <?php
         }
@@ -411,7 +423,9 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
             }
             ?>
             <div class="widget-area right-sidebar pl-md-2 col-sm-12 order-3" id="right-sidebar" role="complementary">
+                <?php do_action('justg_before_main_sidebar'); ?>
                 <?php dynamic_sidebar( 'main-sidebar' ); ?>
+                <?php do_action('justg_after_main_sidebar'); ?>
             </div>
             <?php
         }
@@ -435,13 +449,23 @@ if( ! function_exists( 'justg_the_footer_open' ) ) {
      * Footer open function
      * 
      */
-    function justg_the_footer_open() {
+    function justg_the_footer_open() {        
+        $footer_container = get_theme_mod( 'option_footer_container', 'full' );
+        $footer1 = [
+            'fixed'     => 'container mx-auto p-3 block-footer',
+            'full'      => 'py-3 block-footer',
+            'stretch'   => 'p-3 block-footer',
+        ];
+        $footer2 = [
+            'fixed'     => '',
+            'full'      => 'container mx-auto px-md-0',
+            'stretch'   => '',
+        ];
         ?>
         
-        <div class="wrapper bg-dark text-white" id="wrapper-footer">
-        <div class="container">
-        <footer class="site-footer" id="colophon">
-            
+        <div class="bg-footer footer-<?php echo $footer_container; ?>" id="wrapper-footer">
+            <div class="<?php echo $footer1[$footer_container]; ?>">
+                <footer class="site-footer <?php echo $footer2[$footer_container]; ?>" id="colophon">            
         <?php
     }
 }
@@ -466,7 +490,7 @@ if( ! function_exists( 'justg_widget_float' ) ) {
         if($to_top_status == 'on' || $no_wa){
             echo '<div class="float-widget">';
                 if(get_theme_mod('nomor_whatsapp', 0)) {
-                    echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
+                    echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
                 }
                 if($to_top_status == 'on') {
                     echo '<a id="go-to-top" class="position-fixed btn btn-sm bg-to-top-float to-top-float text-white"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
@@ -484,12 +508,12 @@ if( ! function_exists( 'justg_the_footer_content' ) ) {
     function justg_the_footer_content() {
 
         $footer_widget = get_theme_mod('footer_widget_setting', '0');
-        if($footer_widget == '4'){
+        if($footer_widget != '0'){
             echo '<div class="row">';
                 
-                for ($x = 1; $x <= 4; $x++) {
+                for ($x = 1; $x <= $footer_widget; $x++) {
 
-                    echo '<div class="col-md-3 col-12 footer-widget-1" >';
+                    echo '<div class="col-md col-12 footer-widget-1" >';
 
                     if ( is_active_sidebar( 'footer-widget-'.$x ) ) {
                         dynamic_sidebar( 'footer-widget-'.$x );
