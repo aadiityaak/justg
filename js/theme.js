@@ -2401,15 +2401,16 @@ function () {
         });
     }
 
-    var shopName   = opt.shopName+'-wishlist',
-        inWishlist = opt.inWishlist,
-        restUrl    = opt.restUrl,
-        wishlist   = new Array,
-        ls         = sessionStorage.getItem(shopName),
-        loggedIn   = ($('body').hasClass('logged-in')) ? true : false,
-        userData   = '';
+    var shopName        = opt.shopName+'-wishlist',
+        inWishlist      = opt.inWishlist,
+        restUrl         = opt.restUrl,
+        wishlist        = new Array,
+        ls              = sessionStorage.getItem(shopName),
+        loggedIn        = ($('body').hasClass('logged-in')) ? true : false,
+        woocommerce     = ($('body').hasClass('woocommerce-js')) ? true : false,
+        userData        = '';
 
-    if(loggedIn) {
+    if(loggedIn && woocommerce) {
         // Fetch current user data
         $.ajax({
             type: 'POST',
@@ -2491,7 +2492,7 @@ function () {
 
         currentProduct = currentProduct.toString();
 
-        if (!loggedIn && isInArray(currentProduct,wishlist)) {
+        if (!loggedIn && isInArray(currentProduct,wishlist) && woocommerce) {
             $this.addClass('active').attr('title',inWishlist).html('<i class="fa fa-heart" aria-hidden="true"></i>');
         }
 
@@ -2504,7 +2505,7 @@ function () {
                 wishlist.push(currentProduct);
                 wishlist = wishlist.unique();
 
-                if (loggedIn) {
+                if (loggedIn && woocommerce) {
                     // get user ID
                     if (userData['user_id']) {
                         $.ajax({
@@ -2590,7 +2591,7 @@ function () {
     
         });
 
-        if (loggedIn) {
+        if (loggedIn && woocommerce) {
 
             // get user ID
             if (userData['user_id']) {
@@ -2692,7 +2693,6 @@ function () {
     // Add hide added to cart
     $('body').on('added_to_cart',function(){
         toggleMiniCart();
-        setTimeout(
         $('.added_to_cart').hide('slow');
     });
 
