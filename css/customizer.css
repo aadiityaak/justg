@@ -15,3 +15,10 @@
     padding: 5px 15px;
     background-color: #fff;
 }
+#customize-theme-controls .customize-section-title-menu_locations-heading,
+#customize-theme-controls .customize-section-title-nav_menus-heading {
+    padding: 5px 25px;
+}
+.customize-control-kirki-radio-image label {
+    display: block !important;
+}
