@@ -375,7 +375,7 @@ Kirki::add_field('justg_config', [
 	'settings'    => 'select_header_position',
 	'label'       => esc_html__('Header Position', 'justg'),
 	'section'     => 'header_section',
-	'default'     => 'container',
+	'default'     => 'relative',
 	'placeholder' => esc_html__('Header Position', 'justg'),
 	'priority'    => 10,
 	'multiple'    => 1,

@@ -7,6 +7,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+$full_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 ?>
 
 <article <?php post_class('block-primary'); ?> id="post-<?php the_ID(); ?>">
@@ -20,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 		the_title( '<h1 class="entry-title">', '</h1>' ); 
 		?>
 
-		<div class="entry-meta">
+		<div class="entry-meta mb-2">
 
 			<?php justg_posted_on(); ?>
 
@@ -28,7 +29,11 @@ defined( 'ABSPATH' ) || exit;
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php
+	if($full_url){
+		echo '<img class="w-100 mb-2" src="'.$full_url.'">';
+	}
+	?>
 
 	<div class="entry-content">
 
