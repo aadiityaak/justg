@@ -34,7 +34,7 @@ if ( ! function_exists( 'justg_get_theme_default_settings' ) ) {
 		$defaults = array(
 			'justg_posts_index_style' => 'default',   // Latest blog posts style.
 			'justg_sidebar_position'  => 'right',     // Sidebar position.
-			'justg_container_type'    => 'container px-md-0', // Container width.
+			'justg_container_type'    => 'container', // Container width.
 		);
 
 		/**
