@@ -1,433 +1,27 @@
+# Copyright (C) 2021 aadiityaak
+# This file is distributed under the same license as the SweetStore package.
 msgid ""
 msgstr ""
-"Project-Id-Version: justg\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2017-01-06 07:53+0000\n"
-"POT-Revision-Date: Mon Jul 04 2016 09:13:18 GMT+0200 (CEST)\n"
-"PO-Revision-Date: 2018-05-16 15:45+0200\n"
-"Language-Team: Indonesia\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Project-Id-Version: SweetStore 1.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sweetstore\n"
+"POT-Creation-Date: 2021-02-03 03:17:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.7\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Poedit-Basepath: ..\n"
-"Last-Translator: @aadiityaak <aadiityaak@gmail.com>\n"
+"PO-Revision-Date: 2021-02-03 10:19+0700\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language: id_ID\n"
-"X-Poedit-SearchPath-0: footer.php\n"
-"X-Poedit-SearchPath-1: header.php\n"
-"X-Poedit-SearchPath-2: index.php\n"
-"X-Poedit-SearchPath-3: statichero.php\n"
-"X-Poedit-SearchPath-4: 404.php\n"
-"X-Poedit-SearchPath-5: archive.php\n"
-"X-Poedit-SearchPath-6: search.php\n"
-"X-Poedit-SearchPath-7: sticky.php\n"
-"X-Poedit-SearchPath-8: single.php\n"
-"X-Poedit-SearchPath-9: sidebar.php\n"
-"X-Poedit-SearchPath-10: comment-form.php\n"
-"X-Poedit-SearchPath-11: comments.php\n"
-"X-Poedit-SearchPath-12: content-none.php\n"
-"X-Poedit-SearchPath-13: content-page.php\n"
-"X-Poedit-SearchPath-14: content-search.php\n"
-"X-Poedit-SearchPath-15: content-single.php\n"
-"X-Poedit-SearchPath-16: content.php\n"
-"X-Poedit-SearchPath-17: hero.php\n"
-"X-Poedit-SearchPath-18: page.php\n"
-"X-Poedit-SearchPath-19: functions.php\n"
-"X-Poedit-SearchPath-20: page-templates\n"
-"X-Poedit-SearchPath-21: inc\n"
 
-#: inc/customizer.php:99
-msgid ""
-msgstr ""
-
-#: inc/customizer.php:151
-msgid "Choose how to display latest posts"
-msgstr "Choose how to display latest posts"
-
-#: inc/customizer.php:156
-msgid "Default"
-msgstr "Default"
-
-#: inc/customizer.php:157
-msgid "Masonry"
-msgstr "Masonry"
-
-#: inc/customizer.php:158
-msgid "Grid"
-msgstr "Grid"
-
-#: inc/customizer.php:187
-msgid "Grid Post Columns"
-msgstr "Grid Post Columns"
-
-#: inc/customizer.php:188
-msgid "Choose how many columns to use"
-msgstr "Choose how many columns to use"
-
-#: woocommerce/cart/proceed-to-checkout-button.php:27
-msgid "Proceed to Checkout"
-msgstr "Proceed to Checkout"
-
-#: woocommerce/cart/mini-cart.php:49 woocommerce/cart/cart.php:60
-msgid "Remove this item"
-msgstr "Remove this item"
-
-#: woocommerce/cart/mini-cart.php:72
-msgid "No products in the cart."
-msgstr "No products in the cart."
-
-#: woocommerce/cart/mini-cart.php:80
-msgid "Subtotal"
-msgstr "Subtotal"
-
-#: woocommerce/cart/mini-cart.php:85
-msgid "View Cart"
-msgstr "View Cart"
-
-#: woocommerce/cart/mini-cart.php:86
-msgid "Checkout"
-msgstr "Checkout"
-
-#: woocommerce/cart/cart-empty.php:28
-msgid "Your cart is currently empty."
-msgstr "Your cart is currently empty."
-
-#: woocommerce/cart/cart-empty.php:36
-msgid "Return To Shop"
-msgstr "Return To Shop
-
-#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:79
-#: woocommerce/checkout/form-pay.php:29
-msgid "Product"
-msgstr "Product"
-
-#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:97
-msgid "Price"
-msgstr "Price"
-
-#: woocommerce/cart/cart.php:38 woocommerce/cart/cart.php:103
-msgid "Quantity"
-msgstr "Quantity"
-
-#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:120
-#: woocommerce/myaccount/my-orders.php:16
-msgid "Total"
-msgstr "Total"
-
-#: woocommerce/cart/cart.php:92
-msgid "Available on backorder"
-msgstr "Available on backorder"
-
-#: woocommerce/cart/cart.php:138
-msgid "Coupon:"
-msgstr "Coupon:"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:36
-msgid "Coupon code"
-msgstr "Coupon Code"
-
-#: woocommerce/cart/cart.php:138 woocommerce/checkout/form-coupon.php:40
-msgid "Apply Coupon"
-msgstr "Apply Coupon"
-
-#: woocommerce/cart/cart.php:144
-msgid "Update Cart"
-msgstr "Update Cart"
-
-#: woocommerce/checkout/payment.php:35
-msgid ""
-"Sorry, it seems that there are no available payment methods for your state. "
-"Please contact us if you require assistance or wish to make alternate "
-"arrangements."
-msgstr ""
-"Sorry, it seems that there are no available payment methods for your state. "
-"Please contact us if you require assistance or wish to make alternate "
-"arrangements."
-
-#: woocommerce/checkout/payment.php:35
-msgid "Please fill in your details above to see available payment methods."
-msgstr ""
-"Please fill in your details above to see available payment methods."
-
-#: woocommerce/checkout/payment.php:42
-msgid ""
-"Since your browser does not support JavaScript, or it is disabled, please "
-"ensure you click the <em>Update Totals</em> button before placing your "
-"order. You may be charged more than the amount stated above if you fail to "
-"do so."
-msgstr ""
-"Since your browser does not support JavaScript, or it is disabled, please "
-"ensure you click the <em>Update Totals</em> button before placing your "
-"order. You may be charged more than the amount stated above if you fail to "
-"do so."
-
-#: woocommerce/checkout/payment.php:43
-msgid "Update totals"
-msgstr "Update totals"
-
-#: woocommerce/checkout/form-pay.php:30
-msgid "Qty"
-msgstr "Qty"
-
-#: woocommerce/checkout/form-pay.php:31
-msgid "Totals"
-msgstr "Totals"
-
-#: woocommerce/checkout/form-pay.php:79
-msgid ""
-"Sorry, it seems that there are no available payment methods for your "
-"location. Please contact us if you require assistance or wish to make "
-"alternate arrangements."
-msgstr ""
-"Sorry, it seems that there are no available payment methods for your "
-"location. Please contact us if you require assistance or wish to make "
-"alternate arrangements."
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Have a coupon?"
-msgstr "Have a coupon?"
-
-#: woocommerce/checkout/form-coupon.php:28
-msgid "Click here to enter your code"
-msgstr "Click here to enter your code"
-
-#: woocommerce/global/form-login.php:35
-#: woocommerce/myaccount/form-lost-password.php:30
-msgid "Username or email"
-msgstr "Username or email"
-
-#: woocommerce/global/form-login.php:39 woocommerce/myaccount/form-login.php:48
-#: woocommerce/myaccount/form-login.php:98
-msgid "Password"
-msgstr "Password"
-
-#: woocommerce/global/form-login.php:48 woocommerce/myaccount/form-login.php:37
-#: woocommerce/myaccount/form-login.php:56
-msgid "Login"
-msgstr "Login"
-
-#: woocommerce/global/form-login.php:51 woocommerce/myaccount/form-login.php:58
-msgid "Remember me"
-msgstr "Remember me"
-
-#: woocommerce/global/form-login.php:55 woocommerce/myaccount/form-login.php:62
-msgid "Lost your password?"
-msgstr "Lost your password?"
-
-#: woocommerce/global/quantity-input.php:24
-msgctxt "Product quantity input tooltip"
-msgid "Qty"
-msgstr "Qty"
-
-#: woocommerce/myaccount/form-lost-password.php:27
-msgid ""
-"Lost your password? Please enter your username or email address. You will "
-"receive a link to create a new password via email."
-msgstr ""
-"Lost your password? Please enter your username or email address. You will "
-"receive a link to create a new password via email."
-
-#: woocommerce/myaccount/form-lost-password.php:40
-msgid "Reset Password"
-msgstr "Reset Password"
-
-#: woocommerce/myaccount/form-login.php:44
-msgid "Username or email address"
-msgstr "Username or email address"
-
-#: woocommerce/myaccount/form-login.php:75
-#: woocommerce/myaccount/form-login.php:112
-msgid "Register"
-msgstr "Register"
-
-#: woocommerce/myaccount/form-login.php:84
-msgid "Username"
-msgstr "Username"
-
-#: woocommerce/myaccount/form-login.php:91
-#: woocommerce/myaccount/form-edit-account.php:40
-msgid "Email address"
-msgstr "Email address"
-
-#: woocommerce/myaccount/form-login.php:105
-msgid "Anti-spam"
-msgstr "Anti-spam"
-
-#: woocommerce/myaccount/form-edit-account.php:30
-msgid "First name"
-msgstr "First name"
-
-#: woocommerce/myaccount/form-edit-account.php:34
-msgid "Last name"
-msgstr "Last name"
-
-#: woocommerce/myaccount/form-edit-account.php:45
-msgid "Password Change"
-msgstr "Password Change"
-
-#: woocommerce/myaccount/form-edit-account.php:48
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr "Current Password (leave blank to leave unchanged)"
-
-#: woocommerce/myaccount/form-edit-account.php:52
-msgid "New Password (leave blank to leave unchanged)"
-msgstr "New Password (leave blank to leave unchanged)"
-
-#: woocommerce/myaccount/form-edit-account.php:56
-msgid "Confirm New Password"
-msgstr "Confirm New Password"
-
-#: woocommerce/myaccount/form-edit-account.php:66
-msgid "Save changes"
-msgstr "Save changes"
-
-#: woocommerce/myaccount/my-orders.php:13
-msgid "Order"
-msgstr "Order"
-
-#: woocommerce/myaccount/my-orders.php:14
-msgid "Date"
-msgstr "Date"
-
-#: woocommerce/myaccount/my-orders.php:15
-msgid "Status"
-msgstr "Status"
-
-#: woocommerce/myaccount/my-orders.php:30
-msgid "Recent Orders"
-msgstr "Recent Orders"
-
-#: woocommerce/myaccount/my-orders.php:55 woocommerce/myaccount/orders.php:51
-msgctxt "hash before order number"
-msgid "#"
-msgstr "#"
-
-#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:61
-#, php-format
-msgid "%s for %s item"
-msgid_plural "%s for %s items"
-msgstr[0] "%s for %s Artikel"
-msgstr[1] "%s for %s Artikel"
-
-#: woocommerce/myaccount/my-orders.php:72 woocommerce/myaccount/orders.php:68
-msgid "Pay"
-msgstr "Pay"
-
-#: woocommerce/myaccount/my-orders.php:76 woocommerce/myaccount/orders.php:72
-msgid "View"
-msgstr "View"
-
-#: woocommerce/myaccount/my-orders.php:80 woocommerce/myaccount/orders.php:76
-msgid "Cancel"
-msgstr "Cancel"
-
-#: woocommerce/myaccount/orders.php:107
-msgid "Previous"
-msgstr "Previous"
-
-#: woocommerce/myaccount/orders.php:111
-msgid "Next"
-msgstr "Next"
-
-#: woocommerce/myaccount/orders.php:119 woocommerce/myaccount/downloads.php:98
-msgid "Go Shop"
-msgstr "Go Shop"
-
-#: woocommerce/myaccount/orders.php:121
-msgid "No order has been made yet."
-msgstr "No order has been made yet."
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Billing Address"
-msgstr "Billing Address"
-
-#: woocommerce/myaccount/form-edit-address.php:23
-msgid "Shipping Address"
-msgstr "Shipping Address"
-
-#: woocommerce/myaccount/form-edit-address.php:46
-msgid "Save Address"
-msgstr "Save Address"
-
-#: woocommerce/myaccount/form-reset-password.php:27
-msgid "Enter a new password below."
-msgstr "Enter a new password below."
-
-#: woocommerce/myaccount/form-reset-password.php:30
-msgid "New password"
-msgstr "New password"
-
-#: woocommerce/myaccount/form-reset-password.php:34
-msgid "Re-enter new password"
-msgstr "Re-enter new password"
-
-#: woocommerce/myaccount/form-reset-password.php:47
-msgid "Save"
-msgstr "Save"
-
-#: woocommerce/myaccount/downloads.php:59
-msgid "&infin;"
-msgstr "&infin;"
-
-#: woocommerce/myaccount/downloads.php:67
-msgid "Never"
-msgstr "Never"
-
-#: woocommerce/myaccount/downloads.php:75
-msgid "Download"
-msgstr "Download"
-
-#: woocommerce/myaccount/downloads.php:100
-msgid "No downloads available yet."
-msgstr "No downloads available yet."
-
-#: woocommerce/single-product/review-rating.php:28
-#, php-format
-msgid "Rated %d out of 5"
-msgstr "Rated %d out of 5"
-
-#: woocommerce/single-product/review-rating.php:29
-msgid "out of 5"
-msgstr "out of 5"
-
-#: woocommerce/single-product/rating.php:36
-#, php-format
-msgid "Rated %s out of 5"
-msgstr "Rated %s out of 5"
-
-#: woocommerce/single-product/rating.php:38
-#, php-format
-msgid "out of %s5%s"
-msgstr "out of %s5%s"
-
-#. Description of the theme
-msgid ""
-"Sweet Woocommerce Theme"
-msgstr ""
-"Sweet Woocommerce Theme"
-
-
-#: search.php:29
-#, php-format
-msgid "Search Results for: %s"
-msgstr "Search Results for: %s"
-
-#: header.php:34
-msgid "Skip to content"
-msgstr "Skip to content"
-
-#: 404.php:24
+#: 404.php:37
+#, fuzzy
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! That page can&rsquo;t be found."
 
-#: 404.php:31
+#: 404.php:45
+#, fuzzy
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -435,345 +29,1990 @@ msgstr ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 
-#: 404.php:42
+#: 404.php:55
+#, fuzzy
 msgid "Most Used Categories"
 msgstr "Most Used Categories"
 
 #. translators: %1$s: smiley
-#: 404.php:62
-#, php-format
+#: 404.php:78
+#, fuzzy
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Try looking in the monthly archives. %1$s"
 
-#: author.php:34
+#: author.php:38
+#, fuzzy
 msgid "About:"
 msgstr "About:"
 
-#: author.php:42 inc/custom-comments.php:30
+#: author.php:49
+#, fuzzy
 msgid "Website"
 msgstr "Website"
 
-#: author.php:49
+#: author.php:56
+#, fuzzy
 msgid "Profile"
 msgstr "Profile"
 
-#: author.php:54
+#: author.php:62
+#, fuzzy
 msgid "Posts by"
 msgstr "Posts by"
 
-#: author.php:68
+#: author.php:77
+msgid "Permanent Link:"
+msgstr ""
+
+#: author.php:81
 msgid "in"
-msgstr "in"
+msgstr ""
 
-#: comments.php:28
-#, php-format
+#. translators: %s: post title
+#: comments.php:37
 msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
 
-#: comments.php:36 comments.php:59
+#. translators: 1: number of comments, 2: post title
+#: comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#: comments.php:64 comments.php:99
+#, fuzzy
 msgid "Comment navigation"
 msgstr "Comment navigation"
 
-#: comments.php:38 comments.php:61
+#: comments.php:68 comments.php:103
+#, fuzzy
 msgid "&larr; Older Comments"
 msgstr "&larr; Older Comments"
 
-#: comments.php:42 comments.php:65
+#: comments.php:74 comments.php:109
+#, fuzzy
 msgid "Newer Comments &rarr;"
 msgstr "Newer Comments &rarr;"
 
-#: comments.php:78
+#: inc/class-wp-bootstrap-navwalker.php:403
+msgid "Add a menu"
+msgstr ""
+
+#: inc/custom-comments.php:102
+#, fuzzy
 msgid "Comments are closed."
 msgstr "Comments are closed."
 
-#: footer.php:27
-msgid "http://wordpress.org/"
-msgstr "http://wordpress.org/"
-
-#: footer.php:28
-#, php-format
-msgid "Proudly powered by %s"
-msgstr "Proudly powered by %s"
-
-#: footer.php:31
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr "Theme: %1$s by %2$s."
-
-#: footer.php:33
-#, php-format
-msgid "Version: %1$s"
-msgstr "Version: %1$s"
-
-#: searchform.php:10 searchform.php:16
-msgid "Search"
-msgstr "Search"
-
-#: searchform.php:13
-msgid "Search &hellip;"
-msgstr "Search &hellip;"
-
-#: loop-templates/content-card.php:43 loop-templates/content-page.php:25
-#: loop-templates/content.php:37 loop-templates/content-single.php:31
-#: loop-templates/content-verticalpage.php:28
-msgid "Pages:"
-msgstr "Pages:"
-
-#: loop-templates/content-page.php:34
-#: loop-templates/content-verticalpage.php:37
-msgid "Edit"
-msgstr "Edit"
-
-#: loop-templates/content-none.php:15
-msgid "Nothing Found"
-msgstr "Nothing Found"
-
-#: loop-templates/content-none.php:23
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: inc/customizer.php:29
+msgid "Global"
 msgstr ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 
-#: loop-templates/content-none.php:28
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: inc/customizer.php:34
+msgid "Header"
 msgstr ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
 
-#: loop-templates/content-none.php:34
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+#: inc/customizer.php:39
+msgid "Breadcrumb"
 msgstr ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
 
-#. Name of the template
-msgid "Blank Page Template"
-msgstr "Blank Page Template"
+#: inc/customizer.php:44 inc/customizer.php:107
+msgid "Sidebar"
+msgstr ""
 
-#. Name of the template
-msgid "Left and Right Sidebar Layout"
-msgstr "Left and Right Sidebar Layout"
+#: inc/customizer.php:49
+msgid "Floating"
+msgstr ""
 
-#. Name of the template
-msgid "Empty Page Template"
-msgstr "Empty Page Template"
+#: inc/customizer.php:54
+msgid "Footer"
+msgstr ""
 
-#. Name of the template
-msgid "Full Width Page"
-msgstr "Full Width Page"
+#: inc/customizer.php:65
+msgid "Typography"
+msgstr ""
 
-#. Name of the template
-msgid "Left Sidebar Layout"
-msgstr "Left Sidebar Layout"
+#: inc/customizer.php:70 inc/customizer.php:285 inc/customizer.php:517
+#: inc/customizer.php:1016 inc/customizer.php:1020
+#: inc/kirki/controls/php/class-kirki-control-typography.php:221
+msgid "Color"
+msgstr ""
 
-#. Name of the template
-msgid "Vertical One Page"
-msgstr "Vertical One Page"
+#: inc/customizer.php:75 inc/customizer.php:139
+msgid "Container"
+msgstr ""
 
-#: inc/template-tags.php:18
-#, php-format
-msgid " Edited %4$s"
-msgstr " Edited %4$s"
+#: inc/customizer.php:80
+msgid "Block Setting"
+msgstr ""
 
-#: inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Posted on %s"
+#: inc/customizer.php:85
+msgid "Wrapper Content"
+msgstr ""
 
-#: inc/template-tags.php:34
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "by %s"
+#: inc/customizer.php:91
+msgid "Site Identity"
+msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:51 inc/template-tags.php:57
-msgid ", "
-msgstr ", "
+#: inc/customizer.php:96
+msgid "Primary Header"
+msgstr ""
 
-#: inc/template-tags.php:53
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Posted in %1$s"
+#: inc/customizer.php:101 inc/setup.php:55
+#, fuzzy
+msgid "Primary Menu"
+msgstr "Primary Menu"
 
-#: inc/template-tags.php:59
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Tagged %1$s"
+#: inc/customizer.php:112
+msgid "Sidebar Style"
+msgstr ""
 
-#: inc/template-tags.php:65
-msgid "Leave a comment"
-msgstr "Leave a comment"
+#: inc/customizer.php:117
+msgid "Sidebar Widget"
+msgstr ""
 
-#: inc/template-tags.php:65
-msgid "1 Comment"
-msgstr "1 Comment"
+#: inc/customizer.php:123 inc/customizer.php:650
+msgid "Separator"
+msgstr ""
 
-#: inc/template-tags.php:65
-msgid "% Comments"
-msgstr "% Comments"
+#: inc/customizer.php:128
+msgid "Location"
+msgstr ""
 
-#. translators: %s: Name of current post
-#: inc/template-tags.php:72
-#, php-format
-msgid "Edit %s"
-msgstr "Edit %s"
+#: inc/customizer.php:133
+msgid "Setting"
+msgstr ""
 
-#: inc/template-tags.php:143
+#: inc/customizer.php:144
+msgid "Widget Setting"
+msgstr ""
+
+#: inc/customizer.php:149
+msgid "Widget 1"
+msgstr ""
+
+#: inc/customizer.php:154
+msgid "Widget 2"
+msgstr ""
+
+#: inc/customizer.php:160
+msgid "Whatsapp"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid "Back to Top"
+msgstr ""
+
+#: inc/customizer.php:171
+msgid "Widget 3"
+msgstr ""
+
+#: inc/customizer.php:176
+msgid "Widget 4"
+msgstr ""
+
+#: inc/customizer.php:188
+#, fuzzy
+msgid "Container Width"
+msgstr "Container Width"
+
+#: inc/customizer.php:209
+msgid "Typography Global"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "Typography Menu"
+msgstr ""
+
+#: inc/customizer.php:261
+msgid "Typography Widget"
+msgstr ""
+
+#: inc/customizer.php:289
+msgid "Text"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Heading"
+msgstr ""
+
+#: inc/customizer.php:291 inc/customizer.php:1021
+msgid "Link"
+msgstr ""
+
+#: inc/customizer.php:292 inc/customizer.php:518 inc/customizer.php:1022
+msgid "Hover"
+msgstr ""
+
+#: inc/customizer.php:293 inc/customizer.php:1023
+msgid "Active"
+msgstr ""
+
+#: inc/customizer.php:294
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer.php:295
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:349
+msgid "Background"
+msgstr ""
+
+#: inc/customizer.php:372 inc/customizer.php:375
+msgid "Header Container"
+msgstr ""
+
+#: inc/customizer.php:379 inc/customizer.php:970
+#: inc/kirki/controls/php/class-kirki-control-background.php:119
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer.php:380 inc/customizer.php:971
+msgid "Full Width"
+msgstr ""
+
+#: inc/customizer.php:381 inc/customizer.php:972
+msgid "Full Stretch"
+msgstr ""
+
+#: inc/customizer.php:387 inc/customizer.php:390
+msgid "Header Position"
+msgstr ""
+
+#: inc/customizer.php:394
+msgid "Relative"
+msgstr ""
+
+#: inc/customizer.php:395
+msgid "Fixed Top"
+msgstr ""
+
+#: inc/customizer.php:396
+msgid "Sticky Top"
+msgstr ""
+
+#: inc/customizer.php:402
+msgid "Background Header"
+msgstr ""
+
+#: inc/customizer.php:424
+msgid "Bottom Border Size"
+msgstr ""
+
+#: inc/customizer.php:444
+msgid "Color Border Header"
+msgstr ""
+
+#: inc/customizer.php:457
+msgid "Logo Height"
+msgstr ""
+
+#: inc/customizer.php:484
+msgid "Menu Typography"
+msgstr ""
+
+#: inc/customizer.php:513
+msgid "Menu Color"
+msgstr ""
+
+#: inc/customizer.php:543
+msgid "Margin Block wrapper"
+msgstr ""
+
+#: inc/customizer.php:544
+msgid "Atur Jarak Block wrapper"
+msgstr ""
+
+#: inc/customizer.php:562
+msgid "Background Content"
+msgstr ""
+
+#: inc/customizer.php:563
+msgid "Atur background Content Website"
+msgstr ""
+
+#: inc/customizer.php:583
+msgid "Margin Container wrapper"
+msgstr ""
+
+#: inc/customizer.php:584
+msgid "Atur Jarak Container wrapper"
+msgstr ""
+
+#: inc/customizer.php:604
+msgid "Background Block"
+msgstr ""
+
+#: inc/customizer.php:605
+msgid "Atur background (widget, heading, article, dll)"
+msgstr ""
+
+#: inc/customizer.php:625
+msgid "Margin Block"
+msgstr ""
+
+#: inc/customizer.php:626
+msgid "Atur Jarak Block (widget, heading, article, dll)"
+msgstr ""
+
+#: inc/customizer.php:652
+msgid "/"
+msgstr ""
+
+#: inc/customizer.php:664
+msgid "First title"
+msgstr ""
+
+#: inc/customizer.php:667
+msgid "The first title in the breadcrumb"
+msgstr ""
+
+#: inc/customizer.php:671
+msgid "Blogname"
+msgstr ""
+
+#: inc/customizer.php:672
+msgid "Home"
+msgstr ""
+
+#: inc/customizer.php:678
+msgid "Tampilkan Breadcrumb"
+msgstr ""
+
+#: inc/customizer.php:683
+msgid "Disable on All"
+msgstr ""
+
+#: inc/customizer.php:684
+msgid "Disable on Home Page"
+msgstr ""
+
+#: inc/customizer.php:685
+msgid "Disable on Page"
+msgstr ""
+
+#: inc/customizer.php:686
+msgid "Disable on Post"
+msgstr ""
+
+#: inc/customizer.php:687
+msgid "Disable on Archive"
+msgstr ""
+
+#: inc/customizer.php:688
+msgid "Disable on 404"
+msgstr ""
+
+#: inc/customizer.php:695
+msgid "Lokasi Breadcrumb"
+msgstr ""
+
+#: inc/customizer.php:701
+msgid "Before Content"
+msgstr ""
+
+#: inc/customizer.php:702
+msgid "Before Title"
+msgstr ""
+
+#: inc/customizer.php:703
+msgid "After Title"
+msgstr ""
+
+#: inc/customizer.php:711
+msgid "Default Sidebar"
+msgstr ""
+
+#: inc/customizer.php:714 inc/customizer.php:720 inc/customizer.php:743
+#: inc/customizer.php:759 inc/customizer.php:775
+#, fuzzy
+msgid "Right Sidebar"
+msgstr "Right Sidebar"
+
+#: inc/customizer.php:718 inc/customizer.php:741 inc/customizer.php:757
+#: inc/customizer.php:773
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/customizer.php:719 inc/customizer.php:742 inc/customizer.php:758
+#: inc/customizer.php:774
+#, fuzzy
+msgid "Left Sidebar"
+msgstr "Left Sidebar"
+
+#: inc/customizer.php:733
+msgid "Pages Sidebar"
+msgstr ""
+
+#: inc/customizer.php:736 inc/customizer.php:740 inc/customizer.php:752
+#: inc/customizer.php:756 inc/customizer.php:768 inc/customizer.php:772
+#: inc/kirki/controls/php/class-kirki-control-base.php:134
+#: inc/kirki/controls/views/image.php:36
+#: inc/kirki/field/class-kirki-field-image.php:49
+#, fuzzy
+msgid "Default"
+msgstr "Default"
+
+#: inc/customizer.php:749
+msgid "Blog Posts Sidebar"
+msgstr ""
+
+#: inc/customizer.php:765
+msgid "Archives"
+msgstr ""
+
+#: inc/customizer.php:783
+msgid "Sidebar Width"
+msgstr ""
+
+#: inc/customizer.php:805
+msgid "Background Widget"
+msgstr ""
+
+#: inc/customizer.php:806
+msgid "Atur background widget"
+msgstr ""
+
+#: inc/customizer.php:827
+msgid "Margin Widget"
+msgstr ""
+
+#: inc/customizer.php:828
+msgid "Atur Jarak Widget"
+msgstr ""
+
+#: inc/customizer.php:852
+msgid "Nomor Whatsapp"
+msgstr ""
+
+#: inc/customizer.php:867
+msgid "Text Whatsapp"
+msgstr ""
+
+#: inc/customizer.php:876
+msgid "Posisi Whatsapp"
+msgstr ""
+
+#: inc/customizer.php:883
+msgid "Bawah Kanan"
+msgstr ""
+
+#: inc/customizer.php:884
+msgid "Bawah Kiri"
+msgstr ""
+
+#: inc/customizer.php:891
+msgid "Background Whatsapp"
+msgstr ""
+
+#: inc/customizer.php:913 woocommerce/myaccount/my-orders.php:18
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#: inc/customizer.php:918
+#: inc/kirki/controls/php/class-kirki-control-switch.php:52
+#: inc/kirki/field/class-kirki-field-switch.php:39
+msgid "On"
+msgstr ""
+
+#: inc/customizer.php:919
+#: inc/kirki/controls/php/class-kirki-control-switch.php:56
+#: inc/kirki/field/class-kirki-field-switch.php:40
+msgid "Off"
+msgstr ""
+
+#: inc/customizer.php:926
+msgid "Background Button"
+msgstr ""
+
+#: inc/customizer.php:948
+msgid "Icon Go to Top"
+msgstr ""
+
+#: inc/customizer.php:963 inc/customizer.php:966
+msgid "Footer Container"
+msgstr ""
+
+#: inc/customizer.php:978
+msgid "Background Footer"
+msgstr ""
+
+#: inc/customizer.php:999
+msgid "Widget Footer"
+msgstr ""
+
+#: inc/enqueue.php:42
+msgid "Already in wishlist"
+msgstr ""
+
+#: inc/enqueue.php:43
+msgid "Remove from wishlist"
+msgstr ""
+
+#: inc/enqueue.php:44
+msgid "Details"
+msgstr ""
+
+#: inc/enqueue.php:45
+msgid "Something went wrong, could not add to wishlist"
+msgstr ""
+
+#: inc/enqueue.php:46
+msgid "No wishlist found"
+msgstr ""
+
+#: inc/extras.php:80
+#, fuzzy
 msgid "Post navigation"
 msgstr "Post navigation"
 
-#: inc/template-tags.php:148
+#: inc/extras.php:84
+#, fuzzy
 msgctxt "Previous post link"
 msgid "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 msgstr "<i class=\"fa fa-angle-left\"></i>&nbsp;%title"
 
-#: inc/template-tags.php:151
+#: inc/extras.php:87
+#, fuzzy
 msgctxt "Next post link"
 msgid "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 msgstr "%title&nbsp;<i class=\"fa fa-angle-right\"></i>"
 
-#: inc/setup.php:51
-msgid "Primary Menu"
-msgstr "Primary Menu"
-
-#: inc/setup.php:122
-msgid "Read More..."
-msgstr "Read More..."
-
-#: inc/widgets.php:14
-msgid "Right Sidebar"
-msgstr "Right Sidebar"
-
-#: inc/widgets.php:24
-msgid "Left Sidebar"
-msgstr "Left Sidebar"
-
-#: inc/widgets.php:34
-msgid "Hero Slider"
-msgstr "Hero Slider"
-
-#: inc/widgets.php:44
-msgid "Hero Static"
-msgstr "Hero Static""
-
-#: inc/widgets.php:54
-msgid "Footer Full"
-msgstr "Footer Full"
-
-#: inc/custom-comments.php:24
-msgid "Name"
-msgstr "Name"
-
-#: inc/custom-comments.php:27
-msgid "Email"
-msgstr "Email"
-
-#: inc/custom-comments.php:49
-msgctxt "noun"
-msgid "Comment"
-msgstr "Comment"
-
-#: inc/customizer.php:36
-msgid "Slider Settings"
-msgstr "Slider Settings"
-
-#: inc/customizer.php:45
-msgid "Number of slides displaying at once"
-msgstr "Number of slides displaying at once"
-
-#: inc/customizer.php:57
-msgid "Slider Time (in ms)"
-msgstr "Slider Time (in ms)"
-
-#: inc/customizer.php:69
-msgid "Loop Slider Content"
-msgstr "Loop Slider Content"
-
-#: inc/customizer.php:81
-msgid "Theme Layout Settings"
-msgstr "Theme Layout Settings"
-
-#: inc/customizer.php:83
-msgid "Container width and sidebar defaults"
-msgstr "Container width and sidebar defaults"
-
-#: inc/customizer.php:98
-msgid "Container Width"
-msgstr "Container Width"
-
-#: inc/customizer.php:104
-msgid "Fixed width container"
-msgstr "Fixed width container"
-
-#: inc/customizer.php:105
-msgid "Full width container"
-msgstr "Full width container"
-
-#: inc/customizer.php:122
-msgid "Sidebar Positioning"
-msgstr "Sidebar Positioning"
-
-#: inc/customizer.php:123
-msgid "Set sidebar's position. Can either be: right, left, both or none"
+#: inc/kirki/controls/php/class-kirki-control-background.php:48
+msgid "Background Color"
 msgstr ""
-"Set sidebar's position. Can either be: right, left, both or none"
 
-#: inc/customizer.php:129
-msgid "Right sidebar"
-msgstr "Right sidebar"
+#: inc/kirki/controls/php/class-kirki-control-background.php:54
+msgid "Background Image"
+msgstr ""
 
-#: inc/customizer.php:130
-msgid "Left sidebar"
-msgstr "Left sidebar"
+#: inc/kirki/controls/php/class-kirki-control-background.php:59
+#: inc/kirki/controls/php/class-kirki-control-base.php:132
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:408
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:413
+msgid "No File Selected"
+msgstr ""
 
-#: inc/customizer.php:131
-msgid "Left & Right sidebars"
-msgstr "Left & Right sidebars"
+#: inc/kirki/controls/php/class-kirki-control-background.php:62
+#: inc/kirki/controls/php/class-kirki-control-base.php:133
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:386
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:418
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:443
+#: inc/kirki/controls/views/image.php:37
+#: inc/kirki/field/class-kirki-field-image.php:50
+msgid "Remove"
+msgstr ""
 
-#: inc/customizer.php:132
-msgid "No sidebar"
-msgstr "No sidebar"
+#: inc/kirki/controls/php/class-kirki-control-background.php:63
+#: inc/kirki/controls/php/class-kirki-control-base.php:135
+msgid "Select File"
+msgstr ""
 
-#: inc/customizer.php:150
-msgid "Posts Index Style"
-msgstr "Posts Index Style"
+#: inc/kirki/controls/php/class-kirki-control-background.php:70
+msgid "Background Repeat"
+msgstr ""
 
-#: woocommerce/single-product/rating.php:39
-#, php-format
-msgid "based on %s customer rating"
-msgid_plural "based on %s customer ratings"
-msgstr[0] "based on %s customer rating"
-msgstr[1] "based on %s customer ratings"
+#: inc/kirki/controls/php/class-kirki-control-background.php:72
+msgid "No Repeat"
+msgstr ""
 
-#: woocommerce/single-product/rating.php:42
-#, php-format
-msgid "%s customer review"
-msgid_plural "%s customer reviews"
-msgstr[0] "%s customer review"
-msgstr[1] "%s customer reviews"
+#: inc/kirki/controls/php/class-kirki-control-background.php:73
+msgid "Repeat All"
+msgstr ""
 
-#. Name of the theme
-msgid "justg"
-msgstr "justg"
+#: inc/kirki/controls/php/class-kirki-control-background.php:74
+msgid "Repeat Horizontally"
+msgstr ""
 
-#. Theme URI of the theme
+#: inc/kirki/controls/php/class-kirki-control-background.php:75
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:81
+msgid "Background Position"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:83
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:114
+msgid "Left Top"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:84
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:115
+msgid "Left Center"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:85
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:116
+msgid "Left Bottom"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:86
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:117
+msgid "Right Top"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:87
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:118
+msgid "Right Center"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:88
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:119
+msgid "Right Bottom"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:89
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:120
+msgid "Center Top"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:90
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:121
+msgid "Center Center"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:91
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:122
+msgid "Center Bottom"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:97
+msgid "Background Size"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:100
+msgid "Cover"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:103
+msgid "Contain"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:106
+msgid "Auto"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:113
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-background.php:116
+msgid "Scroll"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-base.php:136
+msgid "Standard Fonts"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-base.php:137
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-base.php:138
+msgid "CSS Defaults"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-base.php:139
+msgid "Default Browser Font-Family"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimension.php:41
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:138
+msgid "Invalid Value"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:123
+#: inc/kirki/controls/php/class-kirki-control-typography.php:102
+msgid "Font Size"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:124
+msgid "Font Weight"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:125
+#: inc/kirki/controls/php/class-kirki-control-typography.php:110
+msgid "Line Height"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:126
+msgid "Font Style"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:127
+#: inc/kirki/controls/php/class-kirki-control-typography.php:118
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:128
+#: inc/kirki/controls/php/class-kirki-control-typography.php:126
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:129
+#: inc/kirki/field/class-kirki-field-spacing.php:32
+msgid "Top"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:130
+#: inc/kirki/field/class-kirki-field-spacing.php:33
+msgid "Bottom"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:131
+#: inc/kirki/controls/php/class-kirki-control-typography.php:145
+#: inc/kirki/field/class-kirki-field-spacing.php:34
+msgid "Left"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:132
+#: inc/kirki/controls/php/class-kirki-control-typography.php:157
+#: inc/kirki/field/class-kirki-field-spacing.php:35
+msgid "Right"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:133
+#: inc/kirki/controls/php/class-kirki-control-typography.php:151
+msgid "Center"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:134
+msgid "Size"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:135
+msgid "Spacing"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:136
+msgid "Width"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-dimensions.php:137
+msgid "Height"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:77
+msgid "row"
+msgstr ""
+
+#. translators: %s represents the label of the row.
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:86
+msgid "Add new %s"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:121
+msgid "Select a Page"
+msgstr ""
+
+#. translators: %s represents the number of rows we're limiting the repeater to
+#. allow.
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:227
+msgid "Limit: %s rows"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:376
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:381
+msgid "No Image Selected"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:387
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:391
+msgid "Add Image"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:387
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:389
+msgid "Change Image"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:419
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:423
+msgid "Add File"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:419
+#: inc/kirki/controls/php/class-kirki-control-repeater.php:421
+msgid "Change File"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-slider.php:67
+msgid "Reset"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:82
+msgid "Font Family"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:83
+#: inc/kirki/controls/php/class-kirki-control-typography.php:88
+msgid "Select Font Family"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:87
+msgid "Backup Font"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:93
+msgid "Variant"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:134
+msgid "Text Align"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:139
+#: inc/kirki/controls/php/class-kirki-control-typography.php:181
+#: inc/kirki/controls/php/class-kirki-control-typography.php:197
+msgid "Inherit"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:163
+msgid "Justify"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:173
+msgid "Text Transform"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:176
+#: inc/kirki/controls/php/class-kirki-control-typography.php:192
+msgid "None"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:177
+msgid "Capitalize"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:178
+msgid "Uppercase"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:179
+msgid "Lowercase"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:180
+#: inc/kirki/controls/php/class-kirki-control-typography.php:196
+msgid "Initial"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:189
+msgid "Text Decoration"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:193
+msgid "Underline"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:194
+msgid "Overline"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:195
+msgid "Line-Through"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:205
+msgid "Margin Top"
+msgstr ""
+
+#: inc/kirki/controls/php/class-kirki-control-typography.php:213
+msgid "Margin Bottom"
+msgstr ""
+
+#: inc/kirki/controls/views/image.php:34 inc/kirki/controls/views/image.php:39
+#: inc/kirki/field/class-kirki-field-image.php:47
+#: inc/kirki/field/class-kirki-field-image.php:52
+msgid "Select image"
+msgstr ""
+
+#: inc/kirki/controls/views/image.php:35
+#: inc/kirki/field/class-kirki-field-image.php:48
+msgid "Change image"
+msgstr ""
+
+#: inc/kirki/controls/views/image.php:38
+#: inc/kirki/field/class-kirki-field-image.php:51
+msgid "No image selected"
+msgstr ""
+
+#: inc/kirki/controls/views/image.php:40
+#: inc/kirki/field/class-kirki-field-image.php:53
+msgid "Choose image"
+msgstr ""
+
+#. translators: %s represents the field ID where the error occurs.
+#: inc/kirki/core/class-kirki-field.php:248
+msgid "Typo found in field %s - setting instead of settings."
+msgstr ""
+
+#. translators: %1$s represents the field ID where the error occurs. %2$s is
+#. the URL in the documentation site.
+#: inc/kirki/core/class-kirki-field.php:257
+#: inc/kirki/core/class-kirki-field.php:267
+msgid ""
+"Config not defined for field %1$s - See %2$s for details on how to properly "
+"add fields."
+msgstr ""
+
+#. translators: %1$s represents the field ID where the error occurs.
+#: inc/kirki/core/class-kirki-field.php:358
+msgid "Typo found in field %s - \"theme_mods\" vs \"theme_mod\""
+msgstr ""
+
+#. translators: %1$s represents the field ID where the error occurs.
+#: inc/kirki/core/class-kirki-field.php:375
+msgid "\"partial_refresh\" invalid entry in field %s"
+msgstr ""
+
+#. translators: The field ID where the error occurs.
+#: inc/kirki/core/class-kirki-field.php:498
+#: inc/kirki/core/class-kirki-field.php:509
+msgid ""
+"\"output\" invalid format in field %s. The \"output\" argument should be "
+"defined as an array of arrays."
+msgstr ""
+
+#: inc/kirki/core/class-kirki-init.php:289
+msgid ""
+"We detected you're using Kirki_Init::get_variables(). Please use Kirki_Util::"
+"get_variables() instead."
+msgstr ""
+
+#: inc/kirki/core/class-kirki-init.php:365
+msgid ""
+"Your theme uses a Font Awesome field for icons. To avoid issues with missing "
+"icons on your frontend we recommend you install the official Font Awesome "
+"plugin."
+msgstr ""
+
+#: inc/kirki/core/class-kirki-init.php:368
+msgid "Install Plugin"
+msgstr ""
+
+#: inc/kirki/core/class-kirki-init.php:369
+msgid "Don't show this again"
+msgstr ""
+
+#: inc/kirki/core/class-kirki.php:237
+msgid ""
+"Kirki fields should not be added on customize_register. Please add them "
+"directly, or on init."
+msgstr ""
+
+#: inc/kirki/deprecated/functions.php:19
+msgid "%1$s or %2$s"
+msgstr ""
+
+#: inc/kirki/field/class-kirki-field-color.php:52
+msgid ""
+"Do not use \"alpha\" as an argument in color controls. Use "
+"\"choices[alpha]\" instead."
+msgstr ""
+
+#. translators: %1$s represents the field ID where the error occurs. %2%s is
+#. buttonset/image.
+#: inc/kirki/field/class-kirki-field-radio.php:37
+msgid ""
+"Error in field %1$s. The \"mode\" argument has been deprecated since Kirki "
+"v0.8. Use the \"radio-%2$s\" type instead."
+msgstr ""
+
+#: inc/kirki/modules/custom-sections/sections/class-kirki-sections-nested-section.php:61
+msgid "Customizing"
+msgstr ""
+
+#. translators: The title.
+#: inc/kirki/modules/custom-sections/sections/class-kirki-sections-nested-section.php:64
+msgid "Customizing &#9656; %s"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:198
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:199
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:200
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:201
+msgid "Light 200"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:202
+msgid "Light 200 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:203
+msgid "Book 300"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:204
+msgid "Book 300 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:205
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:206
+msgid "Normal 400"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:207
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:208
+msgid "Medium 500"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:209
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:210
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:211
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:212
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:213
+msgid "Bold 700"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:214
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:215
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:216
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:217
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:218
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:219
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: inc/kirki/modules/webfonts/class-kirki-fonts.php:220
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: inc/kirki/upgrade-notifications.php:30
+msgid "Important Upgrade Notice:"
+msgstr ""
+
+#: inc/pagination.php:53
+msgid "&laquo;"
+msgstr ""
+
+#: inc/pagination.php:54
+msgid "&raquo;"
+msgstr ""
+
+#: inc/pagination.php:57
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-function.php:127
+msgid "Keranjang Belanja"
+msgstr ""
+
+#: inc/template-function.php:165 inc/template-function.php:190
+#: inc/woocommerce.php:206
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/template-function.php:173
+msgid "%d"
+msgid_plural "%d"
+msgstr[0] ""
+
+#: inc/template-function.php:202
+msgid "View cart"
+msgstr ""
+
+#: inc/template-function.php:211
+#, fuzzy
+msgid "Checkout"
+msgstr "Bayar"
+
+#: inc/template-function.php:289 inc/template-function.php:292
+#: inc/template-function.php:295
+msgid "%s"
+msgstr ""
+
+#: inc/template-function.php:292
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-function.php:295
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-function.php:339
+msgid "Not Found"
+msgstr ""
+
+#: inc/template-function.php:525
+msgid "Click here to edit widget."
+msgstr ""
+
+#: inc/template-tags.php:33
+msgctxt "post date"
+msgid "Posted on"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:42
+msgctxt "post author"
+msgid "Posted by"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59 inc/template-tags.php:65
+msgid ", "
+msgstr ""
+
+#. translators: %s: Categories of current post
+#: inc/template-tags.php:62
+msgid "Posted in %s"
+msgstr ""
+
+#. translators: %s: Tags of current post
+#: inc/template-tags.php:68
+msgid "Tagged %s"
+msgstr ""
+
+#: inc/template-tags.php:73
+#, fuzzy
+msgid "Leave a comment"
+msgstr "Leave a comment"
+
+#: inc/template-tags.php:73
+#, fuzzy
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#: inc/template-tags.php:73
+#, fuzzy
+msgid "% Comments"
+msgstr "% Comments"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:79
+#, fuzzy
+msgid "Edit %s"
+msgstr "Edit %s"
+
+#: inc/widgets.php:105
+msgid "Main Sidebar"
+msgstr ""
+
+#: inc/widgets.php:107
+msgid "Main sidebar widget area"
+msgstr ""
+
+#: inc/widgets.php:118
+msgid "Footer Widget Area 1"
+msgstr ""
+
+#: inc/widgets.php:129
+msgid "Footer Widget Area 2"
+msgstr ""
+
+#: inc/widgets.php:140
+msgid "Footer Widget Area 3"
+msgstr ""
+
+#: inc/widgets.php:151
+msgid "Footer Widget Area 4"
+msgstr ""
+
+#: inc/woocommerce.php:298
+#, fuzzy
+msgid "out of 5"
+msgstr "out of 5"
+
+#: loop-templates/content-none.php:21
+#, fuzzy
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#. translators: 1: Link to WP admin new post page.
+#: loop-templates/content-none.php:36
+#, fuzzy
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: loop-templates/content-none.php:44
+#, fuzzy
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+
+#: loop-templates/content-none.php:52
+#, fuzzy
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+
+#: loop-templates/content-page.php:37 loop-templates/content-single.php:45
+#: loop-templates/content.php:45
+#, fuzzy
+msgid "Pages:"
+msgstr "Pages:"
+
+#: loop-templates/content-page.php:47 woocommerce/myaccount/my-address.php:61
+#, fuzzy
+msgid "Edit"
+msgstr "Edit"
+
+#. translators: %s: query term
+#: search.php:36
+#, fuzzy
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: searchform.php:13 searchform.php:19
+#, fuzzy
+msgid "Search"
+msgstr "Search"
+
+#: searchform.php:16
+#, fuzzy
+msgid "Search &hellip;"
+msgstr "Search &hellip;"
+
+#: woocommerce/cart/cart-empty.php:29
+msgid "Return to shop"
+msgstr ""
+
+#: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:77
+#: woocommerce/checkout/form-pay.php:27
+#, fuzzy
+msgid "Product"
+msgstr "Product"
+
+#: woocommerce/cart/cart.php:31 woocommerce/cart/cart.php:97
+#, fuzzy
+msgid "Price"
+msgstr "Price"
+
+#: woocommerce/cart/cart.php:32 woocommerce/cart/cart.php:103
+#: woocommerce/global/quantity-input.php:28
+#, fuzzy
+msgid "Quantity"
+msgstr "Quantity"
+
+#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:125
+#: woocommerce/cart/mini-cart.php:110
+#, fuzzy
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: woocommerce/cart/cart.php:56 woocommerce/cart/mini-cart.php:54
+#, fuzzy
+msgid "Remove this item"
+msgstr "Hapus item ini"
+
+#: woocommerce/cart/cart.php:92
+#, fuzzy
+msgid "Available on backorder"
+msgstr "Available on backorder"
+
+#: woocommerce/cart/cart.php:143
+#, fuzzy
+msgid "Coupon:"
+msgstr "Coupon:"
+
+#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:34
+#, fuzzy
+msgid "Coupon code"
+msgstr "Coupon Code"
+
+#: woocommerce/cart/cart.php:143 woocommerce/checkout/form-coupon.php:38
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:148
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:92
+msgid "Keranjang Belanja Kosong."
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:96
+msgid "Kembali Belanja"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Proceed to checkout"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:52
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:26
+#, fuzzy
+msgid "Have a coupon?"
+msgstr "Have a coupon?"
+
+#: woocommerce/checkout/form-coupon.php:26
+#, fuzzy
+msgid "Click here to enter your code"
+msgstr "Click here to enter your code"
+
+#: woocommerce/checkout/form-coupon.php:31
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:28
+#, fuzzy
+msgid "Qty"
+msgstr "Qty"
+
+#: woocommerce/checkout/form-pay.php:29
+#, fuzzy
+msgid "Totals"
+msgstr "Totals"
+
+#: woocommerce/checkout/form-pay.php:79
+#, fuzzy
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+
+#: woocommerce/checkout/payment.php:33
+#, fuzzy
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+
+#: woocommerce/checkout/payment.php:33
+#, fuzzy
+msgid "Please fill in your details above to see available payment methods."
+msgstr "Please fill in your details above to see available payment methods."
+
+#. translators: $1 and $2 opening and closing emphasis tags respectively
+#: woocommerce/checkout/payment.php:42
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:44
+#, fuzzy
+msgid "Update totals"
+msgstr "Update totals"
+
+#: woocommerce/global/form-login.php:33
+#: woocommerce/myaccount/form-lost-password.php:28
+#, fuzzy
+msgid "Username or email"
+msgstr "Username or email"
+
+#: woocommerce/global/form-login.php:37 woocommerce/myaccount/form-login.php:42
+#: woocommerce/myaccount/form-login.php:94
+#, fuzzy
+msgid "Password"
+msgstr "Password"
+
+#: woocommerce/global/form-login.php:46 woocommerce/myaccount/form-login.php:50
+#, fuzzy
+msgid "Remember me"
+msgstr "Remember me"
+
+#: woocommerce/global/form-login.php:50 woocommerce/myaccount/form-login.php:31
+#, fuzzy
+msgid "Login"
+msgstr "Login"
+
+#: woocommerce/global/form-login.php:54 woocommerce/myaccount/form-login.php:57
+#, fuzzy
+msgid "Lost your password?"
+msgstr "Lost your password?"
+
+#. translators: %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:42
+#, fuzzy
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr "Qty"
+
+#: woocommerce/loop/orderby.php:24
+msgid "Shop order"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:41
+msgid "Go shop"
+msgstr ""
+
+#: woocommerce/myaccount/downloads.php:43
+#, fuzzy
+msgid "No downloads available yet."
+msgstr "No downloads available yet."
+
+#: woocommerce/myaccount/form-edit-account.php:27
+#, fuzzy
+msgid "First name"
+msgstr "First name"
+
+#: woocommerce/myaccount/form-edit-account.php:31
+#, fuzzy
+msgid "Last name"
+msgstr "Last name"
+
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "Display name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:38
+msgid ""
+"This will be how your name will be displayed in the account section and in "
+"reviews"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:43
+#: woocommerce/myaccount/form-login.php:87
+#, fuzzy
+msgid "Email address"
+msgstr "Email address"
+
+#: woocommerce/myaccount/form-edit-account.php:48
+msgid "Password change"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:51
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:59
+msgid "Confirm new password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:69
+#, fuzzy
+msgid "Save changes"
+msgstr "Save changes"
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:29
+#: woocommerce/myaccount/my-address.php:38
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:20
+#: woocommerce/myaccount/my-address.php:30
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-address.php:46
+msgid "Save address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:38
+#, fuzzy
+msgid "Username or email address"
+msgstr "Username or email address"
+
+#: woocommerce/myaccount/form-login.php:53
+msgid "Log in"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:71
+#: woocommerce/myaccount/form-login.php:108
+#, fuzzy
+msgid "Register"
+msgstr "Register"
+
+#: woocommerce/myaccount/form-login.php:80
+#, fuzzy
+msgid "Username"
+msgstr "Username"
+
+#: woocommerce/myaccount/form-login.php:100
+msgid "A password will be sent to your email address."
+msgstr ""
+
+#: woocommerce/myaccount/form-lost-password.php:25
+#, fuzzy
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+
+#: woocommerce/myaccount/form-lost-password.php:38
+msgid "Reset password"
+msgstr ""
+
+#: woocommerce/myaccount/form-reset-password.php:25
+#, fuzzy
+msgid "Enter a new password below."
+msgstr "Enter a new password below."
+
+#: woocommerce/myaccount/form-reset-password.php:28
+#, fuzzy
+msgid "New password"
+msgstr "New password"
+
+#: woocommerce/myaccount/form-reset-password.php:32
+#, fuzzy
+msgid "Re-enter new password"
+msgstr "Re-enter new password"
+
+#: woocommerce/myaccount/form-reset-password.php:45
+#, fuzzy
+msgid "Save"
+msgstr "Save"
+
+#: woocommerce/myaccount/my-address.php:49
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:66
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:16
+#, fuzzy
+msgid "Order"
+msgstr "Order"
+
+#: woocommerce/myaccount/my-orders.php:17
+#, fuzzy
+msgid "Date"
+msgstr "Date"
+
+#: woocommerce/myaccount/my-orders.php:19
+#, fuzzy
+msgid "Total"
+msgstr "Total"
+
+#: woocommerce/myaccount/my-orders.php:39
+msgid "Recent orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:65 woocommerce/myaccount/orders.php:49
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#. translators: 1: formatted order total 2: total order items
+#: woocommerce/myaccount/my-orders.php:77 woocommerce/myaccount/orders.php:61
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] ""
+
+#: woocommerce/myaccount/orders.php:89
+#, fuzzy
+msgid "Previous"
+msgstr "Previous"
+
+#: woocommerce/myaccount/orders.php:93
+#, fuzzy
+msgid "Next"
+msgstr "Next"
+
+#: woocommerce/myaccount/orders.php:101
+msgid "Go to the shop"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:103
+#, fuzzy
+msgid "No order has been made yet."
+msgstr "No order has been made yet."
+
+#. translators: %s API request parameter key.
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:239
+msgid "Required API request parameter is empty: %s."
+msgstr ""
+
+#. translators: %1$s API request parameter key, %2$s Expected data type, %1$s
+#. Passed data type.
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:244
+msgid "Invalid API request parameter data type: %1$s. Passed %2$s instead %3$s"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:262
+msgid "API request parameters is empty."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:282
+msgid "Account type not support weight over 30 kg."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:299
+msgid "Account type not support subdistrict origin."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:316
+msgid "Account type not support subdistrict destination."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-account.php:333
+msgid "Account type not support multiple couriers."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:337
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:547
+msgid "API response is empty."
+msgstr ""
+
+#. translators: %1$s - JSON error message, %2$s API response body.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:350
+msgid "Failed to decode the JSON data: Error: %1$s, Body: %2$s"
+msgstr ""
+
+#. translators: %1$s - API error code, %2$s API error description.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:358
+msgid "Code: %1$s, Description: %2$s"
+msgstr ""
+
+#. translators: %1$s - API response body.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:366
+msgid "API response is invalid:  %1$s"
+msgstr ""
+
+#. translators: %s - Error message from RajaOngkir.com.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:371
+msgid "<strong>Error from RajaOngkir.com</strong>: %s"
+msgstr ""
+
+#. translators: %s is number of hours.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:792
+msgid "1 hour"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:792
+msgid "%s hours"
+msgstr ""
+
+#. translators: %s is number of days.
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:797
+msgid "1 day"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-api.php:797
+msgid "%s days"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:113
+msgid "Error"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:115
+msgid "Di optimalkan untuk toko yang beralamat di indonesia."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:124
+msgid "Provinsi"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:128
+msgid "Kota"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:132
+msgid "Kecamatan"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:136
+msgid "Status Pajak"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:140
+msgid "Taxable"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:141
+msgctxt "Tax status"
+msgid "None"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:145
+msgid "Urutkan"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:149
+msgid "Berdasarkan harga - termurah"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:150
+msgid "Berdasarkan harga - termahal"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:151
+msgid "Berdasarkan nama - A ke Z"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:152
+msgid "Berdasarkan nama - Z ke A"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:153
+msgid "Tidak"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:157
+msgid "Tampilkan ETA"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:158
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:239
+msgid "Yes"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:160
+msgid "Tampilkan estimasi lama pengiriman saat checkout."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:163
+msgid "Berat dasar (gram)"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:165
+msgid ""
+"Berat dasar digunakan saat aktual berat di keranjang kosong / 0. Jika tidak "
+"ada aktual berat dan berat dasar di kosongkan penghitungan ongkos kirim "
+"tidak bisa dilakukan."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:172
+msgid "API Key"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:194
+msgid "Domestic Shipping"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:198
+msgid "International Shipping"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:202
+msgid "Volumetric Converter"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:203
+msgid "Enable"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:205
+msgid "Convert volumetric to weight before send request to API server."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:208
+msgid "Volumetric Converter Divider"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:210
+msgid ""
+"The formula to convert volumetric to weight: Width x Length x Height in "
+"centimeters / Divider."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:239
+msgid "No"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:389
+msgid "Visit courier's website"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:394
+msgid "Toggle"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:434
+msgid "API Key is required."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:449
+msgid "API Key or Account type is invalid."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:472
+msgid "Account type field is required."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:476
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:533
+msgid "Account type field is invalid."
+msgstr ""
+
+#. Translators: Shipping origin location type.
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:494
+msgid "Shipping origin %s field is required."
+msgstr ""
+
+#. Translators: %1$s Shipping zone name, %2$s Account label.
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:538
+msgid ""
+"%1$s Shipping: Account type %2$s is not allowed to select multiple couriers."
+msgstr ""
+
+#. Translators: %1$s Shipping zone name, %2$s Account label, %3$s Couriers
+#. name.
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:545
+msgid "%1$s Shipping: Account type %2$s is not allowed to select courier %3$s."
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:631
+msgid "No couriers data found"
+msgstr ""
+
+#. translators: %s Encoded data response.
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:636
+msgid "Couriers data is invalid: %s"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:773
+msgid "Shipping origin info is empty or invalid"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:797
+msgid "Shipping destination info is empty or invalid"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:821
+msgid "Cart weight or dimension is empty or invalid"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg-shipping-method.php:835
+msgid "No couriers selected"
+msgstr ""
+
+#: woocommerce/ongkir/includes/classes/class-justg.php:161
+msgid "Settings"
+msgstr ""
+
+#: woocommerce/ongkir/includes/helpers.php:148
+#: woocommerce/ongkir/includes/helpers.php:153
+msgid "Province"
+msgstr ""
+
+#: woocommerce/ongkir/includes/helpers.php:149
+#: woocommerce/ongkir/includes/helpers.php:154
+msgid "Town / City"
+msgstr ""
+
+#: woocommerce/ongkir/includes/helpers.php:150
+#: woocommerce/ongkir/includes/helpers.php:155
+msgid "Subdistrict"
+msgstr ""
+
+#: woocommerce/product-searchform.php:25
+msgid "Search products&hellip;"
+msgstr ""
+
+#: woocommerce/product-searchform.php:26
+msgid "Search for:"
+msgstr ""
+
+#: woocommerce/product-searchform.php:29
+#, fuzzy
+msgctxt "submit button"
+msgid "Search"
+msgstr "Search"
+
+#: woocommerce/single-product/add-to-cart/variable.php:32
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:49
+msgid "Clear"
+msgstr ""
+
+#: woocommerce/wishlist.php:36 woocommerce/wishlist.php:40
+msgid "Add to wishlist"
+msgstr ""
+
+#: woocommerce/wishlist.php:49
+msgid "Wishlist"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "SweetStore"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+#, fuzzy
 msgid "https://github.com/aadiityaak/sweetstore"
 msgstr "https://github.com/aadiityaak/sweetstore"
 
-#. Author of the theme
-msgid "@aadiityaak"
-msgstr "@aadiityaak"
+#. Description of the plugin/theme
+#, fuzzy
+msgid "Sweet Woocommerce Theme"
+msgstr "Sweet Woocommerce Theme"
 
-#. Author URI of the theme
-msgid "https://github.com/aadiityaak"
-msgstr "https://github.com/aadiityaak"
+#. Author of the plugin/theme
+msgid "aadiityaak"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/aadiityaak/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Blank Page Template"
+msgstr "Blank Page Template"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Empty Page Template"
+msgstr "Empty Page Template"
