@@ -18,7 +18,7 @@ if( ! function_exists( 'justg_header_open' )) {
         $header_container = get_theme_mod( 'select_header_container', 'full' );
         $header_position    = get_theme_mod( 'select_header_position', 'relative' );
         $header1 = [
-            'fixed'     => 'container mx-auto px-4 block-header',
+            'fixed'     => 'container mx-auto p-2 block-header',
             'full'      => 'py-2 block-header',
             'stretch'   => 'p-2 block-header',
         ];

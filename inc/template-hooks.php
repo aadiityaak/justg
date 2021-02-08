@@ -103,7 +103,13 @@ add_action( 'justg_after_content', 'justg_right_sidebar_check' );
  * @see justg_the_footer_content()
  * @see justg_the_footer_close()
  */
-add_action( 'justg_do_footer', 'justg_widget_float' );
 add_action( 'justg_do_footer', 'justg_the_footer_open' );
 add_action( 'justg_do_footer', 'justg_the_footer_content' );
 add_action( 'justg_do_footer', 'justg_the_footer_close' );
+
+/**
+ * WP Footer
+ *
+ * @see wp_footer()
+ */
+add_action( 'wp_footer', 'justg_widget_float' );
