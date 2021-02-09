@@ -112,7 +112,7 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 				'error' => array(
 					'title'       => __( 'Error', 'justg' ),
 					'type'        => 'title',
-					'description' => __( 'Di optimalkan untuk toko yang beralamat di indonesia.', 'justg' ),
+					'description' => __( 'Only work for Store Address based in Indonesia.', 'justg' ),
 				),
 			);
 
@@ -121,19 +121,19 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 
 		$settings = array(
 			'origin_province'       => array(
-				'title' => __( 'Provinsi', 'justg' ),
+				'title' => __( 'Shipping Origin Province', 'justg' ),
 				'type'  => 'origin',
 			),
 			'origin_city'           => array(
-				'title' => __( 'Kota', 'justg' ),
+				'title' => __( 'Shipping Origin City', 'justg' ),
 				'type'  => 'origin',
 			),
 			'origin_subdistrict'    => array(
-				'title' => __( 'Kecamatan', 'justg' ),
+				'title' => __( 'Shipping Origin Subdistrict', 'justg' ),
 				'type'  => 'origin',
 			),
 			'tax_status'            => array(
-				'title'   => __( 'Status Pajak', 'justg' ),
+				'title'   => __( 'Tax Status', 'justg' ),
 				'type'    => 'select',
 				'default' => 'none',
 				'options' => array(
@@ -142,27 +142,27 @@ class justg_Shipping_Method extends WC_Shipping_Method {
 				),
 			),
 			'sort_shipping'         => array(
-				'title'   => __( 'Urutkan', 'justg' ),
+				'title'   => __( 'Sort Shipping', 'justg' ),
 				'type'    => 'select',
 				'default' => 'no',
 				'options' => array(
-					'cost'      => __( 'Berdasarkan harga - termurah', 'justg' ),
-					'cost_desc' => __( 'Berdasarkan harga - termahal', 'justg' ),
-					'name'      => __( 'Berdasarkan nama - A ke Z', 'justg' ),
-					'name_desc' => __( 'Berdasarkan nama - Z ke A', 'justg' ),
-					'no'        => __( 'Tidak', 'justg' ),
+					'cost'      => __( 'By Cost - Ascending', 'justg' ),
+					'cost_desc' => __( 'By Cost - Descending', 'justg' ),
+					'name'      => __( 'By Name - A to Z', 'justg' ),
+					'name_desc' => __( 'By Name - Z to A', 'justg' ),
+					'no'        => __( 'No', 'justg' ),
 				),
 			),
 			'show_eta'              => array(
-				'title'       => __( 'Tampilkan ETA', 'justg' ),
+				'title'       => __( 'Show ETA', 'justg' ),
 				'label'       => __( 'Yes', 'justg' ),
 				'type'        => 'checkbox',
-				'description' => __( 'Tampilkan estimasi lama pengiriman saat checkout.', 'justg' ),
+				'description' => __( 'Show estimated time of arrival during checkout.', 'justg' ),
 			),
 			'base_weight'           => array(
-				'title'             => __( 'Berat dasar (gram)', 'justg' ),
+				'title'             => __( 'Base Cart Contents Weight (gram)', 'justg' ),
 				'type'              => 'number',
-				'description'       => __( 'Berat dasar digunakan saat aktual berat di keranjang kosong / 0. Jika tidak ada aktual berat dan berat dasar di kosongkan penghitungan ongkos kirim tidak bisa dilakukan.', 'justg' ),
+				'description'       => __( 'The base cart contents weight will be calculated. If the value is blank or zero, the couriers list will not displayed when the actual cart contents weight is empty.', 'justg' ),
 				'custom_attributes' => array(
 					'min'  => '0',
 					'step' => '100',

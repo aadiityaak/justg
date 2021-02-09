@@ -18,7 +18,7 @@ if( ! function_exists( 'justg_header_open' )) {
         $header_container = get_theme_mod( 'select_header_container', 'full' );
         $header_position    = get_theme_mod( 'select_header_position', 'relative' );
         $header1 = [
-            'fixed'     => 'container mx-auto p-2 block-header',
+            'fixed'     => 'container mx-auto px-3 block-header',
             'full'      => 'py-2 block-header',
             'stretch'   => 'p-2 block-header',
         ];
@@ -124,7 +124,7 @@ if ( ! function_exists( 'justg_header_cart' ) ) {
                 <div class="close-mini-cart"></div>
                 <div class="cart-widget-side">
                     <div class="widget-heading">
-                        <h3 class="widget-title"><?php esc_html_e( 'Keranjang Belanja', 'justg' ); ?></h3>
+                        <h3 class="widget-title"><?php esc_html_e( 'Shopping cart', 'justg' ); ?></h3>
                     </div>
                     <?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
                 </div>

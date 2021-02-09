@@ -206,7 +206,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'typography',
 	'settings'    => 'typography_setting',
-	'label'       => esc_html__('Typography Global', 'justg'),
+	'label'       => esc_html__('Global Typography', 'justg'),
 	'section'     => 'global_typography',
 	'default'     => [
 		'font-family'    => 'inherit',
@@ -258,7 +258,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'typography',
 	'settings'    => 'typography_widget_setting',
-	'label'       => esc_html__('Typography Widget', 'justg'),
+	'label'       => esc_html__('Widget Typography', 'justg'),
 	'section'     => 'global_typography',
 	'default'     => [
 		'font-family'    => 'inherit',
@@ -441,7 +441,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'color',
 	'settings'    => 'header_border_color',
-	'label'       => __('Color Border Header', 'justg'),
+	'label'       => __('Header Border Color', 'justg'),
 	'section'     => 'header_section',
 	'default'     => '#efefef',
 	'output' => [
@@ -540,8 +540,8 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'dimensions',
 	'settings'    => 'dimensions_wrapper_setting',
-	'label'       => esc_html__('Margin Block wrapper', 'justg'),
-	'description' => esc_html__('Atur Jarak Block wrapper', 'justg'),
+	'label'       => esc_html__('Margin block wrapper', 'justg'),
+	'description' => esc_html__('Set the Block wrapper margins', 'justg'),
 	'section'     => 'wrapper_section',
 	'default'     => [
 		'padding-top'    => '2em',
@@ -560,7 +560,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_wrapper_setting',
 	'label'       => esc_html__('Background Content', 'justg'),
-	'description' => esc_html__('Atur background Content Website', 'justg'),
+	'description' => esc_html__('Set Website Content Background', 'justg'),
 	'section'     => 'wrapper_section',
 	'default'     => [
 		'background-color'      => 'rgba(255,255,255,0)',
@@ -581,7 +581,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'dimensions',
 	'settings'    => 'dimensions_wrapper_container',
 	'label'       => esc_html__('Margin Container wrapper', 'justg'),
-	'description' => esc_html__('Atur Jarak Container wrapper', 'justg'),
+	'description' => esc_html__('Set the Container wrapper Spacing', 'justg'),
 	'section'     => 'wrapper_section',
 	'default'     => [
 		'padding-top'    => '0em',
@@ -601,8 +601,8 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_block_setting',
-	'label'       => esc_html__('Background Block', 'justg'),
-	'description' => esc_html__('Atur background (widget, heading, article, dll)', 'justg'),
+	'label'       => esc_html__('Block Background', 'justg'),
+	'description' => esc_html__('Set the background (widgets, headings, articles, etc.)', 'justg'),
 	'section'     => 'block_section',
 	'default'     => [
 		'background-color'      => '#ffffff',
@@ -623,7 +623,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'dimensions',
 	'settings'    => 'dimensions_block_setting',
 	'label'       => esc_html__('Margin Block', 'justg'),
-	'description' => esc_html__('Atur Jarak Block (widget, heading, article, dll)', 'justg'),
+	'description' => esc_html__('Set Block Distance (widgets, headings, articles, etc.)', 'justg'),
 	'section'     => 'block_section',
 	'default'     => [
 		'padding-top'    => '2em',
@@ -675,7 +675,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'multicheck',
 	'settings'    => 'breadcrumb_disable',
-	'label'       => esc_html__('Tampilkan Breadcrumb', 'justg'),
+	'label'       => esc_html__('Show Breadcrumb', 'justg'),
 	'section'     => 'breadcrumb_location',
 	'default'     => array('disable-on-home', 'disable-on-404'),
 	'priority'    => 10,
@@ -692,7 +692,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'select',
 	'settings'    => 'breadcrumb_position',
-	'label'       => esc_html__('Lokasi Breadcrumb', 'justg'),
+	'label'       => esc_html__('Breadcrumb location', 'justg'),
 	'section'     => 'breadcrumb_location',
 	'default'     => array('justg_after_title', 'disable-on-404'),
 	'priority'    => 10,
@@ -803,7 +803,7 @@ Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_widget_setting',
 	'label'       => esc_html__('Background Widget', 'justg'),
-	'description' => esc_html__('Atur background widget', 'justg'),
+	'description' => esc_html__('Set the widget background', 'justg'),
 	'section'     => 'sidebar_style_section',
 	'default'     => [
 		'background-color'      => '#ffffff',
@@ -824,8 +824,8 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'        => 'dimensions',
 	'settings'    => 'dimensions_widget_setting',
-	'label'       => esc_html__('Margin Widget', 'justg'),
-	'description' => esc_html__('Atur Jarak Widget', 'justg'),
+	'label'       => esc_html__('Widget Margins	', 'justg'),
+	'description' => esc_html__('Adjust Widget Spacing', 'justg'),
 	'section'     => 'sidebar_style_section',
 	'default'     => [
 		'padding-top'    => '1em',
@@ -849,7 +849,7 @@ Kirki::add_field('justg_config', [
 Kirki::add_field('justg_config', [
 	'type'     => 'text',
 	'settings' => 'nomor_whatsapp',
-	'label'    => esc_html__('Nomor Whatsapp', 'justg'),
+	'label'    => esc_html__('Whatsapp Number', 'justg'),
 	'section'  => 'whatsapp',
 // 	'default'  => esc_html__('/', 'justg'),
 	'priority' => 10,
@@ -873,22 +873,22 @@ Kirki::add_field('justg_config', [
 Kirki::add_field( 'justg_config', [
 	'type'        => 'select',
 	'settings'    => 'posisi_wa',
-	'label'       => esc_html__( 'Posisi Whatsapp', 'kirki' ),
+	'label'       => esc_html__( 'Whatsapp ', 'justg' ),
 	'section'     => 'whatsapp',
 	'default'     => 'right',
-	'placeholder' => esc_html__( '', 'kirki' ),
+	'placeholder' => esc_html__( '', 'justg' ),
 	'priority'    => 10,
 	'multiple'    => 1,
 	'choices'     => [
-		'right' => esc_html__( 'Bawah Kanan', 'kirki' ),
-		'left' => esc_html__( 'Bawah Kiri', 'kirki' ),
+		'right' => esc_html__( 'Bottom Right', 'justg' ),
+		'left' => esc_html__( 'Bottom Left', 'justg' ),
 	],
 ] );
 
 Kirki::add_field('justg_config', [
 	'type'        => 'background',
 	'settings'    => 'background_whatsapp',
-	'label'       => esc_html__('Background Whatsapp', 'justg'),
+	'label'       => esc_html__('Whatsapp Button Background', 'justg'),
 	'description' => esc_html__('', 'justg'),
 	'section'     => 'whatsapp',
 	'default'     => [
