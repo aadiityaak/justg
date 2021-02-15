@@ -116,7 +116,6 @@ ul.product-categories li ul li {
 .widget_layered_nav ul>li>a {
     -ms-flex: 1;
     flex: 1;
-    text-decoration: none;
 }
 
 .widget ul.product-categories li+li,
