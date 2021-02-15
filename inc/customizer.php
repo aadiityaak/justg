@@ -849,7 +849,7 @@ Kirki::add_field('justg_config', [
 		'padding-right'  => '1em',
 
 		'margin-top'    => '0em',
-		'margin-bottom' => '2em',
+		'margin-bottom' => '1em',
 		'margin-left'   => '0em',
 		'margin-right'  => '0em',
 	],
