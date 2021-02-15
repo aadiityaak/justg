@@ -775,7 +775,22 @@ Kirki::add_field( 'justg_config', [
 		'right' 	=> esc_html__( 'Right Sidebar', 'justg' ),
 	],
 ] );
-
+Kirki::add_field( 'justg_config', [
+	'type'        => 'select',
+	'settings'    => 'justg_shop_sidebar_position',
+	'label'       => esc_html__( 'Shop Sidebar', 'justg' ),
+	'section'     => 'sidebar_section',
+	'default'     => 'default',
+	'placeholder' => esc_html__( 'Default', 'justg' ),
+	'priority'    => 10,
+	'multiple'    => 1,
+	'choices'     => [
+		'default'	=> esc_html__( 'Default', 'justg' ),
+		'no' 		=> esc_html__( 'No Sidebar', 'justg' ),
+		'left'  	=> esc_html__( 'Left Sidebar', 'justg' ),
+		'right' 	=> esc_html__( 'Right Sidebar', 'justg' ),
+	],
+] );
 //sidebar_style_section
 Kirki::add_field('justg_config', [
 	'type'        => 'slider',

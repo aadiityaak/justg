@@ -358,6 +358,7 @@ if( ! function_exists( 'justg_left_sidebar_check' ) ) {
         $pages_sidebar_pos      = get_theme_mod( 'justg_pages_sidebar_position', 'default');
         $singular_sidebar_pos   = get_theme_mod( 'justg_blogs_sidebar_position', 'default');
         $archives_sidebar_pos   = get_theme_mod( 'justg_archives_sidebar_position', 'default');
+        $shop_sidebar_pos       = get_theme_mod( 'justg_shop_sidebar_position', 'default');
 
         if (is_page() && !in_array($pages_sidebar_pos, array('', 'default')) ){
             $sidebar_pos = $pages_sidebar_pos;
@@ -371,7 +372,11 @@ if( ! function_exists( 'justg_left_sidebar_check' ) ) {
             $sidebar_pos = $archives_sidebar_pos;
         }
         
-        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() || is_cart() || is_checkout()) ){
+        if( justg_is_woocommerce_activated() && is_shop() && !in_array($shop_sidebar_pos, array('', 'default'))){
+            $sidebar_pos = $shop_sidebar_pos;
+        }
+
+        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_cart() || is_checkout()) ){
             return;
         }
 
@@ -400,6 +405,7 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
         $pages_sidebar_pos      = get_theme_mod( 'justg_pages_sidebar_position' );
         $singular_sidebar_pos   = get_theme_mod( 'justg_blogs_sidebar_position' );
         $archives_sidebar_pos   = get_theme_mod( 'justg_archives_sidebar_position' );
+        $shop_sidebar_pos       = get_theme_mod( 'justg_shop_sidebar_position', 'default');
 
         if (is_page() && !in_array($pages_sidebar_pos, array('', 'default')) ){
             $sidebar_pos = $pages_sidebar_pos;
@@ -413,7 +419,11 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
             $sidebar_pos = $archives_sidebar_pos;
         }
 
-        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_shop() || is_cart() || is_checkout()) ){
+        if( justg_is_woocommerce_activated() && is_shop() && !in_array($shop_sidebar_pos, array('', 'default'))){
+            $sidebar_pos = $shop_sidebar_pos;
+        }
+
+        if( justg_is_woocommerce_activated() && ( is_account_page() || is_product() || is_cart() || is_checkout()) ){
             return;
         }
 
