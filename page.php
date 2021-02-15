@@ -19,13 +19,13 @@ $container 		= get_theme_mod( 'justg_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?> px-0" id="content">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 
 			<?php do_action('justg_before_content'); ?>
 
-			<div class="content-area col order-2" id="primary">
+			<div class="content-area col order-2 px-md-0" id="primary">
 
 				<main class="site-main" id="main" role="main">
 

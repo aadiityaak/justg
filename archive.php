@@ -17,14 +17,14 @@ $container = get_theme_mod( 'justg_container_type' );
 
 <div class="wrapper" id="archive-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?> px-0" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
 			<?php do_action('justg_before_content'); ?>
 
-			<main class="site-main col order-2" id="main">
+			<main class="site-main col order-2 px-md-0" id="main">
 
 				<?php
 

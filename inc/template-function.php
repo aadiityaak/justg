@@ -385,7 +385,7 @@ if( ! function_exists( 'justg_left_sidebar_check' ) ) {
                 return;
             }
             ?>
-            <div class="widget-area left-sidebar pr-md-2 pl-md-0 col-sm-12 order-md-1 order-3" id="left-sidebar" role="complementary">
+            <div class="widget-area left-sidebar pr-md-3 pl-md-0 col-sm-12 order-md-1 order-3" id="left-sidebar" role="complementary">
                 <?php do_action('justg_before_main_sidebar'); ?>
                 <?php dynamic_sidebar( 'main-sidebar' ); ?>
                 <?php do_action('justg_after_main_sidebar'); ?>
@@ -432,7 +432,7 @@ if( ! function_exists( 'justg_right_sidebar_check' ) ) {
                 return;
             }
             ?>
-            <div class="widget-area right-sidebar pl-md-2 pr-md-0 col-sm-12 order-3" id="right-sidebar" role="complementary">
+            <div class="widget-area right-sidebar pl-md-3 pr-md-0 col-sm-12 order-3" id="right-sidebar" role="complementary">
                 <?php do_action('justg_before_main_sidebar'); ?>
                 <?php dynamic_sidebar( 'main-sidebar' ); ?>
                 <?php do_action('justg_after_main_sidebar'); ?>

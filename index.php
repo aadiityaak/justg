@@ -28,7 +28,7 @@ $container = get_theme_mod( 'justg_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php do_action('justg_before_content'); ?>
 
-			<main class="site-main col order-2" id="main">
+			<main class="site-main col order-2 px-md-0" id="main">
 
 				<?php
 								
