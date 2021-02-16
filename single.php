@@ -32,7 +32,11 @@ $container = get_theme_mod( 'justg_container_type' );
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
+
+						do_action('justg_before_comments');
 						comments_template();
+						do_action('justg_after_comments');
+
 					}
 				}
 				?>
