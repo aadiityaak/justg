@@ -17983,6 +17983,10 @@ a.skip-link {
       color: #333 !important;
    }
 
+   .logged-in .navbar-collapse {
+      padding-top: 70px;
+   }
+
    .logged-in .navbar-collapse.show {
       padding-top: 70px;
    }
