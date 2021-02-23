@@ -23,13 +23,13 @@
     opacity: 1;
 }
 
-.widget a,
-.widget a:visited {
+.widget.woocommerce a,
+.widget.woocommerce a:visited {
     color: var(--gray);
 }
 
-.widget a:hover,
-.widget a:active {
+.widget.woocommerce a:hover,
+.widget.woocommerce a:active {
     color: var(--dark);
 }
 

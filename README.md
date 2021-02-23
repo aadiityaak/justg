@@ -19,4 +19,4 @@ Starter theme Wordpress for Beaver Builder & Woocommerce
 [Submit Feature request or Bug report](https://github.com/aadiityaak/sweetstore/issues/new/choose)
 
 :zap: Download\
-:bomb: [justg-master.zip](https://github.com/aadiityaak/sweetstore/archive/master.zip)
+:bomb: [sweetstore-master.zip](https://github.com/aadiityaak/sweetstore/archive/master.zip)
