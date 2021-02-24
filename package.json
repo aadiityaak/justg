@@ -1,0 +1,22 @@
+{
+  "name": "sweetstore",
+  "version": "1.2.1",
+  "description": "Sweet Woocommerce Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadiityaak/sweetstore.git"
+  },
+  "keywords": [
+    "sweetstore"
+  ],
+  "author": "aadiityaak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aadiityaak/sweetstore/issues"
+  },
+  "homepage": "https://github.com/aadiityaak/sweetstore#readme"
+}

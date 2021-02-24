@@ -462,9 +462,9 @@ if( ! function_exists( 'justg_the_footer_open' ) ) {
     function justg_the_footer_open() {        
         $footer_container = get_theme_mod( 'option_footer_container', 'full' );
         $footer1 = [
-            'fixed'     => 'container mx-auto p-3 block-footer',
-            'full'      => 'py-3 block-footer',
-            'stretch'   => 'p-3 block-footer',
+            'fixed'     => 'container mx-auto pt-5 p-3 block-footer',
+            'full'      => 'pt-5 pb-3 block-footer',
+            'stretch'   => 'pt-5 p-3 block-footer',
         ];
         $footer2 = [
             'fixed'     => '',
