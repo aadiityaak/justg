@@ -1,5 +1,5 @@
 {
-	"name": "justg/justg",
+	"name": "aadiityaak/sweetstore",
 	"description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
 	"type": "wordpress-theme",
 	"license": "GPL-2.0-only",
@@ -27,7 +27,7 @@
 		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."]
 	},
 	"support": {
-		"issues": "https://github.com/aadiityaak/websweet/issues",
-		"source": "https://github.com/aadiityaak/websweet"
+		"issues": "https://github.com/aadiityaak/sweetstore/issues",
+		"source": "https://github.com/aadiityaak/sweetstore"
 	}
 }
