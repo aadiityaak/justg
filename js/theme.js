@@ -2403,7 +2403,7 @@ function () {
 
     var shopName        = opt.shopName+'-wishlist',
         inWishlist      = opt.inWishlist,
-        restUrl         = opt.restUrl,
+        restUrlProduct  = opt.restUrlProduct,
         wishlist        = new Array,
         ls              = sessionStorage.getItem(shopName),
         loggedIn        = ($('body').hasClass('logged-in')) ? true : false,
@@ -2540,12 +2540,12 @@ function () {
     function showWishlist( wishlist ){
         if (undefined !== wishlist && wishlist.length) {
 
-            restUrl += '?include='+wishlist.join(',');
-            restUrl += '&per_page='+wishlist.length;
+            restUrlProduct += '?include='+wishlist.join(',');
+            restUrlProduct += '&per_page='+wishlist.length;
 
             $.ajax({
                 dataType: 'json',
-                url:restUrl
+                url:restUrlProduct
             })
             .done(function(response){
                 $('.wishlist-table').each(function(){

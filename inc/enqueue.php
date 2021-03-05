@@ -37,7 +37,8 @@ if ( ! function_exists( 'justg_scripts' ) ) {
 			array(
 				'ajaxUrl'        => admin_url('admin-ajax.php'),
 				'ajaxPost'       => admin_url('admin-post.php'),
-				'restUrl'        => rest_url('wp/v2/product'),
+				'restUrl'        => rest_url(),
+				'restUrlProduct' => rest_url('wp/v2/product'),
 				'shopName'       => sanitize_title_with_dashes(sanitize_title_with_dashes(get_bloginfo('name'))),
 				'inWishlist'     => esc_html__("Already in wishlist","justg"),
 				'removeWishlist' => esc_html__("Remove from wishlist","justg"),
