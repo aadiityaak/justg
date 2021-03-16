@@ -112,3 +112,10 @@ add_action( 'justg_do_footer', 'justg_the_footer_close' );
  * @see justg_widget_float()
  */
 add_action( 'wp_footer', 'justg_widget_float' );
+
+/**
+ * WP Footer
+ *
+ * @see justg_share()
+ */
+add_action('woocommerce_share','justg_share');

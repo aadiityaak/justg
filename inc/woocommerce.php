@@ -255,23 +255,6 @@ function justg_my_account_endpoint_content() {
  
 }
 
-add_action('woocommerce_share','justg_share');
-function justg_share() {
-	$class = 'p-1 mx-1 text-dark';
-	echo '<div class="share-buttons pt-2">';
-		echo 'Share ';
-		//Email
-		echo '<a class="'.$class.'" href="mailto:?Subject='.get_the_title().'&amp;Body='.get_the_permalink().'"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>';
-		//Facebook
-		echo '<a class="'.$class.'" href="http://www.facebook.com/sharer.php?u='.get_the_permalink().'" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
-		//Pinterest
-		// echo '<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>';
-		//Twitter
-		echo '<a class="'.$class.'" href="https://twitter.com/share?url='.get_the_permalink().'&amp;text='.get_the_title().'&amp;" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
-	echo '</div>';
-
-}
-
 /* Show Buttons */
 add_action( 'woocommerce_before_add_to_cart_quantity', 'display_quantity_minus' );
 function display_quantity_minus() {
