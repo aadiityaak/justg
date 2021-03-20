@@ -245,11 +245,7 @@ if(!class_exists('Aq_Resize')) {
     }
 }
 
-
-
-
-
-if(!function_exists('aq_resize')) {
+if( !function_exists('aq_resize') ) {
 
     /**
      * This is just a tiny wrapper function for the class above so that there is no
@@ -268,23 +264,24 @@ if(!function_exists('aq_resize')) {
     }
 }
 
-/**
- * when delete attachment, get data option
- */
-add_action('delete_attachment', 'delete_attachment_aq_resize', 10, 1);
-function delete_attachment_aq_resize($id) {
+if( !function_exists('delete_attachment_aq_resize') ) {
+    /**
+     * when delete attachment, get data option
+     */
+    add_action('delete_attachment', 'delete_attachment_aq_resize', 10, 1);
+    function delete_attachment_aq_resize($id) {
 
-    $metaname       = '_attachment_aqresize_'.$id;
-    $meta_media     = get_option($metaname);
-    $upload_dir     = wp_get_upload_dir()['basedir'];
+        $metaname       = '_attachment_aqresize_'.$id;
+        $meta_media     = get_option($metaname);
+        $upload_dir     = wp_get_upload_dir()['basedir'];
 
-    if($meta_media){
-        foreach($meta_media as $path) {
-            $file_path = $upload_dir.$path;  // path of the file which need to be deleted. 
-            wp_delete_file( $file_path ); //delete file here.
+        if($meta_media){
+            foreach($meta_media as $path) {
+                $file_path = $upload_dir.$path;  // path of the file which need to be deleted. 
+                wp_delete_file( $file_path ); //delete file here.
+            }
         }
+        //delete option
+        delete_option($metaname);
     }
-    //delete option
-    delete_option($metaname);
 }
-
