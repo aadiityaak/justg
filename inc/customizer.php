@@ -694,7 +694,7 @@ Kirki::add_field('justg_config', [
 	'settings'    => 'breadcrumb_position',
 	'label'       => esc_html__('Breadcrumb location', 'justg'),
 	'section'     => 'breadcrumb_location',
-	'default'     => array('justg_after_title', 'disable-on-404'),
+	'default'     => 'justg_before_title',
 	'priority'    => 10,
 	'transport'	  => 'refresh',
 	'choices'     => [
