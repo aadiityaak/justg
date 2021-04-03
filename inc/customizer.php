@@ -885,6 +885,15 @@ Kirki::add_field('justg_config', [
 	'priority' => 10,
 ]);
 
+Kirki::add_field('justg_config', [
+	'type'     => 'textarea',
+	'settings' => 'message_whatsapp',
+	'label'    => esc_html__('Whatsapp message', 'justg'),
+	'section'  => 'whatsapp',
+	'default'  => esc_html__('Hallo..', 'justg'),
+	'priority' => 10,
+]);
+
 Kirki::add_field( 'justg_config', [
 	'type'        => 'select',
 	'settings'    => 'posisi_wa',
