@@ -480,32 +480,68 @@ if( ! function_exists( 'justg_the_footer_open' ) ) {
     }
 }
 
-if( ! function_exists( 'justg_widget_float' ) ) {
+if( ! function_exists( 'justg_totop_float' ) ) {
+    /**
+     * Floating button to top
+     * 
+     */
+    function justg_totop_float() {
+        $to_top_status  = get_theme_mod('to_top_status', 'off');
+        $icon_to_top    = get_theme_mod('icon_to_top', 'arrow-up');
+
+        if($to_top_status == 0)
+        return false;
+
+        echo '<a id="go-to-top" class="position-fixed btn btn-sm bg-to-top-float to-top-float text-white">';
+        echo '<span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span>';
+        echo '</a>';
+    }
+
+}
+
+if( ! function_exists( 'justg_whatsapp_float' ) ) {
     /**
      * Floating whatsapp
+     * 
+     */
+    function justg_whatsapp_float() {
+        $no_wa          = get_theme_mod('nomor_whatsapp', 0);
+        $text_wa        = get_theme_mod('text_whatsapp', 'Contact Us!');
+        $msg_wa         = get_theme_mod('message_whatsapp', '');
+        $wa_position    = get_theme_mod('posisi_wa', 'right');
+
+        if(empty($no_wa))
+        return false;
+
+        if (substr($no_wa, 0, 1) === '0') {
+            $no_wa  = '62' . substr($no_wa, 1);
+        } else if (substr($no_wa, 0, 1) === '+') {
+            $no_wa  = '' . substr($no_wa, 1);
+        }
+        $no_wa  = str_replace(" ","",$no_wa);
+
+        echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'?text='.$msg_wa.'" target="_blank">';
+        echo '<i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span>';
+        echo '</a>';
+
+    }
+
+}
+
+if( ! function_exists( 'justg_widget_float' ) ) {
+    /**
+     * Floating content in footer
      * 
      */
     function justg_widget_float() {
 
         $no_wa          = get_theme_mod('nomor_whatsapp', 0);
         $to_top_status  = get_theme_mod('to_top_status', 'off');
-        $icon_to_top    = get_theme_mod('icon_to_top', 'arrow-up');
-        $text_wa        = get_theme_mod('text_whatsapp', 'Contact Us!');
-        $wa_position    = get_theme_mod('posisi_wa', 'right');
-        if (substr($no_wa, 0, 1) === '0') {
-           $no_wa    = '62' . substr($no_wa, 1);
-        } else if (substr($no_wa, 0, 1) === '+') {
-            $no_wa    = '' . substr($no_wa, 1);
-        }
+
         if($to_top_status == 'on' || $no_wa){
             echo '<div class="float-widget">';
-                if(get_theme_mod('nomor_whatsapp', 0)) {
-                    echo '<a class="position-fixed btn btn-sm bg-whatsapp-float whatsapp-float text-white ml-auto wa-'.$wa_position.'" href="https://wa.me/'.$no_wa.'" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="d-none d-md-inline">'.$text_wa.'</span></a>';
-                }
-                if($to_top_status == 'on') {
-                    echo '<a id="go-to-top" class="position-fixed btn btn-sm bg-to-top-float to-top-float text-white"><span class="dashicons dashicons-'.esc_attr( $icon_to_top ).'"></span></a>';
-                }
-                echo '</div>';
+                do_action('justg_do_float_footer');
+            echo '</div>';
         }
     }
 }

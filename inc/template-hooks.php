@@ -114,6 +114,14 @@ add_action( 'justg_do_footer', 'justg_the_footer_close' );
 add_action( 'wp_footer', 'justg_widget_float' );
 
 /**
+ * Footer Float
+ *
+ * @see justg_do_float_footer()
+ */
+add_action( 'justg_do_float_footer', 'justg_whatsapp_float',10 );
+add_action( 'justg_do_float_footer', 'justg_totop_float',10 );
+
+/**
  * WP Footer
  *
  * @see justg_share()
